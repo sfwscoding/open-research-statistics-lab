@@ -14,7 +14,7 @@ const modeLabel = {unweighted:"Cohen's Kappa",linear:"Weighted Kappa (Linear)",
   quadratic:"Weighted Kappa (Quadratic)"};
 const initialMatrix = [[4,1,0,0],[1,5,1,0],[0,1,5,1],[0,0,1,3]];
 const state = {
-  mode:"records", source:"ข้อมูลจำลอง", records:Engine.demoData(23),
+  mode:"records", source:"ข้อมูลจำลอง", recordSource:"ข้อมูลจำลอง", matrixSource:"ตารางไขว้ตัวอย่างจำลอง", records:Engine.demoData(23),
   matrix:initialMatrix.map(row=>row.slice()), summary:null, matrixSummary:null
 };
 const getSelected = () => Number($("criterion").value);
@@ -23,6 +23,8 @@ function announce(message) { $("copy-status").textContent = message; }
 function markDirty() {
   $("record-status").textContent="ข้อมูลมีการเปลี่ยนแปลง กด 'วิเคราะห์คะแนนใหม่' เพื่ออัปเดตผลลัพธ์";
   $("data-source").textContent="กำลังแก้ข้อมูล";
+  $("result-body").hidden=true;
+  $("analysis-context").textContent="ข้อมูลเปลี่ยนแปลงแล้ว ผลลัพธ์เดิมถูกซ่อนจนกว่าจะคำนวณใหม่";
 }
 function showError(err) {
   $("errors").textContent=err.message || String(err);
@@ -41,7 +43,7 @@ function buildMatrixInputs() {
     '<tr><th scope="row">ระดับ '+(i+1)+'</th>'+
     row.map((value, j) => '<td><input id="m-'+i+'-'+j+'" type="number" min="0" max="500" step="1" value="'+value+
       '" aria-label="ผู้ประเมิน 1 ระดับ '+(i+1)+' ผู้ประเมิน 2 ระดับ '+(j+1)+'"></td>').join("")+'</tr>').join("");
-  for(let i=0;i<4;i++)for(let j=0;j<4;j++)$("m-"+i+"-"+j).addEventListener("change", analyze);
+  for(let i=0;i<4;i++)for(let j=0;j<4;j++)$("m-"+i+"-"+j).addEventListener("change", ()=>{state.matrixSource=state.source="ตารางไขว้ที่ผู้ใช้กรอก";analyze()});
 }
 function readMatrixInputs() {
   return Array.from({length:4},(_,i)=>Array.from({length:4},(_,j)=>{
@@ -80,8 +82,8 @@ function plot(criteria) {
     svg+='<text x="'+x(i)+'" y="277" text-anchor="middle" font-size="13" fill="#334155">เกณฑ์ '+(i+1)+'</text>';
   for(const method of Engine.MODES){
     const stroke=colors[method],points=criteria.map((r,i)=>({x:x(i),v:r.methods[method].kappa}));
-    let path="";
-    for(const p of points){if(Number.isFinite(p.v)){path+=(path?" L":"M")+p.x+","+y(p.v)}}
+    let path="",started=false;
+    for(const p of points){if(Number.isFinite(p.v)){path+=(started?" L":"M")+p.x+","+y(p.v);started=true}else started=false}
     if(path)svg+='<path d="'+path+'" fill="none" stroke="'+stroke+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>';
     for(const p of points)if(Number.isFinite(p.v)){
       svg+='<circle cx="'+p.x+'" cy="'+y(p.v)+'" r="5" fill="'+stroke+'" stroke="#fff" stroke-width="2"/>';
@@ -219,8 +221,7 @@ function switchMode(mode) {
   $("record-panel").hidden=mode!=="records";
   $("matrix-panel").hidden=mode!=="matrix";
   $("criterion-control").hidden=mode!=="records";
-  if(mode==="records"){state.source=$("record-status").textContent.includes("จำลอง")?"ข้อมูลจำลอง":"ข้อมูลที่ผู้ใช้กรอกหรือแก้ไข";}
-  else state.source="ตารางไขว้ที่แก้ไขได้";
+  state.source=mode==="records"?state.recordSource:state.matrixSource;
   analyze();
 }
 async function copy(text, message) {
@@ -233,7 +234,7 @@ async function copy(text, message) {
 }
 function restoreMatrix() {
   state.matrix=initialMatrix.map(row=>row.slice());
-  buildMatrixInputs();state.source="ตารางไขว้ตัวอย่างจำลอง";analyze();
+  buildMatrixInputs();state.matrixSource=state.source="ตารางไขว้ตัวอย่างจำลอง";analyze();
 }
 $("csv-data").value=Engine.toCSV(state.records);
 buildMatrixInputs();
@@ -242,9 +243,9 @@ $("mode-records").onclick=()=>switchMode("records");
 $("mode-matrix").onclick=()=>switchMode("matrix");
 $("weight").onchange=render;
 $("criterion").onchange=()=>{$("edit-criterion").value=$("criterion").value;syncEditor();render()};
-$("calculate").onclick=()=>{state.source="ข้อมูลที่ผู้ใช้กรอกหรือแก้ไข";analyze()};
+$("calculate").onclick=()=>{state.recordSource=state.source="ข้อมูลที่ผู้ใช้กรอกหรือแก้ไข";analyze()};
 $("csv-data").addEventListener("input",markDirty);
-$("csv-data").addEventListener("change",()=>{state.source="ข้อมูลที่ผู้ใช้กรอกหรือแก้ไข";analyze()});
+$("csv-data").addEventListener("change",()=>{state.recordSource=state.source="ข้อมูลที่ผู้ใช้กรอกหรือแก้ไข";analyze()});
 $("student").onchange=syncEditor;
 $("edit-criterion").onchange=syncEditor;
 $("rater").onchange=syncEditor;
@@ -257,7 +258,7 @@ $("apply-edit").onclick=()=>{
     if(!Number.isInteger(j)||j<0||j>4||![1,2,3,4].includes(value)||!["r1","r2"].includes(rater))
       throw Error("เกณฑ์ ผู้ประเมิน หรือระดับคะแนนไม่ถูกต้อง");
     record[rater][j]=value;
-    state.source="ข้อมูลที่ผู้ใช้แก้ไข";
+    state.recordSource=state.source="ข้อมูลที่ผู้ใช้แก้ไข";
     $("csv-data").value=Engine.toCSV(records);
     $("criterion").value=String(j);
     analyze();
@@ -269,13 +270,13 @@ $("restore").onclick=()=>{
   const n=Number($("sample-n").value);
   try{
     state.records=Engine.demoData(n);
-    state.source="ข้อมูลจำลอง";
+    state.recordSource=state.source="ข้อมูลจำลอง";
     $("csv-data").value=Engine.toCSV(state.records);
     $("record-status").textContent="คืนค่าข้อมูลจำลอง "+n+" คนแล้ว";
     analyze();
   }catch(err){showError(err);}
 };
-$("matrix-calc").onclick=()=>{state.source="ตารางไขว้ที่ผู้ใช้กรอก";analyze()};
+$("matrix-calc").onclick=()=>{state.matrixSource=state.source="ตารางไขว้ที่ผู้ใช้กรอก";analyze()};
 $("matrix-restore").onclick=restoreMatrix;
 $("template").onclick=()=>copy(Engine.HEAD.join(",")+
   "\n"+Engine.toCSV(Engine.demoData(3)).split("\n").slice(1).join("\n"),"คัดลอกแม่แบบ CSV แล้ว");
