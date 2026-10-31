@@ -1,0 +1,12 @@
+"use strict";
+const assert=require("node:assert/strict");
+const {Competency}=require("../competency.js");
+let rows=Array.from({length:23},(_,i)=>Array(5).fill(i<5?4:i<12?3:i<19?2:1));
+let x=Competency.evaluate(rows);
+assert.deepEqual(x.thresholds,[19,12,5]);assert.equal(x.passed,true);assert.equal(x.passedConditions,15);
+assert.deepEqual(x.criteria[0].counts,[4,7,7,5]);
+rows[0][0]=3;x=Competency.evaluate(rows);
+assert.equal(x.passed,false);assert.equal(x.passedConditions,14);assert.deepEqual(x.criteria[0].passed,[true,true,false]);
+assert.throws(()=>Competency.evaluate([[1,2,3,4,5]]));
+assert.throws(()=>Competency.evaluate([[1,2,3,4,0]]));
+console.log("Competency Hybrid Rule tests passed");
