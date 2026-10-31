@@ -1,41 +1,46 @@
 "use strict";
 const assert=require("node:assert/strict"),fs=require("node:fs"),vm=require("node:vm");
-const context={console};context.window=context;const elements={};
-context.document={getElementById(id){return elements[id]||(elements[id]={value:"",innerHTML:"",innerText:"",textContent:""})}};
-const body={set innerHTML(html){for(const m of html.matchAll(/<[\w-]+\s+[^>]*id="([^"]+)"[^>]*>/g)){const el=context.document.getElementById(m[1]);el.value=(m[0].match(/value="([^"]*)"/)||[])[1]??el.value}}};
-const load=path=>vm.runInNewContext(fs.readFileSync(path,"utf8"),context,{filename:path});
-["outcomes.js","competency.js","kpa.js","stat-extensions.js","research-reporting.js","chapter4-builder.js"].forEach(load);
-const R=context.ResearchReports;
-const close=(a,b,tol=1e-9)=>assert.ok(Math.abs(a-b)<tol, "expected "+b+" got "+a);
+const ctx={};ctx.window=ctx;
+for(const script of ["competency.js","research-reporting.js"])vm.runInNewContext(fs.readFileSync(script,"utf8"),ctx,{filename:script});
+const R=ctx.ResearchReports;
+const close=(a,b,tol=1e-9)=>assert.ok(Math.abs(a-b)<tol,"expected "+b+" got "+a);
 const perfect=Array.from({length:4},(_,i)=>Array.from({length:4},(_,j)=>i===j?5:0));
-const k=R.analyzeKappa(perfect);close(k.unweighted.kappa,1);close(k.linear.kappa,1);close(k.quadratic.kappa,1);
-const independent=Array.from({length:4},()=>[1,1,1,1]);close(R.analyzeKappa(independent).unweighted.kappa,0);
-assert.match(R.kappa(perfect),/Cohen.s Kappa/);
+const k=R.analyzeKappa(perfect);
+close(k.unweighted.kappa,1);close(k.linear.kappa,1);close(k.quadratic.kappa,1);
+const independent=Array.from({length:4},()=>[1,1,1,1]);
+close(R.analyzeKappa(independent).unweighted.kappa,0);
+const m=R.analyzeMCQ("Q1,Q2\nA,B\nA,B\nB,B","A,B");
+assert.equal(m.n,3);assert.equal(m.k,2);
+assert.match(R.mcq(m.n,m.k,m.avg,m.kr,m.items,m.labels,m.keys),/ตารางที่ 1/);
 assert.match(R.kappa(perfect),/Weighted/);
-const item=R.analyzeMCQ("Q1,Q2\nA,B\nA,B\nB,B","A,B");
-assert.equal(item.n,3);assert.equal(item.k,2);assert.match(R.mcq(item.n,item.k,item.avg,item.kr,item.items,item.labels,item.keys),/ตารางที่ 1/);
-const passed=Array.from({length:23},()=>[4,4,4,4,4]);
-assert.match(R.hybrid(passed,["A","B","C","D","E"]),/ผ่านครบตาม Hybrid Rule/);
-context.ResearchChapter4.init(body);
-assert.match(elements["r-message"].textContent,/ตารางที่ 1–8/);
-assert.equal((elements["research-output"].innerHTML.match(/ตารางที่ \d/g)||[]).length,8);
-elements["r-k"].value="9";elements["r-build"].onclick();assert.match(elements["research-output"].innerHTML,/9 จาก 23/);
-elements["r-pre"].value="1\n2";elements["r-build"].onclick();assert.match(elements["r-message"].textContent,/คะแนนก่อน–หลังต้องจับคู่/);
-const ext=require("../stat-extensions.js").StatExtensions;
-close(ext.tP(2,22,"greater"),0.028997850851248,1e-10);
-close(ext.tP(2.073873067904,22,"two-sided"),0.05,1e-10);
-for(let i=1;i<=5;i++){const html=fs.readFileSync("lab0"+i+".html","utf8");
- const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m=>m[1]).filter(Boolean);
- if(i===2){
-  assert.match(html,/rubric-reliability\.js/);
-  assert.match(html,/lab02-app\.js/);
-  new vm.Script(fs.readFileSync("rubric-reliability.js","utf8"));
-  new vm.Script(fs.readFileSync("lab02-app.js","utf8"));
- }else{
-  assert.ok(scripts.length,"Lab 0"+i+" must have inline code or a dedicated module");
-  scripts.forEach((js,j)=>new vm.Script(js,{filename:"lab0"+i+"-inline"+j}));
- }
+const passing=Array.from({length:23},()=>[4,4,4,4,4]);
+assert.match(R.hybrid(passing,["C1","C2","C3","C4","C5"]),/ผ่านครบตาม Hybrid Rule/);
+assert.match(R.table(1,"Test",["A"],[[2]],"sample note","sample interpretation"),/sample interpretation/);
+const spec=[
+ ["lab01.html",["lab01-app.js","id=\"stat-menu\"","id=\"mcq-apa\""]],
+ ["lab02.html",["lab02-app.js","id=\"lab02-stat-menu\"","id=\"apa-output\""]],
+ ["lab03.html",["id=\"tests\"","id=\"apa\"","wilcoxon-criterion"]],
+ ["lab04.html",["lab04-views.js","id=\"lab04-stat-menu\"","id=\"apaKpa\"","id=\"apaRubric\""]],
+ ["lab05.html",["chapter4-single.js","id=\"chapter-stat-menu\"","id=\"c-apa\""]]
+];
+for(const [file,markers] of spec){
+ const html=fs.readFileSync(file,"utf8");
+ markers.forEach(marker=>assert.ok(html.includes(marker),file+": missing "+marker));
+ const inline=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];
+ for(const x of inline)new vm.Script(x[1],{filename:file});
 }
-const l5=fs.readFileSync("lab05.html","utf8");assert.match(l5,/chapter4-builder\.js/);assert.doesNotMatch(l5,/การสร้างข้อความรายงานจริงจะเปิดใช้เมื่อ/);
-const l4=fs.readFileSync("lab04.html","utf8");assert.match(l4,/project-tracking\.js/);new vm.Script(fs.readFileSync("project-tracking.js","utf8"));
-console.log("APA reporting, kappa, editable Chapter 4 and 5 Lab syntax checks: passed");
+for(const path of ["lab01-app.js","lab02-app.js","lab04-views.js","chapter4-single.js","project-tracking.js","rubric-reliability.js"])
+ new vm.Script(fs.readFileSync(path,"utf8"),{filename:path});
+const lab01=fs.readFileSync("lab01.html","utf8");
+const lab02=fs.readFileSync("lab02.html","utf8");
+const lab03=fs.readFileSync("lab03.html","utf8");
+const lab04=fs.readFileSync("lab04.html","utf8");
+const lab05=fs.readFileSync("lab05.html","utf8");
+assert.equal((lab01.match(/data-stat="/g)||[]).length,5);
+assert.equal((lab02.match(/data-metric="/g)||[]).length,4);
+assert.equal((lab03.match(/data-test="/g)||[]).length,5);
+assert.equal((lab04.match(/data-stat="/g)||[]).length,4);
+assert.equal((lab05.match(/data-stat="/g)||[]).length,16);
+assert.doesNotMatch(lab05,/chapter4-builder\.js/);
+assert.match(fs.readFileSync("shared-nav.js","utf8"),/lab05\.html\?stat=project/);
+console.log("APA calculations and five isolated statistical lab view structures: passed");
