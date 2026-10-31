@@ -23,10 +23,10 @@ textarea{max-width:100%}input:focus,textarea:focus,select:focus{outline:3px soli
 label{color:#45415f}h2,h3{color:#424060}table{border-collapse:collapse;width:100%}th{background:#f2efff;color:#51478a;text-align:left;padding:12px}td{padding:11px}tbody tr:nth-child(even){background:#faf9ff}
 #workspace{scroll-margin-top:18px}
 @media(max-width:640px){header{padding:28px 20px}main{padding:20px 12px 50px}.card{min-height:0}.inputs{gap:12px}.inputs>div{min-width:130px;flex:1}.inputs input{width:100%}}
-.stat-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}.stat-card{border-radius:17px;background:#fff;border:1px solid #e7e1f6;padding:15px}.stat-card strong{display:block;font-size:clamp(19px,2.6vw,29px);color:#6154a4;margin:6px 0}.stat-card small{font-size:12px}.stat-visual{margin:18px 0;padding:16px;background:#fff;border:1px solid #e8e4f3;border-radius:18px}.stat-track{height:20px;border-radius:12px;background:#ece9f7;overflow:hidden;margin:8px 0}.stat-fill{height:100%;background:linear-gradient(90deg,#8c7cd0,#79c8b5);border-radius:12px}.stat-note{font-size:13px;color:#62647a;line-height:1.6}.stat-pass{color:#18765b}.stat-fail{color:#a34465}</style></head><body>
+.stat-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}.stat-card{border-radius:17px;background:#fff;border:1px solid #e7e1f6;padding:15px}.stat-card strong{display:block;font-size:clamp(19px,2.6vw,29px);color:#6154a4;margin:6px 0}.stat-card small{font-size:12px}.stat-visual{margin:18px 0;padding:16px;background:#fff;border:1px solid #e8e4f3;border-radius:18px}.stat-track{height:20px;border-radius:12px;background:#ece9f7;overflow:hidden;margin:8px 0}.stat-fill{height:100%;background:linear-gradient(90deg,#8c7cd0,#79c8b5);border-radius:12px}.stat-note{font-size:13px;color:#62647a;line-height:1.6}.stat-pass{color:#18765b}.stat-fail{color:#a34465}.lab-overview{padding:26px 28px;background:linear-gradient(115deg,#f2edff,#fff0f6 55%,#eafbf5);border:1px solid #e7e0f5;border-radius:26px;margin:14px 0 22px}.lab-overview h2{margin:8px 0;font-size:clamp(22px,3vw,30px)}.lab-overview p{color:#68637c;margin-bottom:0}.lab-eyebrow{font-size:11px;letter-spacing:.14em;color:#7360b7;font-weight:800}.room-icon{display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:17px;background:#ffffffb8;font-size:27px;margin-bottom:12px}.card .btn{width:100%;margin-top:6px}.card{display:flex;flex-direction:column;align-items:flex-start}.card .btn{margin-top:auto}.stat-card strong{overflow-wrap:anywhere}#lab-body h3{margin-top:25px}#lab-body .result{overflow-x:auto}#lab-body textarea{line-height:1.5}#lab-body .inputs{align-items:flex-start}#lab-body button:focus-visible{outline:3px solid #b0a3ef;outline-offset:3px}@media(max-width:640px){.lab-overview{padding:20px}.stat-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}</style></head><body>
 <header><div class="muted" style="color:#9ad8df">EDUCATIONAL RESEARCH · OPEN LAB</div><h1>Open Research Statistics Lab</h1><p>ห้องปฏิบัติการสถิติการวิจัยทางการศึกษา · เรียนรู้ ทดลอง และตีความผลอย่างมีหลักฐาน</p></header>
 <main><p class="intro">ต้นแบบสำหรับศึกษาสถิติการวิจัยด้านการจัดการเรียนรู้ฐานสมรรถนะ (CBE) โดยใช้ข้อมูลจำลองเท่านั้น ไม่จัดเก็บข้อมูลนักเรียนจริงบนเว็บไซต์</p>
-<section class="grid" id="rooms"></section>
+<section class="lab-overview"><div class="lab-eyebrow">YOUR INTERACTIVE RESEARCH WORKSPACE</div><h2>เลือกห้องทดลอง แล้วปรับค่าดูผลได้ทันที</h2><p>5 ห้องทดลอง · ข้อมูลจำลอง · แสดงผลเป็นภาพและคำอธิบายภาษาไทย</p></section><section class="grid" id="rooms"></section>
 <section class="panel" id="workspace" aria-live="polite"><h2 id="lab-title">เริ่มต้นทดลอง</h2><p id="lab-desc" class="intro">เลือกห้องปฏิบัติการด้านบนเพื่อเริ่มเรียนรู้</p><div id="lab-body"></div></section>
 <section class="panel"><h2>หลักการใช้ผลวิเคราะห์</h2><p class="intro">แบบจำลองนี้ใช้เพื่อการเรียนรู้และตรวจสอบความเข้าใจ ไม่ใช้แทนการวิเคราะห์ข้อมูลจริงด้วย JASP หรือ jamovi การตีความนัยสำคัญต้องพิจารณาสมมติฐาน การออกแบบวิจัย ขนาดผล และความไม่แน่นอนประกอบเสมอ</p><p><a href="https://jasp-stats.org/" target="_blank" rel="noopener">JASP</a> · <a href="https://www.jamovi.org/" target="_blank" rel="noopener">jamovi</a> · <a href="https://www.itl.nist.gov/div898/handbook/" target="_blank" rel="noopener">NIST Statistical Handbook</a></p></section>
 </main><footer>Open Research Statistics Lab · Research prototype · ข้อมูลจำลอง</footer>
@@ -36,6 +36,7 @@ label{color:#45415f}h2,h3{color:#424060}table{border-collapse:collapse;width:100
 <script src="evidence.js"></script>
 <script>
 "use strict";
+const roomIcons=["📝","⚖️","📈","🎯","📚"];
 const rooms=[
 ["MCQ Item Analysis","ความยาก อำนาจจำแนก ความเที่ยง และตัวลวง"],
 ["Rubric Reliability","ความสอดคล้องของผู้ประเมินและ Weighted Kappa"],
@@ -43,7 +44,7 @@ const rooms=[
 ["Competency Tracking","ติดตามสมรรถนะด้วย Rubric 5 เกณฑ์และ Hybrid Rule"],
 ["Chapter 4 Builder","โครงร่างการรายงานผลวิจัยตามวัตถุประสงค์"]];
 const $=id=>document.getElementById(id);
-$("rooms").innerHTML=rooms.map((r,i)=>'<article class="card"><span class="num">LAB 0'+(i+1)+'</span><h2>'+r[0]+'</h2><p>'+r[1]+'</p><button class="btn" data-room="'+i+'">เปิดห้องทดลอง</button></article>').join("");
+$("rooms").innerHTML=rooms.map((r,i)=>'<article class="card"><div class="room-icon">'+roomIcons[i]+'</div><span class="num">LAB 0'+(i+1)+'</span><h2>'+r[0]+'</h2><p>'+r[1]+'</p><button class="btn" data-room="'+i+'">เปิดห้องทดลอง</button></article>').join("");
 document.querySelectorAll("[data-room]").forEach(b=>b.addEventListener("click",()=>openRoom(Number(b.dataset.room))));
 function field(id,label,value,min,max,step=1){return '<div><label for="'+id+'">'+label+'</label><input id="'+id+'" type="number" min="'+min+'" max="'+max+'" step="'+step+'" value="'+value+'"></div>'}
 function get(id){return Number($(id).value)}
