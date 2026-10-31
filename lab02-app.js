@@ -14,11 +14,12 @@ const modeLabel = {unweighted:"Cohen's Kappa",linear:"Weighted Kappa (Linear)",
   quadratic:"Weighted Kappa (Quadratic)"};
 const initialMatrix = [[4,1,0,0],[1,5,1,0],[0,1,5,1],[0,0,1,3]];
 const state = {
-  mode:"records", source:"ข้อมูลจำลอง", recordSource:"ข้อมูลจำลอง", matrixSource:"ตารางไขว้ตัวอย่างจำลอง", records:Engine.demoData(23),
+  view:"quadratic",mode:"records", source:"ข้อมูลจำลอง", recordSource:"ข้อมูลจำลอง", matrixSource:"ตารางไขว้ตัวอย่างจำลอง", records:Engine.demoData(23),
   matrix:initialMatrix.map(row=>row.slice()), summary:null, matrixSummary:null
 };
 const getSelected = () => Number($("criterion").value);
-const weight = () => $("weight").value;
+const weight = () => state.view==="agreement"?"unweighted":state.view;
+const metricLabels={unweighted:"2.1.1 Cohen’s Kappa",linear:"2.1.2 Weighted Kappa (Linear)",quadratic:"2.1.3 Weighted Kappa (Quadratic)",agreement:"2.2 Exact Agreement (%)"};
 function announce(message) { $("copy-status").textContent = message; }
 function markDirty() {
   $("record-status").textContent="ข้อมูลมีการเปลี่ยนแปลง กด 'วิเคราะห์คะแนนใหม่' เพื่ออัปเดตผลลัพธ์";
@@ -68,137 +69,91 @@ function syncEditor() {
   } catch (_) { /* The CSV error is displayed on explicit recalculation. */ }
 }
 function plot(criteria) {
-  const colors={unweighted:"#2563eb",linear:"#15803d",quadratic:"#c2410c"};
-  const x=i=>90+i*139;
-  const y=v=>236-(v+1)*97;
+  const method=weight(),stroke={unweighted:"#2563eb",linear:"#15803d",quadratic:"#c2410c"}[method];
+  const x=i=>90+i*139,y=v=>236-(v+1)*97;
   let svg='<rect width="740" height="300" fill="#fff"/>';
   for(const tick of [-1,-.5,0,.5,1]){
     const yy=y(tick);
-    svg+='<line x1="62" y1="'+yy+'" x2="691" y2="'+yy+'" stroke="'+
-      (tick===0?"#94a3b8":"#e2e8f0")+'" stroke-width="'+(tick===0?1.5:1)+'"/>'+
+    svg+='<line x1="62" y1="'+yy+'" x2="691" y2="'+yy+'" stroke="#e2e8f0"/>'+
       '<text x="52" y="'+(yy+4)+'" text-anchor="end" fill="#64748b" font-size="12">'+tick+'</text>';
   }
-  for(let i=0;i<criteria.length;i++)
+  let path="",started=false;
+  criteria.forEach((v,i)=>{
     svg+='<text x="'+x(i)+'" y="277" text-anchor="middle" font-size="13" fill="#334155">เกณฑ์ '+(i+1)+'</text>';
-  for(const method of Engine.MODES){
-    const stroke=colors[method],points=criteria.map((r,i)=>({x:x(i),v:r.methods[method].kappa}));
-    let path="",started=false;
-    for(const p of points){if(Number.isFinite(p.v)){path+=(started?" L":"M")+p.x+","+y(p.v);started=true}else started=false}
-    if(path)svg+='<path d="'+path+'" fill="none" stroke="'+stroke+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>';
-    for(const p of points)if(Number.isFinite(p.v)){
-      svg+='<circle cx="'+p.x+'" cy="'+y(p.v)+'" r="5" fill="'+stroke+'" stroke="#fff" stroke-width="2"/>';
-    }
-  }
+    const stat=v.methods[method].kappa;
+    if(Number.isFinite(stat)){
+      path+=(started?" L":"M")+x(i)+","+y(stat);started=true;
+      svg+='<circle cx="'+x(i)+'" cy="'+y(stat)+'" r="5" fill="'+stroke+'"/>';
+    }else started=false;
+  });
+  if(path)svg+='<path d="'+path+'" stroke="'+stroke+'" stroke-width="3" fill="none"/>';
   $("kappa-chart").innerHTML=svg;
 }
-function summaryCards(stats, criterionText) {
-  const selected=stats.methods[weight()];
-  const CI=stats.bootstrap.methods[weight()];
-  const cards=[
-    ["จำนวนคู่คะแนน",String(stats.n),criterionText],
-    ["เห็นตรงกัน",fmt(stats.exactPercent,1)+"%",stats.exact+"/"+stats.n+" คู่"],
-    ["Cohen's κ",fmt(stats.methods.unweighted.kappa),"ไม่ถ่วงน้ำหนัก"],
-    [modeLabel[weight()],fmt(selected.kappa),"วิธีที่เลือก"],
-    ["95% CI",ciText(CI),"Bootstrap percentile · B = "+stats.bootstrap.iterations],
-    ["MAD",fmt(stats.meanAbsoluteDifference,2),"ค่าเฉลี่ยระยะห่างระดับคะแนน"]
-  ];
+function summaryCards(stats,criterionText){
+  const mode=state.view,method=weight(),chosen=stats.methods[method],interval=stats.bootstrap.methods[method];
+  const cards=mode==="agreement"?
+    [["จำนวนคู่",stats.n,criterionText],["ความเห็นตรงกัน",fmt(stats.exactPercent,1)+"%",stats.exact+"/"+stats.n+" คู่"],["MAD",fmt(stats.meanAbsoluteDifference,2),"ระยะห่างของระดับคะแนน"]]:
+    [["จำนวนคู่",stats.n,criterionText],[metricLabels[mode],fmt(chosen.kappa),"ค่าความเห็นพ้องที่ปรับโอกาสโดยบังเอิญ"],
+     ["95% CI",ciText(interval),"Bootstrap percentile, "+stats.bootstrap.iterations+" รอบ"],
+     ["Pₒ",fmt(chosen.po),"ความเห็นพ้องสังเกต (ถ่วงน้ำหนักตามวิธี)"],
+     ["Pₑ",fmt(chosen.pe),"ความเห็นพ้องคาดหมายจากโอกาส"]];
   $("result-cards").innerHTML=cards.map(([name,val,note])=>
     '<div class="result-card"><small>'+esc(name)+'</small><strong>'+esc(val)+
     '</strong><div class="caption">'+esc(note)+'</div></div>').join("");
 }
-function methodsTable(number, stats, criterionText) {
-  const rows=Engine.MODES.map(method=>{
-    const value=stats.methods[method],interval=stats.bootstrap.methods[method];
-    return [modeLabel[method],stats.n,fmt(value.po),fmt(value.pe),fmt(value.kappa),ciText(interval)];
+function reportOne(statsList,recordMode){
+  const mode=state.view,focused=statsList[recordMode?getSelected():0],n=recordMode?statsList.length:1;
+  if(mode==="agreement"){
+    const rows=statsList.map((stat,i)=>[recordMode?"เกณฑ์ "+(i+1):"ตารางไขว้",stat.n,stat.exact,
+      fmt(stat.exactPercent,1)+"%",fmt(stat.meanAbsoluteDifference,2)]);
+    const main=Reporting.table(1,"ร้อยละความเห็นตรงกันของผู้ประเมิน (Exact Agreement)",
+      ["เกณฑ์","n คู่","ตรงกัน (คู่)","ตรงกัน (%)","MAD"],rows,
+      "ค่า agreement = จำนวนคู่ที่ได้ระดับเดียวกัน / n; MAD = ระยะห่างเฉลี่ยของระดับคะแนน ไม่ใช่ Cohen’s κ",
+      "จากการประเมิน "+focused.n+" คู่ ใน"+(recordMode?"เกณฑ์ "+(getSelected()+1):"ตารางไขว้ 4×4")+
+      " พบผู้ประเมินให้ระดับตรงกัน "+focused.exact+" คู่ ("+fmt(focused.exactPercent,1)+
+      "%) ค่า MAD = "+fmt(focused.meanAbsoluteDifference,2)+" ระดับ");
+    const cross=Reporting.table(2,"ตารางไขว้ระดับคะแนนประกอบความเห็นตรงกัน — "+(recordMode?"เกณฑ์ "+(getSelected()+1):"ตารางไขว้"),
+      ["ผู้ประเมิน 1 \\ 2","ระดับ 1","ระดับ 2","ระดับ 3","ระดับ 4","รวม"],
+      [...focused.matrix.map((row,i)=>["ระดับ "+(i+1),...row,focused.r1[i]]),
+       ["รวม",...focused.r2,focused.n]],
+      "แนวทแยงคือคู่ให้ระดับตรงกัน; ตารางแจกแจงเป็นข้อมูลประกอบ Exact Agreement เท่านั้น",
+      "ช่องแนวทแยงรวม "+focused.exact+" คู่ จากทั้งหมด "+focused.n+" คู่ ข้อมูลนี้ช่วยตรวจว่าความไม่ตรงกันเกิดที่ระดับใด");
+    return main+cross;
+  }
+  const label=metricLabels[mode];
+  const rows=statsList.map((stat,i)=>{
+    const x=stat.methods[mode],interval=stat.bootstrap.methods[mode];
+    return [recordMode?"เกณฑ์ "+(i+1):"ตารางไขว้",stat.n,fmt(x.po),fmt(x.pe),fmt(x.kappa),ciText(interval)];
   });
-  return Reporting.table(number,
-    "ความสอดคล้องของผู้ประเมินสองคน — "+criterionText,
-    ["วิธีคำนวณ","n","Pₒ","Pₑ","κ","95% CI"],
-    rows,
-    "κ = (Pₒ − Pₑ)/(1 − Pₑ); Weighted แบบ Linear ใช้น้ำหนัก 1 − |i−j|/3 และ Quadratic ใช้น้ำหนัก 1 − ((i−j)/3)²; 95% CI ใช้ paired percentile bootstrap 1,500 ครั้งจากคู่คะแนน; N/A คือค่าที่นิยามหรือประมาณไม่ได้",
-    "การประเมิน "+stats.n+" คู่ มีผู้ประเมินให้คะแนนตรงกัน "+fmt(stats.exactPercent,1)+
-    "% (จำนวน "+stats.exact+" คู่) พบ Cohen's κ = "+fmt(stats.methods.unweighted.kappa)+
-    ", Linear Weighted κ = "+fmt(stats.methods.linear.kappa)+
-    " และ Quadratic Weighted κ = "+fmt(stats.methods.quadratic.kappa)+
-    " โดยช่วงความเชื่อมั่น 95% ของวิธี "+(weight()==="linear"?"Linear":"Quadratic")+
-    " คือ "+ciText(stats.bootstrap.methods[weight()])+
-    ". ควรตรวจการกระจายระดับคะแนน ความไม่สมดุล และความกว้างของช่วงความเชื่อมั่นก่อนตีความ");
+  const chosen=focused.methods[mode],ci=focused.bootstrap.methods[mode];
+  return Reporting.table(1,"ผล"+label+" ของผู้ประเมินสองคน",
+    ["เกณฑ์","n คู่","Pₒ","Pₑ","κ","95% CI"],rows,
+    "κ = (Pₒ − Pₑ)/(1 − Pₑ); "+(mode==="linear"?"น้ำหนัก = 1 − |i−j|/3":
+    mode==="quadratic"?"น้ำหนัก = 1 − ((i−j)/3)²":"น้ำหนัก = 1 เมื่อคะแนนตรงกัน และ 0 เมื่อไม่ตรงกัน")+
+    "; 95% CI = paired percentile bootstrap 1,500 ครั้ง; N/A คือค่าไม่สามารถกำหนดได้",
+    "สำหรับ"+(recordMode?"เกณฑ์ "+(getSelected()+1):"ตารางไขว้")+
+    " จำนวน "+focused.n+" คู่ พบ "+label+" = "+fmt(chosen.kappa)+
+    " (95% CI "+ciText(ci)+") มี Pₒ = "+fmt(chosen.po)+" และ Pₑ = "+fmt(chosen.pe)+
+    ". ควรตรวจการกระจายระดับคะแนนและสมมติฐานก่อนตีความค่าความสอดคล้อง");
 }
-function matrixTable(number,stats,criterionText) {
-  const rows=stats.matrix.map((row,i)=>[
-    "ระดับ "+(i+1),...row,stats.r1[i]
-  ]);
-  rows.push(["รวมผู้ประเมิน 2",...stats.r2,stats.n]);
-  return Reporting.table(number,
-    "ตารางไขว้การให้คะแนนระดับ 1–4 — "+criterionText,
-    ["ผู้ประเมิน 1 \\ 2","ระดับ 1","ระดับ 2","ระดับ 3","ระดับ 4","รวม"],
-    rows,
-    "ช่องแนวทแยงคือคะแนนตรงกัน; รวมคู่ตรงกัน "+stats.exact+"/"+stats.n+
-    " คู่; ตารางแสดงจำนวน (n) ไม่ใช่ร้อยละ",
-    "การให้คะแนนมีคู่ตรงกัน "+stats.exact+" คู่ จากทั้งหมด "+stats.n+
-    " คู่ ("+fmt(stats.exactPercent,1)+
-    "%) จึงควรดูรูปแบบการไม่ตรงกันในระดับคะแนนที่อยู่ห่างกันประกอบกับค่า Weighted Kappa");
-}
-function distributionTable(number,stats,criterionText) {
-  return Reporting.table(number,
-    "การกระจายระดับรูบริกแยกตามผู้ประเมิน — "+criterionText,
-    ["ระดับรูบริก","ผู้ประเมิน 1 n (%)","ผู้ประเมิน 2 n (%)"],
-    Array.from({length:4},(_,i)=>[
-      "ระดับ "+(i+1),
-      stats.r1[i]+" ("+fmt(100*stats.r1[i]/stats.n,1)+"%)",
-      stats.r2[i]+" ("+fmt(100*stats.r2[i]/stats.n,1)+"%)"]),
-    "n = "+stats.n+" คู่; ร้อยละเป็นสัดส่วนภายในผู้ประเมินแต่ละคน",
-    "การกระจายการให้คะแนนระดับ 1–4 อาจไม่สมดุลระหว่างผู้ประเมิน ซึ่งมีผลต่อค่า Pₑ และ κ จึงไม่ควรพิจารณาค่า κ โดยละเลยตารางแจกแจงนี้");
-}
-function criteriaTable(summary) {
-  const chosen=weight(),criteria=summary.criteria;
-  const rows=criteria.map(r=>[
-    "เกณฑ์ "+r.criterion,r.n,fmt(r.exactPercent,1)+"%",
-    fmt(r.methods.unweighted.kappa),fmt(r.methods.linear.kappa),
-    fmt(r.methods.quadratic.kappa),ciText(r.bootstrap.methods[chosen]),
-    fmt(r.meanAbsoluteDifference,2)
-  ]);
-  const focus=criteria[getSelected()];
-  return Reporting.table(1,
-    "ความสอดคล้องของผู้ประเมินสองคน แยกตามเกณฑ์รูบริกทั้ง 5 ด้าน",
-    ["เกณฑ์","n คู่","ตรงกัน (%)","Cohen κ","Linear κ","Quadratic κ","95% CI (วิธีที่เลือก)","MAD"],
-    rows,
-    "คะแนนระดับ 1–4; 95% CI ของ "+modeLabel[chosen]+
-    " คำนวณด้วย paired percentile bootstrap 1,500 ครั้งต่อเกณฑ์; MAD คือค่าเฉลี่ยระยะห่างของระดับคะแนน; ไม่รวมค่าทั้งห้าเป็น κ ค่าเดียว",
-    "การประเมิน "+summary.n+" คน ครบ 5 เกณฑ์ พบว่าเกณฑ์ที่ "+focus.criterion+
-    " มีร้อยละการให้คะแนนตรงกัน "+fmt(focus.exactPercent,1)+"% และ "+
-    modeLabel[chosen]+" = "+fmt(focus.methods[chosen].kappa)+
-    " (95% CI "+ciText(focus.bootstrap.methods[chosen])+
-    ") ทั้งนี้ค่าสัมประสิทธิ์ต้องพิจารณาแยกตามเกณฑ์ ไม่ใช้ค่าเฉลี่ย κ เพื่ออ้างความเที่ยงของคะแนนรูบริกรวมโดยตรง");
-}
-function reportRecords(summary) {
-  const stats=summary.criteria[getSelected()];
-  return criteriaTable(summary)+methodsTable(2,stats,"เกณฑ์ "+stats.criterion)+
-    matrixTable(3,stats,"เกณฑ์ "+stats.criterion)+
-    distributionTable(4,stats,"เกณฑ์ "+stats.criterion);
-}
-function reportMatrix(stats) {
-  return methodsTable(1,stats,"ตารางไขว้ 4×4")+
-    matrixTable(2,stats,"ตารางไขว้ 4×4")+
-    distributionTable(3,stats,"ตารางไขว้ 4×4");
-}
-function render() {
-  try {
+function render(){
+  try{
     clearError();
     $("data-source").textContent=state.source;
     const recordsMode=state.mode==="records";
     const stats=recordsMode?state.summary.criteria[getSelected()]:state.matrixSummary;
     summaryCards(stats,recordsMode?"เกณฑ์ "+(getSelected()+1):"เกณฑ์เดียว (4×4)");
-    $("analysis-context").textContent=recordsMode?
-      "รูปแบบรายคน · ผู้ประเมิน 2 คน · นักเรียน "+state.summary.n+
-      " คน · 5 เกณฑ์ · กำลังดูรายละเอียดเกณฑ์ "+(getSelected()+1)+
-      " · เน้น "+modeLabel[weight()]:
-      "รูปแบบตารางไขว้ · ผู้ประเมิน 2 คน · "+stats.n+
-      " คู่คะแนน · เกณฑ์เดียว · เน้น "+modeLabel[weight()];
-    $("chart-block").hidden=!recordsMode;
-    if(recordsMode)plot(state.summary.criteria);
-    $("apa-output").innerHTML=recordsMode?reportRecords(state.summary):reportMatrix(stats);
-  } catch(err) { showError(err); }
+    $("analysis-context").textContent=metricLabels[state.view]+" · "+(recordsMode?
+      "ข้อมูลรายคน "+state.summary.n+" คน × 5 เกณฑ์ · เลือกเกณฑ์ "+(getSelected()+1):
+      "ตารางไขว้ 4×4 · "+stats.n+" คู่");
+    $("chart-block").hidden=!recordsMode||state.view==="agreement";
+    if(recordsMode&&state.view!=="agreement")plot(state.summary.criteria);
+    $("apa-output").innerHTML=reportOne(recordsMode?state.summary.criteria:[stats],recordsMode);
+    $("stat-chart-title").textContent="กราฟ "+metricLabels[state.view]+" แยก 5 เกณฑ์";
+    document.querySelectorAll("[data-metric]").forEach(button=>{
+      button.setAttribute("aria-current",String(button.dataset.metric===state.view));
+    });
+  }catch(err){showError(err);}
 }
 function analyze() {
   try {
@@ -241,7 +196,13 @@ buildMatrixInputs();
 fillStudentDropdown();
 $("mode-records").onclick=()=>switchMode("records");
 $("mode-matrix").onclick=()=>switchMode("matrix");
-$("weight").onchange=render;
+$("weight").onchange=()=>{state.view=$("weight").value;render()};
+document.querySelectorAll("[data-metric]").forEach(button=>button.onclick=()=>{
+  state.view=button.dataset.metric;
+  $("weight").value=weight();
+  if(history&&history.replaceState)history.replaceState(null,"",location.pathname+"?stat="+state.view);
+  render();
+});
 $("criterion").onchange=()=>{$("edit-criterion").value=$("criterion").value;syncEditor();render()};
 $("calculate").onclick=()=>{state.recordSource=state.source="ข้อมูลที่ผู้ใช้กรอกหรือแก้ไข";analyze()};
 $("csv-data").addEventListener("input",markDirty);
@@ -327,5 +288,8 @@ $("download-report").onclick=()=>{
   saveFile("lab02-rubric-reliability-apa.txt",text,"text/plain;charset=utf-8");
   announce("เตรียมบันทึกไฟล์รายงาน .txt แล้ว");
 };
+const initialView=new URLSearchParams(location.search).get("stat");
+if(metricLabels[initialView])state.view=initialView;
+$("weight").value=weight();
 analyze();
 })();
