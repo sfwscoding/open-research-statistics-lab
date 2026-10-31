@@ -1,0 +1,33 @@
+name: Research statistics checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  mcq-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run MCQ reference tests
+        run: node tests/mcq.test.js
+      - name: Check JavaScript syntax in HTML
+        run: |
+          node - <<'NODE'
+          const fs = require('node:fs');
+          const vm = require('node:vm');
+          const html = fs.readFileSync('index.html', 'utf8');
+          const scripts = [...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/gi)];
+          if (!scripts.length) throw Error('No inline scripts found');
+          scripts.forEach((match, i) => new vm.Script(match[1], {filename: 'inline-' + i + '.js'}));
+          console.log('Inline JavaScript syntax OK');
+          NODE
