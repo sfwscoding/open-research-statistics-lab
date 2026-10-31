@@ -24,9 +24,11 @@ jobs:
           node tests/outcomes.test.js
           node tests/competency.test.js
           node tests/kpa.test.js
+          node tests/evidence.test.js
           node --check outcomes.js
           node --check competency.js
           node --check kpa.js
+          node --check evidence.js
       - name: Check JavaScript syntax in HTML
         run: |
           node - <<'NODE'
