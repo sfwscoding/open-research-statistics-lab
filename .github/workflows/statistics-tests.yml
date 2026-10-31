@@ -30,6 +30,7 @@ jobs:
           node tests/lab04.test.js
           node tests/research-reporting.test.js
           node tests/lab03.test.js
+          node tests/lab03-routing.test.js
           node tests/stat-extensions.test.js
           node --check stat-extensions.js
           node tests/one-sample.test.js
