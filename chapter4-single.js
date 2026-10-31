@@ -22,6 +22,7 @@ const mean=a=>a.reduce((s,v)=>s+v,0)/a.length;
 const sd=a=>a.length<2?NaN:Math.sqrt(a.reduce((s,v)=>s+(v-mean(a))**2,0)/(a.length-1));
 const pct=(v,n)=>fmt(100*v/n,1)+"%";
 const pText=p=>!Number.isFinite(p)?"N/A":p<.001?"< .001":"= "+p.toFixed(3).replace(/^0/,"");
+const pCell=p=>!Number.isFinite(p)?"N/A":p<.001?"< .001":p.toFixed(3).replace(/^0/,"");
 const nval=id=>{const v=$(id).value;if(v.trim()===""||!Number.isFinite(Number(v)))throw Error("กรุณากรอกค่าตัวเลข "+id+" ให้ถูกต้อง");return Number(v)};
 const ints=(id)=>{$(id).value.split("\n");};
 const csv=(id,numCols)=>{const lines=$(id).value.trim().split(/\r?\n/).filter(Boolean).map(line=>line.split(",").map(v=>v.trim()));
@@ -106,14 +107,14 @@ function result(stat){
    const test=O.paired(values.map(()=>target),values),diff=values.map(v=>v-target),p=S.tP(test.t,test.df,"greater");
    return {cards:[["ค่าเฉลี่ยคะแนน",fmt(mean(values),2),"คะแนน"],["t",fmt(test.t,3),"df = "+test.df],["p-value",pText(p),"ทางเดียว H₁: M > μ₀"]],
     apa:table(stat,"One-Sample t-test เทียบค่าเป้าหมาย",["n","M","SD","μ₀","t(df)","95% CI ของ M−μ₀","p (ทางเดียว)"],
-      [[values.length,fmt(mean(values),2),fmt(sd(values),2),fmt(target,2),fmt(test.t,3)+" ("+test.df+")",ci(test.mean,test.sd,test.n),fmt(p,4)]],
+      [[values.length,fmt(mean(values),2),fmt(sd(values),2),fmt(target,2),fmt(test.t,3)+" ("+test.df+")",ci(test.mean,test.sd,test.n),pCell(p)]],
       "สมมติฐาน H₁: M > μ₀; CI 95% แบบสองทางสำหรับ M−μ₀; ต้องตรวจการแจกแจงและ outliers",
       "ผู้เรียน "+values.length+" คน มีค่าเฉลี่ย "+fmt(mean(values),2)+" เทียบเกณฑ์ "+fmt(target,2)+" ได้ t("+test.df+") = "+fmt(test.t,3)+", p "+pText(p)+"; ช่วงความเชื่อมั่นของผลต่างเฉลี่ย "+ci(test.mean,test.sd,test.n))};
   }
   const x=O.oneSampleAlternative(values,target,"greater");
   return {cards:[["W⁺",fmt(x.wPlus,1),"ผลรวมอันดับบวก"],["คู่ไม่เป็นศูนย์",x.wilcoxonN,"คน"],["Exact p",pText(x.wilcoxonP),"H₁: สูงกว่าเกณฑ์"]],
    apa:table(stat,"Wilcoxon Signed-Rank Test แบบเทียบกับเกณฑ์",["จำนวนทั้งหมด","ไม่เป็นศูนย์","W⁺","W⁻","p (exact)"],
-     [[x.n,x.wilcoxonN,fmt(x.wPlus,1),fmt(x.wMinus,1),fmt(x.wilcoxonP,4)]],
+     [[x.n,x.wilcoxonN,fmt(x.wPlus,1),fmt(x.wMinus,1),pCell(x.wilcoxonP)]],
      "ผลต่าง = คะแนน−"+fmt(target,2)+"; ตัดผลต่างศูนย์; exact sign-permutation; สมมติฐานทางเลือก H₁: สูงกว่าเกณฑ์; ตรวจความสมมาตรของผลต่าง",
      "ข้อมูล "+x.n+" คน ใช้ผลต่างที่ไม่เป็นศูนย์ "+x.wilcoxonN+" คู่ ได้ W⁺ = "+fmt(x.wPlus,1)+" และ exact p "+pText(x.wilcoxonP)+". ไม่ใช่การทดสอบค่าเฉลี่ย")};
  }
@@ -124,14 +125,14 @@ function result(stat){
    const test=O.paired(pre,post);
    return {cards:[["M ผลต่าง",fmt(test.mean,2),"หลัง−ก่อน"],["t",fmt(test.t,3),"df = "+test.df],["p-value",pText(test.p),"สองทาง"]],
     apa:table(stat,"ผล Paired-Samples t-test ก่อนเรียน–หลังเรียน",["n","M ก่อน","M หลัง","M ผลต่าง","SD ผลต่าง","t(df)","95% CI ผลต่าง","p"],
-     [[pre.length,fmt(mean(pre),2),fmt(mean(post),2),fmt(test.mean,2),fmt(test.sd,2),fmt(test.t,3)+" ("+test.df+")",ci(test.mean,test.sd,test.n),fmt(test.p,4)]],
+     [[pre.length,fmt(mean(pre),2),fmt(mean(post),2),fmt(test.mean,2),fmt(test.sd,2),fmt(test.t,3)+" ("+test.df+")",ci(test.mean,test.sd,test.n),pCell(test.p)]],
      "กำหนดผลต่าง = หลัง−ก่อน; t-test แบบสองทาง; CI 95% แบบสองทางสำหรับค่าเฉลี่ยผลต่าง",
      "คะแนนก่อน–หลัง "+pre.length+" คู่ มีผลต่างเฉลี่ย "+fmt(test.mean,2)+" คะแนน ได้ t("+test.df+") = "+fmt(test.t,3)+", p "+pText(test.p)+" และ 95% CI "+ci(test.mean,test.sd,test.n))};
   }
   const x=O.wilcoxon(pre,post);
   return {cards:[["W⁺",fmt(x.wPlus,1),"อันดับผลต่างบวก"],["W⁻",fmt(x.wMinus,1),"อันดับผลต่างลบ"],["p-value",pText(x.p),"Exact สองทาง"]],
    apa:table(stat,"ผล Wilcoxon Signed-Rank Test แบบจับคู่ก่อน–หลัง",["จำนวนคู่ทั้งหมด","ไม่เป็นศูนย์","W⁺","W⁻","p (exact)"],
-     [[pre.length,x.n,fmt(x.wPlus,1),fmt(x.wMinus,1),fmt(x.p,4)]],
+     [[pre.length,x.n,fmt(x.wPlus,1),fmt(x.wMinus,1),pCell(x.p)]],
      "ผลต่าง = หลัง−ก่อน; ตัดผลต่างศูนย์ด้วย Wilcox method; จัดอันดับเฉลี่ยเมื่อผูกอันดับ; exact sign-permutation สองทาง",
      "การทดสอบคะแนนจับคู่ "+pre.length+" คน พบผลต่างไม่เป็นศูนย์ "+x.n+" คู่ ค่า W⁺ = "+fmt(x.wPlus,1)+", W⁻ = "+fmt(x.wMinus,1)+", p "+pText(x.p)+" ไม่ได้ทดสอบความต่างของค่าเฉลี่ยโดยตรง")};
  }
@@ -142,7 +143,7 @@ function result(stat){
   const p=O.binomial(n,k,p0);
   return {cards:[["จำนวนผู้ผ่าน",k+"/"+n,pct(k,n)],["Exact p-value",pText(p),"H₁: p > p₀"],["ผลตัดสิน",p<alpha?"มีนัยสำคัญ":"ไม่มีนัยสำคัญ","ที่ α = "+alpha]],
    apa:table(stat,"ผลการทดสอบ Exact Binomial เทียบสัดส่วนอ้างอิง",["n","ผู้ผ่าน (k)","Observed p","H₀: p₀","Exact p","α"],
-     [[n,k,fmt(k/n),fmt(p0),fmt(p,4),fmt(alpha,3)]],
+     [[n,k,fmt(k/n),fmt(p0),pCell(p),fmt(alpha,3)]],
      "Exact Binomial ทางเดียว H₁: p > p₀; ผลเป็นสองกลุ่ม (ผ่าน/ไม่ผ่าน); การสังเกตต้องเป็นอิสระ",
      "ผู้ผ่านเกณฑ์ "+k+" จาก "+n+" คน ("+pct(k,n)+") เทียบสัดส่วนเป้าหมาย "+pct(p0*100,100)+" ได้ exact p "+pText(p)+" จึง"+(p<alpha?"ปฏิเสธ":"ไม่ปฏิเสธ")+" H₀ ที่ α = "+alpha)};
  }
