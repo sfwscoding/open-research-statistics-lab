@@ -4,7 +4,7 @@ const context={console};context.window=context;const elements={};
 context.document={getElementById(id){return elements[id]||(elements[id]={value:"",innerHTML:"",innerText:"",textContent:""})}};
 const body={set innerHTML(html){for(const m of html.matchAll(/<[\w-]+\s+[^>]*id="([^"]+)"[^>]*>/g)){const el=context.document.getElementById(m[1]);el.value=(m[0].match(/value="([^"]*)"/)||[])[1]??el.value}}};
 const load=path=>vm.runInNewContext(fs.readFileSync(path,"utf8"),context,{filename:path});
-["outcomes.js","competency.js","kpa.js","research-reporting.js","chapter4-builder.js"].forEach(load);
+["outcomes.js","competency.js","kpa.js","stat-extensions.js","research-reporting.js","chapter4-builder.js"].forEach(load);
 const R=context.ResearchReports;
 const close=(a,b,tol=1e-9)=>assert.ok(Math.abs(a-b)<tol, "expected "+b+" got "+a);
 const perfect=Array.from({length:4},(_,i)=>Array.from({length:4},(_,j)=>i===j?5:0));
