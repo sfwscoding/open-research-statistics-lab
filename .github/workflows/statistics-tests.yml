@@ -28,6 +28,7 @@ jobs:
           node tests/integration.test.js
           node tests/ui.test.js
           node tests/lab04.test.js
+          node tests/lab03.test.js
           node tests/one-sample.test.js
           node --check outcomes.js
           node --check competency.js
