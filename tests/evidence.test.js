@@ -1,0 +1,11 @@
+"use strict";
+const assert=require("node:assert/strict");
+const {Evidence}=require("../evidence.js");
+const sample=[{studentId:"S001",hour:1,dimension:"K",type:"quiz",percent:80,reference:"MT1-K"},{studentId:"S001",hour:13,dimension:"PROJECT",type:"artifact",percent:90,reference:"PJ13"},{studentId:"S002",hour:1,dimension:"P",type:"artifact",percent:75,reference:"MT1-P"}];
+let x=Evidence.validate(sample);
+assert.equal(x.recordCount,3);assert.equal(x.studentCount,2);assert.equal(x.hourCounts[0],2);assert.equal(x.hourCounts[12],1);
+assert.throws(()=>Evidence.validate([...sample,sample[0]]));
+assert.throws(()=>Evidence.validate([{...sample[0],studentId:"Student Name"}]));
+assert.throws(()=>Evidence.validate([{...sample[0],hour:13}]));
+assert.throws(()=>Evidence.validate([{...sample[1],percent:120}]));
+console.log("Evidence ledger tests passed");
