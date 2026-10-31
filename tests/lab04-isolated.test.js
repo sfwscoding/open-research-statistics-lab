@@ -55,7 +55,7 @@ new Function("document","window","navigator","URLSearchParams","hourly","rows","
 );
 assert.equal(buttons.find(b=>b["aria-current"]==="true").dataset.stat,"micro");
 assert.match(get("apaMicro").innerHTML,/ตารางที่ 2/);
-assert.equal(panel("project").parentPanel,undefined);
+assert.equal(panel("project").parentPanel,"main");
 assert.equal(get("apaResults").hidden,true);
 for(const button of buttons){
  button.onclick();
