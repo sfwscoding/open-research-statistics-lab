@@ -1,0 +1,19 @@
+/* Shared semantic palette. Backgrounds intentionally unchanged. */
+:root{--sem-blue:#2563eb;--sem-green:#15803d;--sem-red:#dc2626;--sem-orange:#c2410c;--sem-blue-soft:#eff6ff;--sem-green-soft:#f0fdf4;--sem-red-soft:#fef2f2;--sem-orange-soft:#fff7ed;--sem-ink:#26384b;--sem-line:#dbe5ed;--sem-focus:#2563eb;color-scheme:light}
+:where(button,input,select,textarea,a,summary):focus-visible{outline:3px solid var(--sem-focus)!important;outline-offset:3px}
+:where(.btn,button.primary,.primary-btn,.action-primary){background:var(--sem-blue)!important;color:white!important;border-color:var(--sem-blue)!important}
+:where(.btn,button.primary,.primary-btn,.action-primary):hover{background:#1d4ed8!important}
+:where(.active,[aria-selected="true"],[aria-current="page"]):not(.unified-nav):not(.global-lab-nav){accent-color:var(--sem-blue)}
+:where(input[type="range"],input[type="checkbox"],input[type="radio"]){accent-color:var(--sem-blue)}
+:where(.stat-pass,.success,.status-success,.passed,.pass){color:var(--sem-green)!important}
+:where(.stat-fail,.error,.status-error,.failed,.fail){color:var(--sem-red)!important}
+:where(.warning,.caution,.status-warning){color:var(--sem-orange)!important}
+:where(.badge-success,.pill-success){background:var(--sem-green-soft)!important;color:var(--sem-green)!important}
+:where(.badge-error,.pill-error){background:var(--sem-red-soft)!important;color:var(--sem-red)!important}
+:where(.badge-warning,.pill-warning){background:var(--sem-orange-soft)!important;color:var(--sem-orange)!important}
+:where(.badge-info,.pill-info){background:var(--sem-blue-soft)!important;color:#1d4ed8!important}
+:where(.panel,.card){border-color:var(--sem-line)}
+.unified-nav details.current>summary,.unified-nav details[open]>summary{background:var(--sem-blue-soft)!important;color:#1d4ed8!important}
+.unified-nav .unified-overview{color:#1d4ed8!important}
+.unified-nav .unified-dropdown a:hover,.unified-nav .unified-dropdown a:focus-visible{background:var(--sem-blue-soft)!important}
+/* Restrict palette changes to foreground UI; preserve existing body gradients. */
