@@ -15,7 +15,7 @@
 | ห้อง | รายการที่มี |
 | --- | --- |
 | **Lab 01 – MCQ Item Analysis** | ความยากรายข้อ (p), corrected item-total correlation, D จากกลุ่มสูง/ต่ำ, ตัวลวง, KR-20, ตารางและคำบรรยาย APA |
-| **Lab 02 – Rubric Reliability** | Cohen's Kappa ไม่ถ่วงน้ำหนัก; Weighted Kappa แบบ Linear และ Quadratic จากเมทริกซ์ 4 × 4; ตารางและคำบรรยาย APA |
+| **Lab 02 – Rubric Reliability** | คะแนนผู้ประเมิน 2 คน × รูบริก 5 เกณฑ์ ระดับ 1–4 (ข้อมูลจำลอง 23 คน แก้คะแนนรายคนหรือวาง CSV/TSV ได้); Cohen’s Kappa, Weighted Kappa Linear และ Quadratic แยกเกณฑ์; % agreement, MAD, ตารางไขว้ 4×4, การแจกแจงคะแนน, 95% paired bootstrap CI, กราฟ, ตาราง APA 7 และคำบรรยายผล; มีโหมดตารางไขว้เกณฑ์เดียวแบบอิสระและดาวน์โหลด CSV |
 | **Lab 03 – Learning Outcomes** | Exact Binomial (ทางเดียวและสองทาง), One-Sample t, Paired t, One-Sample Wilcoxon, Paired Wilcoxon; โหมดจำลองและข้อมูลดิบ; กราฟ; APA และ CI 95% สำหรับ t |
 | **Lab 04 – Competency Tracking** | หลักฐาน KPA 12 ชั่วโมง; Rubric 5 เกณฑ์; Hybrid Rule 80/50/20; ข้อมูลโครงงานจำลอง 4 ชั่วโมง (13–16); ตาราง APA 3 ตาราง |
 | **Lab 05 – Chapter 4 Builder** | แก้ข้อมูลและคำนวณใหม่ได้สำหรับ MCQ, Kappa, One-Sample, Paired, Exact Binomial, Hybrid Rule, KPA และโครงงาน; สร้างตาราง APA 8 ตาราง พร้อมคำบรรยายและปุ่มคัดลอก |
@@ -30,6 +30,8 @@
 - Exact Binomial ต้องมีข้อมูลสองผลลัพธ์ (ผ่าน/ไม่ผ่าน) และสมมติการสังเกตเป็นอิสระ
 - Wilcoxon Signed-Rank ใช้การกำหนดเครื่องหมายแบบ conditional exact สำหรับผลต่างไม่เป็นศูนย์ (Wilcox zero method) และอาจมีอันดับซ้ำ ควรตรวจสมมติฐานความสมมาตรของผลต่างก่อนตีความเป็นผลต่างตำแหน่ง
 - Weighted Kappa ใช้น้ำหนักความเห็นพ้องเชิงเส้นหรือกำลังสอง โดยต้องกำหนดรูปแบบน้ำหนักให้สอดคล้องกับลักษณะของคะแนนรูบริกก่อนวิเคราะห์
+- Lab 02 คำนวณค่า Kappa **แยกทั้ง 5 เกณฑ์** ไม่ใช้ค่าเฉลี่ยของ Kappa รายเกณฑ์แทนความเที่ยงของคะแนนรวม และไม่อนุมานค่าผ่านเกณฑ์สมรรถนะจากค่า Kappa
+- ช่วงความเชื่อมั่น 95% ใน Lab 02 เป็น **paired percentile bootstrap** แบบ seed คงที่ 1,500 ครั้งต่อเกณฑ์ เพื่อใช้ทดลองศึกษาเท่านั้น; ในกลุ่มตัวอย่างขนาดเล็กอาจครอบคลุมค่าจริงได้ไม่ดี ควรเทียบกับวิธีอื่นก่อนใช้อ้างอิง
 - **ยังไม่มี** ช่วงความเชื่อมั่นสำหรับ Kappa, การส่งไฟล์ Word โดยตรง, หรือการดึงข้อมูลจาก Google Classroom/Sheets อัตโนมัติ
 - เว็บไซต์ประมวลผลภายในเบราว์เซอร์ ไม่ควรวางข้อมูลที่ระบุตัวตนนักเรียนลงในเครื่องมือสาธิตโดยไม่มีมาตรการคุ้มครองที่เหมาะสม
 - ระบบยังเป็น **Research Prototype** ไม่ใช่เครื่องมือสถิติที่ผ่านการรับรองความถูกต้องสำหรับการตีพิมพ์โดยอัตโนมัติ ควรตรวจผลกับ R, JASP, jamovi หรือ SciPy
@@ -41,6 +43,7 @@
 node tests/outcomes.test.js
 node tests/stat-extensions.test.js
 node tests/research-reporting.test.js
+node tests/rubric-reliability.test.js
 ```
 
 GitHub Actions จะรันชุดทดสอบอื่นที่ระบุใน `.github/workflows/statistics-tests.yml` ทุกครั้งที่ push ไปยัง `main`.
