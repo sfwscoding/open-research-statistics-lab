@@ -109,7 +109,7 @@ let quadratic=$("weight").value==="quadratic";
 for(let r=0;r<4;r++)for(let c=0;c<4;c++){let d=Math.abs(r-c)/3,w=quadratic?d*d:d;observed+=w*m[r][c]/n;expected+=w*rows[r]*cols[c]/(n*n)}
 if(expected<1e-12){$("output").textContent=observed<1e-12?"ไม่สามารถคำนวณ κ ได้: ความไม่เห็นพ้องที่คาดหมายเป็นศูนย์ (ทุกคะแนนอยู่ระดับเดียวกัน)":"ไม่สามารถคำนวณ κ ได้: ค่าคาดหมายเป็นศูนย์";return}
 let kappa=1-observed/expected;
-$("output").textContent="จำนวนคู่ประเมิน = "+n+" · Weighted κ ("+(quadratic?"quadratic":"linear")+") = "+kappa.toFixed(4)+" · ความไม่เห็นพ้องสังเกต = "+observed.toFixed(4)+" · ความไม่เห็นพ้องคาดหมาย = "+expected.toFixed(4)+" · ควรรายงานช่วงความเชื่อมั่นและตรวจสอบกับโปรแกรมสถิติด้วย";
+$("output").innerHTML=statCards([["คู่ประเมิน",n,"จำนวนคู่"],["Weighted κ",kappa.toFixed(4),quadratic?"Quadratic":"Linear"],["Observed",observed.toFixed(4),"ความไม่เห็นพ้อง"],["Expected",expected.toFixed(4),"ความไม่เห็นพ้องคาดหมาย"]])+visualBars([["Observed",observed],["Expected",expected]])+"<p class=stat-note>ควรรายงานช่วงความเชื่อมั่น และตรวจสอบผลกับ JASP/jamovi</p>";
 }
 $("calc").onclick=run;run();return}
 body.innerHTML='<p>โครงสร้างบทที่ 4 (ฉบับเตรียมการ)</p><ol><li>คุณภาพเครื่องมือและความสอดคล้องของผู้ประเมิน</li><li>ผลการจัดการเรียนรู้และการเปลี่ยนแปลง</li><li>ผลการบรรลุสมรรถนะตาม Hybrid Rule</li><li>ตารางผล ค่าสถิติ และคำอธิบายข้อจำกัด</li></ol><p class="muted">การสร้างข้อความรายงานจริงจะเปิดใช้เมื่อเชื่อมผลวิเคราะห์ที่ผ่านการตรวจสอบแล้ว</p>';
