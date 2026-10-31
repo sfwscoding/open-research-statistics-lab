@@ -51,7 +51,7 @@ header,.intro,.shell,.panel,.stat-card,.stat,.stat-visual,.lab-navigation,.cours
 <script src="outcomes.js"></script>
 <script src="competency.js"></script>
 <script src="kpa.js"></script>
-<script src="evidence.js"></script><script src="research-reporting.js?v=1"></script>
+<script src="evidence.js"></script><script src="research-reporting.js?v=1"></script><script src="chapter4-builder.js?v=1"></script>
 <script>
 "use strict";
 const roomIcons=["📝","⚖️","📈","🎯","📚"];
@@ -130,6 +130,6 @@ let kappa=1-observed/expected;
 $("output").innerHTML=statCards([["คู่ประเมิน",n,"จำนวนคู่"],["Weighted κ",kappa.toFixed(4),quadratic?"Quadratic":"Linear"],["Observed",observed.toFixed(4),"ความไม่เห็นพ้อง"],["Expected",expected.toFixed(4),"ความไม่เห็นพ้องคาดหมาย"]])+visualBars([["Observed",observed],["Expected",expected]])+"<p class=stat-note>ควรรายงานช่วงความเชื่อมั่น และตรวจสอบผลกับ JASP/jamovi</p>";
 }
 $("calc").onclick=run;run();return}
-body.innerHTML='<p>โครงสร้างบทที่ 4 (ฉบับเตรียมการ)</p><ol><li>คุณภาพเครื่องมือและความสอดคล้องของผู้ประเมิน</li><li>ผลการจัดการเรียนรู้และการเปลี่ยนแปลง</li><li>ผลการบรรลุสมรรถนะตาม Hybrid Rule</li><li>ตารางผล ค่าสถิติ และคำอธิบายข้อจำกัด</li></ol><p class="muted">การสร้างข้อความรายงานจริงจะเปิดใช้เมื่อเชื่อมผลวิเคราะห์ที่ผ่านการตรวจสอบแล้ว</p>';
+ResearchChapter4.init(body);
 }
 </script><script>openRoom(4);</script><script src="shared-nav.js"></script></body></html>
