@@ -47,11 +47,13 @@ jobs:
       - name: Check JavaScript syntax in HTML
         run: |
           node - <<'NODE'
-          const fs = require('node:fs');
-          const vm = require('node:vm');
-          const html = fs.readFileSync('index.html', 'utf8');
-          const scripts = [...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/gi)];
-          if (!scripts.length) throw Error('No inline scripts found');
-          scripts.forEach((match, i) => new vm.Script(match[1], {filename: 'inline-' + i + '.js'}));
-          console.log('Inline JavaScript syntax OK');
+          const fs=require('node:fs');
+          const vm=require('node:vm');
+          for(const page of ['index.html','lab01.html','lab02.html','lab03.html','lab04.html','lab05.html']){
+            const html=fs.readFileSync(page,'utf8');
+            const inline=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];
+            inline.forEach((match,i)=>new vm.Script(match[1],{filename:page+'-inline-'+i}));
+            if(page==='lab02.html'&&!html.includes('lab02-app.js'))throw Error('Lab 02 app is missing');
+            console.log(page+': '+inline.length+' inline scripts parsed');
+          }
           NODE
