@@ -1,135 +1,145 @@
 <!doctype html>
-<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="ห้องปฏิบัติการสถิติการวิจัยทางการศึกษา แบบจำลองเชิงโต้ตอบ"><title>Open Research Statistics Lab</title>
-<style>:root{--ui-blue:#2563eb;--ui-green:#15803d;--ui-red:#dc2626;--ui-orange:#c2410c;--ui-text:#25364a;--ui-muted:#64748b;--ui-border:#e2e8f0;--ui-surface:#fff;--ui-soft:#f8fafc;font-family:system-ui,"Noto Sans Thai",sans-serif;color:var(--ui-text)}*{box-sizing:border-box}body{margin:0;background:linear-gradient(120deg,#bff1ef 0%,#d7f5e8 48%,#d5ebff 100%);min-height:100vh}header{max-width:1340px;margin:20px auto 0;padding:36px 42px;background:#fff;border:1px solid var(--ui-border);border-radius:24px;box-shadow:none;color:var(--ui-text)}header h1{font-size:clamp(26px,4vw,42px);margin:5px 0 10px;color:#1e40af}header p{color:var(--ui-muted);line-height:1.7}header .muted{color:#1d4ed8!important;font-size:12px;letter-spacing:.08em;font-weight:800}main{max-width:1320px;margin:auto;padding:25px 20px 60px}.intro{color:var(--ui-muted);line-height:1.8}.panel,.card,.stat-card,.stat-visual{background:#fff;border:1px solid var(--ui-border);border-radius:18px;box-shadow:none}.panel{padding:clamp(18px,3vw,30px);margin-top:20px}.card{padding:22px}.card h2,.panel h2,h2,h3{color:var(--ui-text)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.muted,.stat-note,small{color:var(--ui-muted)}.btn,button.btn{display:inline-block;cursor:pointer;border:1px solid #2563eb;border-radius:11px;padding:11px 16px;background:#2563eb;color:white;font:inherit;font-weight:650;text-decoration:none}.btn:hover{background:#1d4ed8}.btn:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #2563eb;outline-offset:3px}label{display:block;font-weight:650;color:#334155;margin:12px 0 6px}input,textarea,select{background:#fff;color:#25364a;border:1px solid #cbd5e1!important;border-radius:10px!important;padding:10px;font:inherit;max-width:100%}input{width:100%;max-width:220px}.inputs{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start}.result{background:#f8fafc;color:#334155;border:1px solid var(--ui-border);border-left:4px solid #2563eb;border-radius:12px;padding:18px;margin-top:16px;line-height:1.8;overflow-x:auto}.stat-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}.stat-card{padding:16px}.stat-card strong{display:block;font-size:clamp(20px,2.5vw,28px);color:#1d4ed8;margin:5px 0;overflow-wrap:anywhere}.stat-card:nth-child(4n+2){border-top:3px solid #15803d}.stat-card:nth-child(4n+3){border-top:3px solid #dc2626}.stat-card:nth-child(4n+4){border-top:3px solid #c2410c}.stat-card:nth-child(4n+2) strong{color:#15803d}.stat-card:nth-child(4n+3) strong{color:#dc2626}.stat-card:nth-child(4n+4) strong{color:#c2410c}.stat-visual{margin:18px 0;padding:16px}.stat-track{height:20px;border-radius:12px;background:#e2e8f0;overflow:hidden;margin:8px 0}.stat-fill{height:100%;border-radius:12px;background:linear-gradient(90deg,#2563eb,#15803d)}.stat-pass{color:#15803d}.stat-fail{color:#dc2626}.stat-note{font-size:13px;line-height:1.6}a{color:#1d4ed8}table{border-collapse:collapse;width:100%}th{background:#f1f5f9;color:#334155;text-align:left;padding:12px}td{padding:11px;border-bottom:1px solid #e2e8f0}tbody tr:nth-child(even){background:#f8fafc}#workspace{scroll-margin-top:18px}#lab-title{margin-top:0}.num{color:#1d4ed8;font-weight:800}.room-icon{font-size:26px}.stat-visual svg{max-width:100%}footer{text-align:center;padding:24px;color:var(--ui-muted)}@media(max-width:700px){header{margin:12px 10px 0;padding:24px 20px}main{padding:18px 12px 50px}.inputs>div{min-width:130px;flex:1}.inputs input{width:100%}}
-/* Lab 01: intentional four-color visual rhythm; neutral surfaces retained. */
-header{border-top:6px solid #2563eb;background:linear-gradient(105deg,#ffffff 0%,#ffffff 74%,#eff6ff 100%)}header h1{color:#25364a}header .muted{color:#1d4ed8!important}
-#workspace.panel{border-top:5px solid #15803d;box-shadow:none}
-#workspace #lab-title{color:#15803d}
-#lab-body .panel:nth-of-type(4n+1){border-top:4px solid #2563eb}
-#lab-body .panel:nth-of-type(4n+2){border-top:4px solid #15803d}
-#lab-body .panel:nth-of-type(4n+3){border-top:4px solid #c2410c}
-#lab-body .panel:nth-of-type(4n+4){border-top:4px solid #dc2626}
-#lab-body h3:nth-of-type(4n+1){border-left:4px solid #2563eb}
-#lab-body h3:nth-of-type(4n+2){border-left:4px solid #15803d}
-#lab-body h3:nth-of-type(4n+3){border-left:4px solid #c2410c}
-#lab-body h3:nth-of-type(4n+4){border-left:4px solid #dc2626}
-#lab-body h3{padding-left:12px;margin-top:24px}
-.stat-cards .stat-card:nth-child(4n+1){border-top:4px solid #2563eb;background:#eff6ff}
-.stat-cards .stat-card:nth-child(4n+2){border-top:4px solid #15803d;background:#f0fdf4}
-.stat-cards .stat-card:nth-child(4n+3){border-top:4px solid #dc2626;background:#fef2f2}
-.stat-cards .stat-card:nth-child(4n+4){border-top:4px solid #c2410c;background:#fff7ed}
-.stat-card:nth-child(4n+1) strong{color:#1d4ed8}.stat-card:nth-child(4n+2) strong{color:#15803d}.stat-card:nth-child(4n+3) strong{color:#dc2626}.stat-card:nth-child(4n+4) strong{color:#c2410c}
-.result{background:#f8fafc;border-left-color:#15803d}
-.result:has(.stat-fail){border-left-color:#dc2626;background:#fffafa}
-.result:has(.stat-pass):not(:has(.stat-fail)){border-left-color:#15803d;background:#f8fdf9}
-.stat-visual{border-top:4px solid #c2410c}
-.stat-visual:nth-of-type(even){border-top-color:#2563eb}
-.stat-track{background:#e2e8f0}.stat-fill{background:linear-gradient(90deg,#2563eb 0%,#15803d 100%)}
-#lab-body th{background:#eff6ff;color:#1e40af}
-#lab-body tbody tr:nth-child(even){background:#f8fafc}
-#lab-body input[type=range]{accent-color:#2563eb}
-#lab-body .stat-pass{color:#15803d;font-weight:700}
-#lab-body .stat-fail{color:#dc2626;font-weight:700}
-#lab-body .stat-note{border-left:3px solid #c2410c;padding:8px 12px;background:#fff7ed;border-radius:5px}
-#lab-body .btn{background:#2563eb;color:#fff}
-@media(max-width:700px){header{background:#fff}#lab-body h3{padding-left:9px}}
-
-/* Flat & Clean: no decorative shadows across all Lab surfaces. */
-*,*::before,*::after{box-shadow:none!important;text-shadow:none!important}
-
-/* Flat card surfaces: remove decorative thick color rails, retain APA table rules. */
-header,.intro,.shell,.panel,.stat-card,.stat,.stat-visual,.lab-navigation,.course,.summary,.result,.interpret,.apa-interpret,#workspace,.layout>.stack>.panel,.right>.panel,#lab-body .panel,.stat-cards .stat-card{border-top:0!important;box-shadow:none!important}
-/* Thin neutral outlines preserve grouping without colored edge emphasis. */
-.panel,.stat-card,.stat,.stat-visual,.lab-navigation,.course,.summary,.result,.interpret,.apa-interpret{border-color:#e2e8f0}
-</style><link rel="stylesheet" href="shared-nav.css"><link rel="stylesheet" href="research-reporting.css?v=1"></head><body>
-<header><div class="muted" style="color:#9ad8df">OPEN RESEARCH STATISTICS LAB · LAB 02</div><h1>Lab 02 · Rubric Reliability</h1><p>เครื่องมือวิเคราะห์และทดลองทางสถิติสำหรับการวิจัยทางการศึกษา</p></header>
-<main><p class="intro">ต้นแบบสำหรับศึกษาสถิติการวิจัยด้านการจัดการเรียนรู้ฐานสมรรถนะ (CBE) โดยใช้ข้อมูลจำลองเท่านั้น ไม่จัดเก็บข้อมูลนักเรียนจริงบนเว็บไซต์</p>
-<section class="lab-overview" style="display:none"><div class="lab-eyebrow">YOUR INTERACTIVE RESEARCH WORKSPACE</div><h2>เลือกห้องทดลอง แล้วปรับค่าดูผลได้ทันที</h2><p>5 ห้องทดลอง · ข้อมูลจำลอง · แสดงผลเป็นภาพและคำอธิบายภาษาไทย</p></section><section class="panel" style="display:none;background:#e5f7f1;border:4px solid white"><h2>Lab 04 · Dashboard รุ่นทดลองใหม่</h2><p class="intro">กราฟเส้น KPA 12 ชั่วโมง · เลือกนักเรียน · แก้คะแนนจำลอง · Hybrid Rule 5 เกณฑ์</p><a class="btn" href="lab04.html" style="text-decoration:none">เปิด Lab 04 แบบ Dashboard ใหม่</a></section><section class="panel" style="display:none;background:#f2eaff;border:4px solid white"><h2>Lab 03 · Learning Outcomes Dashboard ใหม่</h2><p>Exact Binomial · One-Sample t · Exact Wilcoxon พร้อมกราฟการแจกแจง โหมดทดลอง/ข้อมูลดิบแยกกัน และตาราง APA 7</p><a class="btn" href="lab03.html" style="text-decoration:none">เปิด Lab 03 แบบ Dashboard ใหม่</a></section><section class="panel" id="catalog" style="display:none"><h2>สารบัญสถิติ Lab 01–05</h2><p class="intro">เลือกหัวข้อจากหมวดเลขลำดับชั้น โดยแต่ละค่าสถิติจะมีกราฟ ตาราง APA 7 คำบรรยายผล และอ้างอิงอยู่ในรายการเดียวกัน</p><div class="grid"><article class="card"><h2>1. คุณภาพข้อสอบ</h2><p>1.1 Item Analysis</p><p>1.1.1 ความยาก (p)<br>1.1.2 อำนาจจำแนก<br>1.1.3 ตัวลวง</p><p>1.2 Reliability · KR-20</p><a href="#workspace">เปิด Lab 01 ด้านล่าง</a></article><article class="card"><h2>2. ความเที่ยงของ Rubric</h2><p>2.1 Inter-rater Agreement</p><p>2.1.1 Cohen’s Kappa<br>2.1.2 Weighted Kappa</p><p>2.2 ตารางความสอดคล้อง</p><a href="#workspace">เปิด Lab 02 ด้านล่าง</a></article><article class="card"><h2>3. ผลการเรียนรู้</h2><p>3.1 ค่าเฉลี่ยเทียบเกณฑ์<br>3.1.1 One-Sample t<br>3.1.2 Wilcoxon เทียบเกณฑ์</p><p>3.2 ข้อมูลแบบจับคู่<br>3.2.1 Paired t<br>3.2.2 Wilcoxon ก่อน–หลัง</p><p>3.3 สัดส่วนเทียบเป้าหมาย<br>3.3.1 Exact Binomial</p><a href="lab03.html">เปิด Lab 03 Dashboard</a></article><article class="card"><h2>4. ติดตามสมรรถนะ</h2><p>4.1 KPA / Micro Task<br>4.1.1 KPA 12 ชั่วโมง<br>4.1.2 Micro Task</p><p>4.2 Rubric / Hybrid Rule<br>4.3 โครงงาน</p><a href="lab04.html">เปิด Lab 04 Dashboard</a></article><article class="card"><h2>5. รายงานผลวิจัย</h2><p>5.1 รายงานตามวัตถุประสงค์<br>5.1.1 ผลการตรวจสอบเครื่องมือ<br>5.1.2 ผลการพัฒนาผู้เรียน</p><p>5.2 บูรณาการผลจาก Lab 01–04</p><a href="#workspace">เปิด Lab 05 ด้านล่าง</a></article></div><p class="muted">หมายเหตุ: Lab 01, 02 และ 05 ยังใช้เครื่องมือเดิมในหน้าแรก ส่วนการย้ายเป็น Dashboard และจัด APA 7 รายสถิติจะทยอยพัฒนาต่อ</p></section><section class="grid" id="rooms" style="display:none"></section>
-<section class="panel" id="workspace" aria-live="polite"><h2 id="lab-title">เริ่มต้นทดลอง</h2><p id="lab-desc" class="intro">เลือกห้องปฏิบัติการด้านบนเพื่อเริ่มเรียนรู้</p><div id="lab-body"></div></section>
-<section class="panel"><h2>หลักการใช้ผลวิเคราะห์</h2><p class="intro">แบบจำลองนี้ใช้เพื่อการเรียนรู้และตรวจสอบความเข้าใจ ไม่ใช้แทนการวิเคราะห์ข้อมูลจริงด้วย JASP หรือ jamovi การตีความนัยสำคัญต้องพิจารณาสมมติฐาน การออกแบบวิจัย ขนาดผล และความไม่แน่นอนประกอบเสมอ</p><p><a href="https://jasp-stats.org/" target="_blank" rel="noopener">JASP</a> · <a href="https://www.jamovi.org/" target="_blank" rel="noopener">jamovi</a> · <a href="https://www.itl.nist.gov/div898/handbook/" target="_blank" rel="noopener">NIST Statistical Handbook</a></p></section>
-</main><footer>Open Research Statistics Lab · Research prototype · ข้อมูลจำลอง</footer>
-<script src="outcomes.js"></script>
-<script src="competency.js"></script>
-<script src="kpa.js"></script>
-<script src="evidence.js"></script><script src="research-reporting.js?v=1"></script>
-<script>
-"use strict";
-const roomIcons=["📝","⚖️","📈","🎯","📚"];
-const rooms=[
-["MCQ Item Analysis","ความยาก อำนาจจำแนก ความเที่ยง และตัวลวง"],
-["Rubric Reliability","ความสอดคล้องของผู้ประเมินและ Weighted Kappa"],
-["Learning Outcomes","One-Sample / Paired t-test, Wilcoxon และ Exact Binomial"],
-["Competency Tracking","ติดตามสมรรถนะด้วย Rubric 5 เกณฑ์และ Hybrid Rule"],
-["Chapter 4 Builder","โครงร่างการรายงานผลวิจัยตามวัตถุประสงค์"]];
-const $=id=>document.getElementById(id);
-$("rooms").innerHTML=rooms.map((r,i)=>'<article class="card"><div class="room-icon">'+roomIcons[i]+'</div><span class="num">LAB 0'+(i+1)+'</span><h2>'+r[0]+'</h2><p>'+r[1]+'</p><button class="btn" data-room="'+i+'">เปิดห้องทดลอง</button></article>').join("");
-document.querySelectorAll("[data-room]").forEach(b=>b.addEventListener("click",()=>openRoom(Number(b.dataset.room))));
-function field(id,label,value,min,max,step=1){return '<div><label for="'+id+'">'+label+'</label><input id="'+id+'" type="number" min="'+min+'" max="'+max+'" step="'+step+'" value="'+value+'"></div>'}
-function get(id){return Number($(id).value)}
-function valid(x,min,max){return Number.isFinite(x)&&x>=min&&x<=max}
-function choose(n,k){let p=1;for(let i=1;i<=k;i++)p=p*(n-i+1)/i;return p}
-function binTail(n,k,p){let s=0;for(let i=k;i<=n;i++)s+=choose(n,i)*Math.pow(p,i)*Math.pow(1-p,n-i);return Math.min(1,s)}
-function visualBars(rows){const max=Math.max(1,...rows.map(r=>r[1]));return '<div class="stat-visual" role="img" aria-label="กราฟเปรียบเทียบค่า"><div class="visual-bars">'+rows.map(([name,val])=>'<div class="visual-row"><span>'+name+'</span><div class="stat-track"><div class="stat-fill" style="width:'+(100*val/max).toFixed(2)+'%"></div></div><strong>'+Number(val).toFixed(1)+'</strong></div>').join('')+'</div></div>'}
-function statCards(items){return '<div class="stat-cards">'+items.map(([label,value,desc])=>'<div class="stat-card"><small>'+label+'</small><strong>'+value+'</strong><small>'+desc+'</small></div>').join('')+'</div>'}
-function statBar(value,max,label){let pct=max>0?Math.min(100,Math.max(0,100*value/max)):0;return '<div class="stat-visual"><div><strong>'+label+'</strong> · '+value+' / '+max+'</div><div class="stat-track"><div class="stat-fill" style="width:'+pct+'%"></div></div><div class="stat-note">'+pct.toFixed(1)+'% ของทั้งหมด</div></div>'}
-function statDecision(p,alpha){return '<p class="'+(p<alpha?'stat-pass':'stat-fail')+'"><strong>'+(p<alpha?'มีนัยสำคัญทางสถิติ':'ไม่มีนัยสำคัญทางสถิติ')+'</strong> เมื่อ α='+alpha+'</p>'}
-function openRoom(i){
-$("workspace").scrollIntoView({behavior:"auto",block:"start"});
-$("lab-title").textContent=rooms[i][0];$("lab-desc").textContent=rooms[i][1];
-const body=$("lab-body");
-if(i===2){
-body.innerHTML='<p>ทดสอบผลก่อน–หลังเรียนด้วยข้อมูลจับคู่ (หนึ่งบรรทัดต่อหนึ่งคน) และ Exact Binomial แบบทางเดียว ข้อมูลเริ่มต้นเป็นข้อมูลจำลอง</p><div class="inputs"><div><label for="pre">คะแนนก่อนเรียน</label><textarea id="pre" rows="7" style="width:220px;padding:10px"></textarea></div><div><label for="post">คะแนนหลังเรียน</label><textarea id="post" rows="7" style="width:220px;padding:10px"></textarea></div></div><p><button class="btn" id="paired-calc">คำนวณ Paired t-test และ Wilcoxon</button></p><div class="result" id="paired-output"></div><hr><h3>Exact Binomial Test</h3><div class="inputs">'+field("n","จำนวนนักเรียน",23,1,200)+field("k","จำนวนผู้ผ่านเกณฑ์",19,0,200)+field("p0","สัดส่วนภายใต้ H₀",0.7,0,1,0.01)+field("alpha","ระดับนัยสำคัญ α",0.05,0.001,0.5,0.001)+'</div><p><button class="btn" id="calc">คำนวณ Exact Binomial</button></p><div class="result" id="output"></div><p class="muted">Paired t เป็นการทดสอบสองทาง; Wilcoxon ใช้ exact conditional sign permutation (ตัดผลต่างศูนย์ออก และคงอันดับเฉลี่ยกรณีผูกอันดับ) โดยทดสอบสองทาง; ผล Wilcoxon ไม่ใช่การทดสอบความต่างของค่าเฉลี่ยโดยตรง</p>';
-$("pre").value=Array.from({length:23},(_,i)=>String(8+i%7)).join("\n");$("post").value=Array.from({length:23},(_,i)=>String(10+i%7+(i%5===0?0:1))).join("\n");
-function runPaired(){try{const parse=id=>$(id).value.trim().split(/[\s,;]+/).map(Number);let pre=parse("pre"),post=parse("post"),t=Outcomes.paired(pre,post),w=Outcomes.wilcoxon(pre,post);$("paired-output").textContent="PAIRED t-TEST · คู่ข้อมูล n="+t.n+" · ค่าเฉลี่ยผลต่าง (หลัง−ก่อน)="+t.mean.toFixed(3)+" · t("+t.df+")="+t.t.toFixed(4)+" · p (สองทาง)="+t.p.toFixed(6)+" · Cohen dz="+(t.dz===null?"N/A":t.dz.toFixed(3))+" · Wilcoxon W+="+w.wPlus+" · W−="+w.wMinus+" · คู่ไม่เป็นศูนย์="+w.n+" · exact p (สองทาง)="+w.p.toFixed(6)}catch(e){$("paired-output").textContent=e.message}}
-function runBin(){try{let n=get("n"),k=get("k"),p=get("p0"),alpha=get("alpha");if(!valid(alpha,.001,.5))throw Error("ระดับนัยสำคัญไม่ถูกต้อง");if(!Number.isSafeInteger(n)||!Number.isSafeInteger(k)||k>n||n<1)throw Error("กรุณาระบุจำนวนเต็ม n และ k โดย 0 ≤ k ≤ n");let pv=Outcomes.binomial(n,k,p);$("output").innerHTML='<h3>Exact Binomial Test</h3>'+statCards([["n",n,"จำนวนทั้งหมด"],["ผ่าน",k,"จำนวนสำเร็จ"],["Observed", (100*k/n).toFixed(1)+"%","สัดส่วนสังเกต"],["p-value",pv.toFixed(6),"ทางเดียว H₁: p > "+p]])+statBar(k,n,"ผู้ผ่านเกณฑ์")+statDecision(pv,alpha);}catch(e){$("output").textContent=e.message}}
-$("paired-calc").onclick=runPaired;$("calc").onclick=runBin;runPaired();runBin();
-const one=document.createElement("section");one.style.marginTop="30px";one.innerHTML='<h3>One-Sample t-test และ Wilcoxon Signed-Rank</h3><p>เปรียบเทียบคะแนนนักเรียนกลุ่มเดียวกับค่าเป้าหมายที่กำหนด · เลือกสมมติฐานสองทางหรือทางเดียวได้ · ใช้ข้อมูลจำลอง</p><div class="inputs"><div><label for="one-data">คะแนนรายคน (แยกด้วยบรรทัดหรือจุลภาค)</label><textarea id="one-data" rows="7" style="width:220px;padding:10px"></textarea></div><div>'+field("one-target","ค่าเป้าหมาย (μ₀)",12,0,100,.1)+'</div><div><label for="one-alt">สมมติฐานทางเลือก H₁</label><select id="one-alt" style="padding:10px"><option value="two-sided">แตกต่าง (สองทาง)</option><option value="greater" selected>มากกว่า (ทางเดียว)</option><option value="less">น้อยกว่า (ทางเดียว)</option></select></div></div><p><button class="btn" id="one-calc">คำนวณ One-Sample t-test และ Wilcoxon</button></p><div class="result" id="one-output"></div><p class="muted">One-Sample t-test ทดสอบค่าเฉลี่ย ส่วน Wilcoxon Signed-Rank ทดสอบความสมมาตรของผลต่างรอบค่ากลางอ้างอิง ไม่ใช่การทดสอบมัธยฐานโดยไม่มีเงื่อนไข · Exact Wilcoxon รองรับผลต่างไม่เป็นศูนย์ไม่เกิน 30 คน</p>';body.insertBefore(one,body.firstChild);$("one-data").value=Array.from({length:23},(_,j)=>String(10+(j*7)%9)).join("\n");
-function runOne(){try{let values=$("one-data").value.trim().split(/[\s,;]+/).map(Number),target=get("one-target"),r=Outcomes.oneSampleAlternative(values,target,$("one-alt").value);$("one-output").innerHTML='<h3>One-Sample t-test</h3>'+statCards([["n",r.n,"จำนวนข้อมูล"],["Mean",r.mean.toFixed(2),"คะแนนเฉลี่ย"],["t ("+r.df+")",r.t.toFixed(3),"ค่าสถิติ t"],["p-value",r.tP.toFixed(5),"สมมติฐาน "+r.alternative],["Cohen d",r.d===null?"N/A":r.d.toFixed(3),"ขนาดอิทธิพล"]])+statDecision(r.tP,.05)+'<h3>One-Sample Wilcoxon Signed-Rank</h3>'+statCards([["W+",r.wPlus,"ผลรวมอันดับบวก"],["W−",r.wMinus,"ผลรวมอันดับลบ"],["Exact p",r.wilcoxonP.toFixed(5),"สมมติฐาน "+r.alternative]])+statDecision(r.wilcoxonP,.05)+statBar(r.wPlus,r.wPlus+r.wMinus,"สัดส่วนอันดับบวก")}catch(e){$("one-output").textContent=e.message}}
-$("one-calc").onclick=runOne;runOne();return}
-if(i===3){
-body.innerHTML='<p>วางคะแนนรูบริก 5 เกณฑ์ต่อคน ระดับ 1–4 ในรูปแบบ CSV (แถวแรกเป็นชื่อเกณฑ์) ตรวจ Hybrid Rule ทั้ง 15 เงื่อนไข: ≥80% ระดับ ≥2, ≥50% ระดับ ≥3 และ ≥20% ระดับ 4 <strong>ทุกเกณฑ์</strong></p><label for="rubric-data">คะแนนรายคน (ไม่ระบุชื่อ)</label><textarea id="rubric-data" rows="11" style="width:100%;font:13px monospace;padding:12px;border:1px solid #bdced7;border-radius:9px"></textarea><p><button class="btn" id="rubric-calc">ประเมิน Hybrid Rule</button></p><div class="result" id="rubric-output"></div><div id="rubric-table" style="overflow-x:auto;margin-top:12px"></div><p class="muted">นี่คือเกณฑ์ปฏิบัติการที่กำหนดสำหรับงานวิจัย ไม่ใช่มาตรฐานสากลทั่วไป · ค่าเฉลี่ยระดับรูบริกแสดงเพื่อพรรณนาเท่านั้น</p>';
-let demo=["K1,K2,K3,K4,K5"];for(let i=0;i<23;i++)demo.push(Array.from({length:5},(_,j)=>String(1+((i*3+j*7+i*j)%4))).join(","));$("rubric-data").value=demo.join("\n");
-function run(){try{const lines=$("rubric-data").value.trim().split(/\r?\n/).map(line=>line.split(",").map(v=>v.trim()));if(lines.length<2||lines[0].length!==5||lines.some(x=>x.length!==5))throw Error("ต้องมีหัวตาราง 5 คอลัมน์ และคะแนน 5 ค่าในแต่ละแถว");const rows=lines.slice(1).map(row=>row.map(v=>v!==""?Number(v):NaN));let result=Competency.evaluate(rows),names=lines[0];$("rubric-output").innerHTML=statCards([["นักเรียน",result.n,"คน"],["ผ่านเงื่อนไข",result.passedConditions+"/15","เกณฑ์ทั้งหมด"],["ผล Hybrid Rule",result.passed?"ผ่าน":"ยังไม่ผ่าน","ทุกเกณฑ์ต้องผ่าน"]])+statBar(result.passedConditions,15,"เงื่อนไขที่ผ่าน")+visualBars(result.criteria.map((c,j)=>["เกณฑ์ "+(j+1),c.reached[1]/result.n*100]));const escape=v=>String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));$("rubric-table").innerHTML='<table style="width:100%;border-collapse:collapse;text-align:left"><thead><tr><th>เกณฑ์</th><th>ระดับ 1/2/3/4</th><th>≥2 (80%)</th><th>≥3 (50%)</th><th>=4 (20%)</th><th>เฉลี่ย</th></tr></thead><tbody>'+result.criteria.map((c,j)=>'<tr style="border-top:1px solid #dce6ec"><td>'+escape(names[j])+'</td><td>'+c.counts.join(" / ")+'</td>'+c.reached.map((v,i)=>'<td>'+v+'/'+result.n+' '+(c.passed[i]?"✓":"✗")+'</td>').join("")+'<td>'+c.mean.toFixed(2)+'</td></tr>').join("")+'</tbody></table>'}catch(e){$("rubric-output").textContent=e.message;$("rubric-table").textContent=""}}
-$("rubric-calc").onclick=run;run();
-const section=document.createElement("section");section.style.marginTop="26px";section.innerHTML='<h3>หลักฐาน KPA สะสมรายชั่วโมง (12 ชั่วโมง)</h3><p>กรอกข้อมูล 36 คอลัมน์ต่อคน ตามลำดับ K1,P1,A1,...,K12,P12,A12 เป็นร้อยละ 0–100 (แถวแรกเป็นหัวตาราง) · ข้อมูลเริ่มต้นเป็นข้อมูลจำลอง</p><label for="kpa-data">ข้อมูลหลักฐานรายคน (CSV)</label><textarea id="kpa-data" rows="7" style="width:100%;font:12px monospace;padding:12px;border:1px solid #bdced7;border-radius:9px"></textarea><p><button class="btn" id="kpa-calc">สรุป KPA รายชั่วโมง</button></p><div id="kpa-output" class="result"></div><div id="kpa-table" style="overflow-x:auto;margin-top:12px"></div><p class="muted">ค่า K/P/A เป็นร้อยละของหลักฐานตามเครื่องมือที่กำหนด มิใช่คะแนนรูบริกสมรรถนะ และยังไม่รวมหลักฐานโครงงาน 4 ชั่วโมง · ต้องตรวจความเทียบเคียงของคะแนนข้ามภาระงานก่อนตีความแนวโน้ม</p>';body.appendChild(section);
-const head=Array.from({length:12},(_,h)=>["K","P","A"].map(t=>t+(h+1))).flat();let demoK=[head.join(",")];for(let i=0;i<23;i++)demoK.push(Array.from({length:36},(_,j)=>Math.min(100,Math.max(0,Math.round(46+Math.floor(j/3)*2.2+(j%3)*3+(i*7+j*3)%19)))).join(","));$("kpa-data").value=demoK.join("\n");
-function runKpa(){try{let lines=$("kpa-data").value.trim().split(/\r?\n/).map(v=>v.split(",").map(x=>x.trim()));if(lines.length<2||lines[0].length!==36||lines.some(v=>v.length!==36))throw Error("ต้องมี 36 คอลัมน์ K/P/A ครบ 12 ชั่วโมง");let rows=lines.slice(1).map(r=>r.map(v=>v===""?NaN:Number(v))),result=KPATracker.analyze(rows);$("kpa-output").innerHTML=statCards([["นักเรียน",result.n,"ข้อมูลจำลอง"],["K",result.overall.K.toFixed(1)+"%","ความรู้"],["P",result.overall.P.toFixed(1)+"%","ทักษะ"],["A",result.overall.A.toFixed(1)+"%","เจตคติ"]])+visualBars(result.hours.map(h=>["ชั่วโมง "+h.hour,(h.K+h.P+h.A)/3]))+"<p class=stat-note>กราฟรายชั่วโมงเป็นค่าเฉลี่ย K/P/A เพื่อพรรณนา ไม่ใช่หลักฐานยืนยันสมรรถนะ</p>";$("kpa-table").innerHTML='<table style="width:100%;border-collapse:collapse"><thead><tr><th>ชั่วโมง</th><th>K (%)</th><th>P (%)</th><th>A (%)</th><th>จำนวนหลักฐานต่อมิติ</th></tr></thead><tbody>'+result.hours.map(h=>'<tr style="border-top:1px solid #dce6ec"><td>'+h.hour+'</td><td>'+h.K.toFixed(1)+'</td><td>'+h.P.toFixed(1)+'</td><td>'+h.A.toFixed(1)+'</td><td>'+h.complete+'</td></tr>').join("")+'</tbody></table>'}catch(e){$("kpa-output").textContent=e.message;$("kpa-table").textContent=""}}
-$("kpa-calc").onclick=runKpa;runKpa();
-const evidenceSection=document.createElement("section");evidenceSection.style.marginTop="26px";evidenceSection.innerHTML='<h3>บันทึกหลักฐาน Micro Task และโครงงาน 4 ชั่วโมง</h3><p>ข้อมูลตัวอย่างแบบไม่ระบุตัวตน: studentId,hour,dimension,type,percent,reference · ชั่วโมง 1–12 ใช้ K/P/A; ชั่วโมง 13–16 ใช้ PROJECT</p><textarea id="evidence-data" rows="8" style="width:100%;font:12px monospace;padding:12px;border:1px solid #bdced7;border-radius:9px"></textarea><p><button class="btn" id="evidence-calc">ตรวจสอบและสรุปหลักฐาน</button></p><div class="result" id="evidence-output"></div><div id="evidence-table" style="overflow-x:auto;margin-top:12px"></div><p class="muted">reference เป็นรหัสหลักฐานหรือรหัสงานจำลอง ไม่ใช่ลิงก์ที่เปิดเผยข้อมูลส่วนบุคคล · ข้อมูลยังอยู่ในหน้าเว็บและไม่ได้ส่งไปยัง Google Sheets</p>';body.appendChild(evidenceSection);
-const example=["studentId,hour,dimension,type,percent,reference"];for(let i=1;i<=23;i++){let id="S"+String(i).padStart(3,"0");for(let h=1;h<=12;h++)for(let d of ["K","P","A"])example.push([id,h,d,d==="K"?"quiz":d==="P"?"artifact":"observation",55+(i*3+h*5+d.charCodeAt(0))%41,"MT"+h+"-"+d].join(","));for(let h=13;h<=16;h++)example.push([id,h,"PROJECT","artifact",60+(i+h)%36,"PJ"+h].join(","))}$("evidence-data").value=example.join("\n");
-function runEvidence(){try{let lines=$("evidence-data").value.trim().split(/\r?\n/).map(line=>line.split(",").map(v=>v.trim()));if(lines[0].join(",")!=="studentId,hour,dimension,type,percent,reference"||lines.slice(1).some(r=>r.length!==6))throw Error("หัวตารางหรือจำนวนคอลัมน์ไม่ถูกต้อง");const records=lines.slice(1).map(r=>({studentId:r[0],hour:Number(r[1]),dimension:r[2],type:r[3],percent:r[4]===""?NaN:Number(r[4]),reference:r[5]})),result=Evidence.validate(records);$("evidence-output").textContent="นักเรียนแบบรหัส "+result.studentCount+" คน · หลักฐาน "+result.recordCount+" รายการ · ชั่วโมง 1–12: "+result.hourCounts.slice(0,12).reduce((a,b)=>a+b,0)+" รายการ · โครงงาน 4 ชั่วโมง: "+result.hourCounts.slice(12).reduce((a,b)=>a+b,0)+" รายการ";$("evidence-table").innerHTML='<table style="width:100%;border-collapse:collapse"><thead><tr><th>ชั่วโมง</th><th>จำนวนหลักฐาน</th></tr></thead><tbody>'+result.hourCounts.map((count,i)=>'<tr style="border-top:1px solid #dce6ec"><td>'+(i+1)+(i>=12?" (โครงงาน)":"")+'</td><td>'+count+'</td></tr>').join("")+'</tbody></table>'}catch(e){$("evidence-output").textContent=e.message;$("evidence-table").textContent=""}}
-$("evidence-calc").onclick=runEvidence;runEvidence();return}
-if(i===0){
-body.innerHTML='<p>วางข้อมูล CSV: แถวแรกเป็นชื่อข้อสอบ แต่ละแถวถัดไปเป็นคำตอบของนักเรียนหนึ่งคน ใช้ตัวเลือก A/B/C/D และกำหนดเฉลยแยกต่างหาก</p><label for="answers">คำตอบรายคน (CSV)</label><textarea id="answers" rows="9" style="width:100%;font:13px monospace;padding:12px;border:1px solid #bdced7;border-radius:9px"></textarea><label for="key">เฉลย (คั่นด้วยจุลภาค)</label><input id="key" style="max-width:100%" value="A,B,C,D,A"><p><button class="btn" id="calc">วิเคราะห์รายข้อและ KR-20</button></p><div id="output" class="result"></div><div id="item-table" style="overflow-x:auto;margin-top:12px"></div><p class="muted">ตัวเลือกแต่ละข้อแสดงจำนวนตอบรวม / กลุ่มคะแนนสูง / กลุ่มคะแนนต่ำ โดยแบ่งกลุ่มละประมาณ 27% จากคะแนนรวม; ควรตรวจตัวลวงที่กลุ่มสูงเลือกมากกว่ากลุ่มต่ำอย่างระมัดระวัง โดยเฉพาะเมื่อคะแนนเสมอกันมาก · Corrected item-total correlation ใช้คะแนนรวมที่ตัดข้อนั้นออก; หากความแปรปรวนเป็นศูนย์จะรายงาน N/A แทนการตีความ</p>';
-const demo=['Q1,Q2,Q3,Q4,Q5'];const key=['A','B','C','D','A'];for(let i=0;i<23;i++){demo.push(key.map((v,j)=>((i*7+j*11)%23 < (18-j*2))?v:['A','B','C','D'][(i+j+1)%4]).join(','))}$("answers").value=demo.join("\n");
-function run(){
-const lines=$("answers").value.trim().split(/\r?\n/).map(x=>x.split(",").map(v=>v.trim().toUpperCase()));const keys=$("key").value.split(",").map(x=>x.trim().toUpperCase());const k=keys.length;
-if(k<2||k>100||lines.length<4||lines.length>501||lines.some(x=>x.length!==k)||keys.some(x=>!x)||lines.slice(1).some(x=>x.some(v=>!v))){$("output").textContent="รูปแบบข้อมูลไม่ถูกต้อง: ต้องมี 2–100 ข้อ, นักเรียนอย่างน้อย 3 คน และทุกแถวมีจำนวนคอลัมน์เท่ากับเฉลย";$("item-table").textContent="";return}
-const n=lines.length-1,choices=lines.slice(1),scores=choices.map(row=>row.map((v,j)=>Number(v===keys[j]))),totals=scores.map(row=>row.reduce((a,b)=>a+b,0));
-const variance=a=>{const mean=a.reduce((x,y)=>x+y,0)/a.length;return a.reduce((x,y)=>x+(y-mean)**2,0)/a.length};
-const correlation=(a,b)=>{const ma=a.reduce((x,y)=>x+y,0)/a.length,mb=b.reduce((x,y)=>x+y,0)/b.length;let c=0,va=0,vb=0;for(let i=0;i<a.length;i++){let x=a[i]-ma,y=b[i]-mb;c+=x*y;va+=x*x;vb+=y*y}return va>0&&vb>0?c/Math.sqrt(va*vb):null};
-let pq=0;const items=[];const groupSize=Math.max(1,Math.floor(n*0.27));const ordered=totals.map((t,i)=>({t,i})).sort((a,b)=>b.t-a.t||a.i-b.i);const high=ordered.slice(0,groupSize).map(v=>v.i),low=ordered.slice(-groupSize).map(v=>v.i);
-for(let j=0;j<k;j++){let col=scores.map(row=>row[j]),p=col.reduce((a,b)=>a+b,0)/n;pq+=p*(1-p);let corrected=correlation(col,totals.map((t,i)=>t-col[i]));let freq={};choices.forEach(row=>freq[row[j]]=(freq[row[j]]||0)+1);let optionStats=Object.entries(freq).sort().map(([option,count])=>({option,count,high:high.filter(i=>choices[i][j]===option).length,low:low.filter(i=>choices[i][j]===option).length}));items.push({p,corrected,freq,optionStats,discrimination:high.reduce((a,i)=>a+col[i],0)/groupSize-low.reduce((a,i)=>a+col[i],0)/groupSize})}
-const vt=variance(totals),kr=vt>0?k/(k-1)*(1-pq/vt):null;
-$("output").textContent="นักเรียน "+n+" คน · ข้อสอบ "+k+" ข้อ · คะแนนเฉลี่ย "+(totals.reduce((a,b)=>a+b,0)/n).toFixed(2)+" / "+k+" · KR-20 = "+(kr===null?"N/A (คะแนนรวมไม่มีความแปรปรวน)":kr.toFixed(4))+". กลุ่มสูงและต่ำกลุ่มละ "+groupSize+" คน (จัดลำดับคะแนนรวม; กรณีคะแนนเสมอเรียงตามลำดับข้อมูล) · ใช้สูตร KR-20 กับข้อสอบให้คะแนนแบบ 0/1 และความแปรปรวนคะแนนรวมที่ใช้ตัวหาร n";
-const esc=v=>String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-$("item-table").innerHTML='<table style="width:100%;border-collapse:collapse;text-align:left"><thead><tr><th>ข้อ</th><th>p</th><th>Corrected r</th><th>D สูง–ต่ำ</th><th>ตัวเลือก: รวม / กลุ่มสูง / กลุ่มต่ำ</th></tr></thead><tbody>'+items.map((v,j)=>'<tr style="border-top:1px solid #dce6ec"><td>'+esc(lines[0][j]||("Q"+(j+1)))+'</td><td>'+v.p.toFixed(3)+'</td><td>'+(v.corrected===null?"N/A":v.corrected.toFixed(3))+'</td><td>'+v.discrimination.toFixed(3)+'</td><td>'+v.optionStats.map(x=>esc(x.option)+(x.option===keys[j]?" ✓":"")+": "+x.count+" / "+x.high+" / "+x.low).join(" · ")+'</td></tr>').join("")+'</tbody></table>';
-}
-$("calc").onclick=run;run();return}
-if(i===1){
-body.innerHTML='<p>กรอกจำนวนการประเมินร่วมของผู้ประเมิน 2 คน (แถว = คนที่ 1, คอลัมน์ = คนที่ 2) สำหรับระดับ 1–4; ตัวเลขเริ่มต้นเป็นข้อมูลจำลอง</p><div style="overflow-x:auto"><table id="matrix" style="border-spacing:8px"><thead><tr><th>ผู้ประเมิน 1 \\ 2</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead><tbody></tbody></table></div><label for="weight">รูปแบบน้ำหนัก</label><select id="weight" style="padding:10px;border-radius:8px"><option value="quadratic">Quadratic</option><option value="linear">Linear</option></select><p><button class="btn" id="calc">คำนวณ Weighted Kappa</button></p><div id="output" class="result"></div>';
-const sample=[[4,1,0,0],[1,5,1,0],[0,1,5,1],[0,0,1,3]];
-$("matrix").querySelector("tbody").innerHTML=sample.map((row,r)=>'<tr><th>'+(r+1)+'</th>'+row.map((v,c)=>'<td><input style="width:64px" aria-label="ผู้ประเมิน 1 ระดับ '+(r+1)+' ผู้ประเมิน 2 ระดับ '+(c+1)+'" type="number" min="0" step="1" id="m'+r+c+'" value="'+v+'"></td>').join("")+'</tr>').join("");
-function run(){let m=[],rows=[0,0,0,0],cols=[0,0,0,0],n=0,observed=0,expected=0;
-for(let r=0;r<4;r++){m[r]=[];for(let c=0;c<4;c++){let v=get("m"+r+c);if(!Number.isSafeInteger(v)||v<0){$("output").textContent="กรุณาใส่จำนวนเต็มที่ไม่ติดลบทุกช่อง";return}m[r][c]=v;rows[r]+=v;cols[c]+=v;n+=v}}
-if(n===0){$("output").textContent="ต้องมีการประเมินอย่างน้อยหนึ่งคู่";return}
-let quadratic=$("weight").value==="quadratic";
-for(let r=0;r<4;r++)for(let c=0;c<4;c++){let d=Math.abs(r-c)/3,w=quadratic?d*d:d;observed+=w*m[r][c]/n;expected+=w*rows[r]*cols[c]/(n*n)}
-if(expected<1e-12){$("output").innerHTML=ResearchReports.kappa(m);return}
-let kappa=1-observed/expected;
-$("output").innerHTML=statCards([["คู่ประเมิน",n,"จำนวนคู่"],["Weighted κ",kappa.toFixed(4),quadratic?"Quadratic":"Linear"],["Observed",observed.toFixed(4),"ความไม่เห็นพ้อง"],["Expected",expected.toFixed(4),"ความไม่เห็นพ้องคาดหมาย"]])+visualBars([["Observed",observed],["Expected",expected]])+"<p class=stat-note>ควรตรวจช่วงความเชื่อมั่นและสมมติฐานเพิ่มเติมก่อนใช้งานวิจัยจริง</p>"+ResearchReports.kappa(m);
-}
-$("calc").onclick=run;run();return}
-body.innerHTML='<p>โครงสร้างบทที่ 4 (ฉบับเตรียมการ)</p><ol><li>คุณภาพเครื่องมือและความสอดคล้องของผู้ประเมิน</li><li>ผลการจัดการเรียนรู้และการเปลี่ยนแปลง</li><li>ผลการบรรลุสมรรถนะตาม Hybrid Rule</li><li>ตารางผล ค่าสถิติ และคำอธิบายข้อจำกัด</li></ol><p class="muted">การสร้างข้อความรายงานจริงจะเปิดใช้เมื่อเชื่อมผลวิเคราะห์ที่ผ่านการตรวจสอบแล้ว</p>';
-}
-</script><script>openRoom(1);</script><script src="shared-nav.js"></script></body></html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Lab 02 ศึกษาความสอดคล้องผู้ประเมิน Rubric 5 เกณฑ์ ระดับ 1–4 ด้วย Cohen's Kappa, Linear และ Quadratic Weighted Kappa พร้อมตาราง APA 7">
+<title>Lab 02 · Rubric Reliability | Open Research Statistics Lab</title>
+<link rel="stylesheet" href="lab02.css?v=2">
+<link rel="stylesheet" href="research-reporting.css?v=1">
+<link rel="stylesheet" href="shared-nav.css">
+</head>
+<body>
+<header class="lab02-hero">
+ <div class="eyebrow">OPEN RESEARCH STATISTICS LAB · LAB 02</div>
+ <h1>Rubric Reliability · ความสอดคล้องของผู้ประเมิน</h1>
+ <p>ศึกษาการให้คะแนนรูบริก 5 เกณฑ์ ระดับ 1–4 โดยผู้ประเมิน 2 คน ทดลองเปลี่ยนคะแนนและเปรียบเทียบ Cohen's Kappa กับ Weighted Kappa พร้อมตาราง APA 7 และคำบรรยายผลที่คำนวณตามข้อมูล</p>
+ <div class="flowline">
+  <span class="mini-pill">2.1.1 Cohen's Kappa</span>
+  <span class="mini-pill green">2.1.2 Linear / Quadratic Weighted Kappa</span>
+  <span class="mini-pill orange">2.2 Agreement Matrix · APA 7</span>
+ </div>
+</header>
+<div class="lab02-wrap">
+<section class="panel" aria-label="แนวทางการทดลอง">
+ <p class="section-lead"><strong>วิธีทดลอง:</strong> เริ่มจากข้อมูลจำลอง 23 คน หรือวางคะแนนจริงแบบไม่ระบุตัวตน แล้วแก้ค่าคะแนนรายเกณฑ์เพื่อสังเกตผลต่อร้อยละความเห็นตรงกันและค่า κ ใช้โหมดตารางไขว้ 4×4 เพื่อศึกษาเกณฑ์เดียวโดยแยกจากข้อมูล 5 เกณฑ์</p>
+</section>
+<div class="lab02-layout">
+<aside>
+ <section class="panel" id="setup">
+  <h2>1. เลือกรูปแบบข้อมูล</h2>
+  <div class="mode-buttons" role="group" aria-label="รูปแบบข้อมูล">
+   <button type="button" id="mode-records" aria-pressed="true">รายคน · 5 เกณฑ์</button>
+   <button type="button" id="mode-matrix" aria-pressed="false">ตารางไขว้ · 1 เกณฑ์</button>
+  </div>
+  <div class="field">
+   <label for="weight">วิธีถ่วงน้ำหนักที่ต้องการเน้น</label>
+   <select id="weight">
+    <option value="linear">Linear — ระยะห่างระดับคะแนน</option>
+    <option value="quadratic" selected>Quadratic — กำลังสองของระยะห่าง</option>
+   </select>
+  </div>
+  <div class="field" id="criterion-control">
+   <label for="criterion">เกณฑ์รูบริกที่ต้องการดูรายละเอียด</label>
+   <select id="criterion">
+    <option value="0">เกณฑ์ 1</option><option value="1">เกณฑ์ 2</option>
+    <option value="2">เกณฑ์ 3</option><option value="3">เกณฑ์ 4</option>
+    <option value="4">เกณฑ์ 5</option>
+   </select>
+  </div>
+  <div class="callout neutral">ค่า κ แสดงความสอดคล้องที่ปรับผลจากความเห็นตรงกันโดยบังเอิญ ไม่ใช่คะแนนความตรงของรูบริก และไม่ใช่ผลตัดสินว่านักเรียนบรรลุสมรรถนะแล้ว</div>
+ </section>
+ <section class="panel" id="record-panel">
+  <h2>2. คะแนนผู้ประเมินสองคน</h2>
+  <p class="hint">CSV หรือข้อมูลจากตาราง Google Sheets แบบคัดลอกวาง แถวละ 1 คน รวม 11 คอลัมน์: รหัสนักเรียน, ผู้ประเมิน 1 จำนวน 5 เกณฑ์, ผู้ประเมิน 2 จำนวน 5 เกณฑ์</p>
+  <div class="field">
+   <label for="csv-data">ตารางคะแนนรายคน (CSV)</label>
+   <textarea class="csv-field" id="csv-data" rows="11" spellcheck="false" aria-describedby="csv-help"></textarea>
+   <small id="csv-help" class="hint">หัวตารางต้องเป็น student_id,r1_c1,…,r1_c5,r2_c1,…,r2_c5 คะแนนต้องเป็นจำนวนเต็ม 1–4 ทุกช่อง</small>
+  </div>
+  <div class="button-row">
+   <button class="btn" type="button" id="calculate">วิเคราะห์คะแนนใหม่</button>
+   <button class="btn secondary" type="button" id="template">คัดลอกแม่แบบ CSV</button>
+  </div>
+  <h3>ทดลองแก้คะแนนรายคน</h3>
+  <p class="hint">เลือกนักเรียน เกณฑ์ และผู้ประเมินเพื่อเปลี่ยนระดับคะแนนโดยไม่ต้องแก้ CSV เอง</p>
+  <div class="grid-edit">
+   <div class="field"><label for="student">นักเรียน (รหัส)</label><select id="student"></select></div>
+   <div class="field"><label for="edit-criterion">เกณฑ์</label><select id="edit-criterion"><option value="0">เกณฑ์ 1</option><option value="1">เกณฑ์ 2</option><option value="2">เกณฑ์ 3</option><option value="3">เกณฑ์ 4</option><option value="4">เกณฑ์ 5</option></select></div>
+   <div class="field"><label for="rater">ผู้ประเมิน</label><select id="rater"><option value="r1">คนที่ 1</option><option value="r2">คนที่ 2</option></select></div>
+   <div class="field"><label for="level">คะแนนใหม่</label><select id="level"><option value="1">ระดับ 1</option><option value="2">ระดับ 2</option><option value="3">ระดับ 3</option><option value="4">ระดับ 4</option></select></div>
+  </div>
+  <div class="button-row"><button class="btn green" type="button" id="apply-edit">บันทึกคะแนนและคำนวณ</button></div>
+  <h3>สร้างชุดข้อมูลจำลองใหม่</h3>
+  <div class="grid-edit">
+   <div class="field"><label for="sample-n">จำนวนผู้เรียน</label><input id="sample-n" type="number" value="23" min="3" max="200" step="1"></div>
+   <div class="field"><label for="restore">คืนค่า</label><button type="button" id="restore" class="btn secondary">สร้างข้อมูลจำลอง</button></div>
+  </div>
+  <p id="record-status" class="hint" aria-live="polite">ตัวอย่างเริ่มต้นเป็นข้อมูลจำลอง ไม่ใช่ผลของนักเรียนจริง</p>
+ </section>
+ <section class="panel" id="matrix-panel" hidden>
+  <h2>2. ตารางไขว้ 4×4</h2>
+  <p class="hint">แต่ละช่องคือจำนวนคู่คะแนนที่ผู้ประเมิน 1 และ 2 ให้ตามระดับแถว–คอลัมน์ ใช้ศึกษา <strong>เพียงเกณฑ์เดียว</strong> และแยกข้อมูลจากโหมดรายคน</p>
+  <div class="matrix-scroll">
+   <table class="matrix-entry" aria-label="กรอกจำนวนคู่คะแนนในตารางไขว้สี่ระดับ">
+    <thead><tr><th>R1 \ R2</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead>
+    <tbody id="matrix-input-body"></tbody>
+   </table>
+  </div>
+  <div class="button-row">
+   <button class="btn" id="matrix-calc" type="button">คำนวณตารางไขว้ใหม่</button>
+   <button class="btn secondary" id="matrix-restore" type="button">คืนค่าตัวอย่าง 23 คู่</button>
+  </div>
+  <p class="hint">กรณี Pₑ = 1 จะไม่สามารถนิยาม κ ได้ จึงแสดง N/A โดยไม่ฝืนรายงานค่า</p>
+ </section>
+</aside>
+<main>
+ <section class="panel" id="results" aria-live="polite">
+  <div class="results-heading"><h2>3. ผลการวิเคราะห์ความสอดคล้อง</h2><span class="mini-pill green" id="data-source">ข้อมูลจำลอง</span></div>
+  <p id="analysis-context" class="result-source"></p>
+  <div id="errors" class="error" role="alert" hidden></div>
+  <div id="result-body">
+   <div class="result-cards" id="result-cards"></div>
+   <div class="chart-panel" id="chart-block">
+    <h3>ภาพรวมค่า Kappa รายเกณฑ์</h3>
+    <div class="legend" aria-label="คำอธิบายกราฟ">
+     <span class="legend-item"><i class="legend-swatch" style="background:#2563eb"></i>Cohen's κ</span>
+     <span class="legend-item"><i class="legend-swatch" style="background:#15803d"></i>Linear Weighted κ</span>
+     <span class="legend-item"><i class="legend-swatch" style="background:#c2410c"></i>Quadratic Weighted κ</span>
+    </div>
+    <svg id="kappa-chart" viewBox="0 0 740 300" role="img" aria-label="เปรียบเทียบ Kappa รายเกณฑ์ 5 เกณฑ์"></svg>
+    <p class="hint">สีเส้นแยกวิธีคำนวณ ค่า κ ติดลบหมายถึงความสอดคล้องต่ำกว่าที่คาดจากความบังเอิญ ไม่ใช่การตัดสินคุณภาพผู้เรียน</p>
+   </div>
+   <section aria-labelledby="apa-heading">
+    <div class="results-heading"><h2 id="apa-heading">4. ตาราง APA 7 และคำบรรยายผล</h2></div>
+    <div class="button-row">
+     <button type="button" id="copy-report" class="btn">คัดลอกตารางและคำบรรยาย</button>
+     <button type="button" id="download-report" class="btn secondary">บันทึกรายงาน .txt</button>
+     <button type="button" id="copy-matrix" class="btn secondary">คัดลอกเมทริกซ์ 4×4</button>
+    </div>
+    <p id="copy-status" class="hint" aria-live="polite"></p>
+    <div id="apa-output"></div>
+   </section>
+  </div>
+ </section>
+ <section class="panel">
+  <h2>5. ข้อควรระวังสำหรับการวิจัยจริง</h2>
+  <div class="callout">ช่วงความเชื่อมั่น 95% ในห้องทดลองนี้ใช้ <strong>paired percentile bootstrap</strong> สุ่มนักเรียนพร้อมคะแนนผู้ประเมินทั้งคู่ 1,500 ครั้ง ผลอาจไม่เสถียรเมื่อกลุ่มตัวอย่างเล็ก การกระจายคะแนนไม่สมดุล หรือมีค่าขอบเขตสูง จึงควรตรวจซ้ำกับซอฟต์แวร์สถิติอิสระก่อนอ้างอิงในงานวิจัย</div>
+  <p class="section-lead">การเลือก Linear หรือ Quadratic ควรตัดสินใจจากธรรมชาติของระดับรูบริกและวัตถุประสงค์วิจัยก่อนดูผล การคำนวณแยกเกณฑ์ทั้งห้าช่วยตรวจความสอดคล้องของการให้คะแนนแต่ละด้าน แต่ค่าเฉลี่ยของ Kappa ทั้งห้าไม่ใช่ค่าสัมประสิทธิ์ความเชื่อมั่นของคะแนนรวมโดยอัตโนมัติ</p>
+  <div class="reference-links">
+   <a target="_blank" rel="noopener" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11660713/">BMC 2024 — Agreement and reliability of ordinal ratings</a>
+   <a target="_blank" rel="noopener" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5687310/">Weighted Kappa · Linear & Quadratic</a>
+   <a target="_blank" rel="noopener" href="https://journals.sagepub.com/doi/full/10.1177/2515245920911881">Percentile Bootstrap — Methodological Primer</a>
+   <a target="_blank" rel="noopener" href="https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/statistics_in_apa.html">Purdue OWL — APA 7 Statistics</a>
+  </div>
+ </section>
+</main>
+</div>
+</div>
+<footer class="lab02-footer">Open Research Statistics Lab · Research Prototype · ประมวลผลภายในเบราว์เซอร์ · ไม่ส่งข้อมูลผู้เรียนไปยังเซิร์ฟเวอร์</footer>
+<script src="rubric-reliability.js?v=2"></script>
+<script src="research-reporting.js?v=1"></script>
+<script src="lab02-app.js?v=2"></script>
+<script src="shared-nav.js"></script>
+</body>
+</html>
