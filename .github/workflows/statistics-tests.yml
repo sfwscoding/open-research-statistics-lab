@@ -28,6 +28,7 @@ jobs:
           node tests/integration.test.js
           node tests/ui.test.js
           node tests/lab04.test.js
+          node tests/lab04-isolated.test.js
           node tests/research-reporting.test.js
           node tests/rubric-reliability.test.js
           node tests/single-stat-views.test.js
