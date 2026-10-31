@@ -27,6 +27,7 @@ jobs:
           node tests/evidence.test.js
           node tests/integration.test.js
           node tests/ui.test.js
+          node tests/one-sample.test.js
           node --check outcomes.js
           node --check competency.js
           node --check kpa.js
