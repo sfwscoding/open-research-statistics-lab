@@ -69,30 +69,42 @@ for(const m of html.matchAll(/\bid="([^"]+)"/g))get(m[1]);
 for(const [id,value] of Object.entries({
  weight:"quadratic",criterion:"0","edit-criterion":"0",rater:"r1",level:"1","sample-n":"23"
 }))get(id).value=value;
-const dom={getElementById:get},navigator={clipboard:{writeText:async()=>{}}};
-new Function("window","document","navigator","Blob","URL","setTimeout",app)(
- {RubricReliability:E,ResearchReports:ctx.ResearchReports},dom,navigator,()=>{}, {},()=>{}
+const buttons=[...html.matchAll(/data-metric="([^"]+)"/g)].map(m=>({
+ dataset:{metric:m[1]},setAttribute(key,value){this[key]=value}
+}));
+const dom={getElementById:get,querySelectorAll(q){return q==="[data-metric]"?buttons:[]}};
+const navigator={clipboard:{writeText:async()=>{}}};
+const loc={pathname:"/lab02.html",search:"?stat=quadratic"};
+const hist={replaceState(){}};
+new Function("window","document","navigator","history","location","URLSearchParams","Blob","URL","setTimeout",app)(
+ {RubricReliability:E,ResearchReports:ctx.ResearchReports,location:loc,history:hist},
+ dom,navigator,hist,loc,URLSearchParams,()=>{}, {},()=>{}
 );
-assert.match(get("analysis-context").textContent,/นักเรียน 23 คน/);
-assert.equal((get("apa-output").innerHTML.match(/ตารางที่ \d/g)||[]).length,4);
-assert.match(get("apa-output").innerHTML,/เกณฑ์ 5/);
+assert.match(get("analysis-context").textContent,/ข้อมูลรายคน 23 คน/);
+assert.equal((get("apa-output").innerHTML.match(/ตารางที่ \d/g)||[]).length,1);
+assert.match(get("apa-output").innerHTML,/Quadratic/);
 assert.ok(get("kappa-chart").innerHTML.includes("path"));
+for(const button of buttons){
+ button.onclick();
+ const count=(get("apa-output").innerHTML.match(/ตารางที่ \d/g)||[]).length;
+ assert.equal(count,button.dataset.metric==="agreement"?2:1,button.dataset.metric);
+ const label={unweighted:"Cohen",linear:"Linear",quadratic:"Quadratic",agreement:"Exact Agreement"}[button.dataset.metric];
+ assert.ok(get("apa-output").innerHTML.includes(label),"APA belongs to selected method "+label);
+}
 get("student").value="S001";get("edit-criterion").value="2";get("rater").value="r2";
 const original=E.readCSV(get("csv-data").value)[0].r2[2];get("level").value=String(original===4?1:4);
 get("apply-edit").onclick();
 const changed=E.readCSV(get("csv-data").value)[0].r2[2];assert.notEqual(changed,original);
-assert.equal((get("apa-output").innerHTML.match(/ตารางที่ \d/g)||[]).length,4);
 get("mode-matrix").onclick();
 assert.match(get("analysis-context").textContent,/ตารางไขว้/);
-assert.equal((get("apa-output").innerHTML.match(/ตารางที่ \d/g)||[]).length,3);
+assert.equal((get("apa-output").innerHTML.match(/ตารางที่ \d/g)||[]).length,2);
 get("m-0-0").value="6";get("matrix-calc").onclick();
-assert.match(get("analysis-context").textContent,/25 คู่คะแนน/);
+assert.match(get("analysis-context").textContent,/25 คู่/);
 get("mode-records").onclick();
 get("csv-data").value="bad";get("calculate").onclick();
 assert.match(get("errors").textContent,/หัวตารางและนักเรียน/);
 assert.equal(get("result-body").hidden,true);
 assert.match(html,/rubric-reliability.js/);
 assert.match(html,/lab02-app.js/);
-assert.match(html,/research-reporting.css/);
 new vm.Script(app);
-console.log("Lab 02: five-criterion raw scores, Cohen/weighted kappa, bootstrap, APA tables and editable UX: passed.");
+console.log("Lab 02: isolated Kappa views, agreement, bootstrap, APA, matrix and editable scoring passed");
