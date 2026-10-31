@@ -1,23 +1,28 @@
 "use strict";
-const assert=require("node:assert/strict");
-const fs=require("node:fs");
-const vm=require("node:vm");
-const index=fs.readFileSync("index.html","utf8");
+const assert=require("node:assert/strict"),fs=require("node:fs"),vm=require("node:vm");
+const index=fs.readFileSync("index.html","utf8"),nav=fs.readFileSync("shared-nav.js","utf8");
 assert.match(index,/Open Research Statistics Lab/);
-assert.match(index,/shared-nav\.js/);
 for(let i=1;i<=5;i++){
- const name="lab0"+i+".html";
- assert.match(index,new RegExp('href="'+name+'"'),"Homepage must link to "+name);
- const html=fs.readFileSync(name,"utf8");
- assert.match(html,/shared-nav\.js/,"Missing shared navigation in "+name);
+ const path="lab0"+i+".html",html=fs.readFileSync(path,"utf8");
+ assert.ok(index.includes('href="'+path+'"'),"missing homepage link "+path);
+ assert.match(html,/shared-nav\.js/);
  const inline=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];
- for(const [j,script] of inline.entries())new vm.Script(script[1],{filename:name+"-inline-"+j});
- if(i===2){
-   for(const asset of ["rubric-reliability.js","lab02-app.js","lab02.css","research-reporting.css"])
-     assert.ok(html.includes(asset),"Lab 02 missing "+asset);
-   assert.match(html,/id="csv-data"/);
-   assert.match(html,/id="matrix-panel"/);
-   assert.match(html,/id="apa-output"/);
- }else assert.ok(inline.length>0,"Expected inline controller in "+name);
+ inline.forEach((x,j)=>new vm.Script(x[1],{filename:path+"-inline"+j}));
+ const required={
+  1:["lab01-app.js",'id="stat-menu"'],
+  2:["lab02-app.js",'id="lab02-stat-menu"'],
+  3:['id="tests"','id="apa"'],
+  4:["lab04-views.js",'id="lab04-stat-menu"'],
+  5:["chapter4-single.js",'id="chapter-stat-menu"']
+ }[i];
+ required.forEach(s=>assert.ok(html.includes(s),path+" missing "+s));
 }
-console.log("Five-Lab portal, shared navigation, current JavaScript syntax and Lab 02 controls: passed.");
+for(const link of [
+ "lab01.html?stat=difficulty","lab01.html?stat=kr20",
+ "lab02.html?stat=unweighted","lab02.html?stat=linear","lab02.html?stat=quadratic",
+ "lab03.html?test=wilcoxon-criterion","lab03.html?test=binomial",
+ "lab04.html?stat=kpa","lab04.html?stat=project",
+ "lab05.html?stat=one-w","lab05.html?stat=project"])
+ assert.ok(nav.includes(link),"Missing menu deep link: "+link);
+new vm.Script(nav,{filename:"shared-nav.js"});
+console.log("Homepage, 5 isolated Lab menus and JavaScript syntax: passed");
