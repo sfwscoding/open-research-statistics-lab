@@ -22,6 +22,7 @@ function init(body){
  const rub=["C1,C2,C3,C4,C5"];for(let i=0;i<23;i++)rub.push(Array.from({length:5},(_,j)=>String(1+((i*3+j*7+i*j)%4))).join(","));$("r-rubric").value=rub.join("\n");
  const header=Array.from({length:12},(_,h)=>["K","P","A"].map(d=>d+(h+1))).flat(),kpa=[header.join(",")];
  for(let i=0;i<23;i++)kpa.push(Array.from({length:36},(_,j)=>Math.min(100,Math.max(0,Math.round(46+Math.floor(j/3)*2.2+(j%3)*3+(i*7+j*3)%19)))).join(","));$("r-kpa").value=kpa.join("\n");
+ const project=["H13,H14,H15,H16"];for(let i=0;i<23;i++)project.push(Array.from({length:4},(_,h)=>String(Math.min(100,58+h*5+(i*7+h*3)%21))).join(","));$("r-project").value=project.join("\n");
  const numbers=s=>s.trim().split(/[\s,;]+/).filter(Boolean).map(num);
  const ci=(estimate,sd,n)=>{if(!Number.isFinite(sd)||n<2)return "N/A";let lo=0,hi=16;for(let j=0;j<60;j++){const mid=(lo+hi)/2;if(g.StatExtensions.tP(mid,n-1,"greater")>.025)lo=mid;else hi=mid}const offset=(lo+hi)/2*sd/Math.sqrt(n);return "["+f(estimate-offset,2)+", "+f(estimate+offset,2)+"]"};
 
