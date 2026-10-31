@@ -1,0 +1,14 @@
+"use strict";
+const assert=require("node:assert/strict");
+const {Competency}=require("../competency.js");
+const {KPATracker}=require("../kpa.js");
+const {Evidence}=require("../evidence.js");
+const ids=Array.from({length:23},(_,i)=>"S"+String(i+1).padStart(3,"0"));
+const kpa=ids.map((_,i)=>Array.from({length:36},(_,j)=>50+(i+j)%41));
+const ratings=ids.map((_,i)=>Array(5).fill(i<5?4:i<12?3:i<19?2:1));
+const records=ids.flatMap(id=>[{studentId:id,hour:1,dimension:"K",type:"quiz",percent:70,reference:"MT1"},{studentId:id,hour:13,dimension:"PROJECT",type:"artifact",percent:80,reference:"PJ13"}]);
+assert.equal(KPATracker.analyze(kpa).n,23);
+assert.equal(Evidence.validate(records).studentCount,23);
+assert.equal(Competency.evaluate(ratings).passedConditions,15);
+assert.equal(new Set(ids).size,23);
+console.log("Research data flow integration smoke test passed");
