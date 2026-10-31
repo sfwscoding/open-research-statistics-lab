@@ -1,0 +1,77 @@
+/* Lab 02 - Flat & Clean semantic color system.
+   Preserve the approved gradient and avoid decorative box shadows. */
+:root{font-family:system-ui,"Noto Sans Thai",sans-serif;--blue:#2563eb;--green:#15803d;--red:#dc2626;--orange:#c2410c;--ink:#25364a;--muted:#64748b;--line:#e2e8f0;--white:#fff;color:var(--ink)}
+*{box-sizing:border-box;box-shadow:none!important;text-shadow:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(120deg,#bff1ef 0%,#d7f5e8 48%,#d5ebff 100%);min-height:100vh;color:var(--ink)}
+[hidden]{display:none!important}
+a{color:#1d4ed8}
+button,select,input,textarea{font:inherit}
+button{cursor:pointer}
+:where(a,button,input,textarea,select):focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.lab02-hero{max-width:1340px;margin:20px auto 0;padding:30px clamp(18px,4vw,42px);background:#fff;border:1px solid var(--line);border-radius:22px}
+.eyebrow{font-size:12px;color:#1d4ed8;letter-spacing:.07em;font-weight:800}
+.lab02-hero h1{font-size:clamp(25px,3.2vw,40px);letter-spacing:-.02em;line-height:1.28;margin:8px 0}
+.lab02-hero p{color:var(--muted);line-height:1.8;max-width:900px;margin:7px 0}
+.lab02-wrap{max-width:1320px;margin:auto;padding:20px 20px 60px}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:clamp(16px,2vw,26px);margin:0 0 16px}
+.panel h2{font-size:clamp(18px,2vw,22px);margin:0 0 12px}
+.panel h3{font-size:16px;color:var(--ink);margin:15px 0 9px}
+.section-lead{color:var(--muted);line-height:1.8;font-size:14px}
+.flowline{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:12px 0}
+.mini-pill{font-size:12px;font-weight:650;color:#1e40af;background:#eff6ff;border:1px solid #dbeafe;border-radius:100px;padding:6px 11px}
+.mini-pill.green{background:#f0fdf4;color:var(--green);border-color:#bbf7d0}
+.mini-pill.orange{background:#fff7ed;color:var(--orange);border-color:#fed7aa}
+.lab02-layout{display:grid;grid-template-columns:minmax(270px,390px) minmax(0,1fr);gap:16px;align-items:start}
+.field{display:grid;gap:7px;margin:13px 0}
+label{font-size:13px;font-weight:700;color:#334155}
+select,input,textarea{border:1px solid #cbd5e1!important;background:#fff;border-radius:10px;color:var(--ink);padding:10px 11px;max-width:100%}
+input[type=number]{width:100%}
+textarea{width:100%;min-height:220px;line-height:1.55;resize:vertical}
+textarea.csv-field{font:12px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace}
+.mode-buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
+.mode-buttons button{background:#f8fafc;border:1px solid #cbd5e1;border-radius:10px;padding:11px;color:#475569;font-size:13px;font-weight:700}
+.mode-buttons button[aria-pressed=true]{background:#eff6ff;color:#1d4ed8;border-color:#2563eb}
+.btn{background:var(--blue);border:1px solid var(--blue);color:#fff;border-radius:10px;padding:10px 15px;font-weight:700;cursor:pointer}
+.btn:hover{background:#1d4ed8}
+.btn.secondary{background:#fff;border:1px solid #cbd5e1;color:var(--ink)}
+.btn.secondary:hover{background:#eff6ff}
+.btn.green{background:var(--green);border-color:var(--green)}
+.btn.green:hover{background:#166534}
+.button-row{display:flex;flex-wrap:wrap;gap:9px;margin:13px 0 8px}
+.callout{border-left:3px solid var(--orange);padding:11px 13px;background:#fff7ed;border-radius:8px;font-size:13px;line-height:1.75;color:#7c2d12}
+.callout.neutral{border-left-color:var(--blue);background:#eff6ff;color:#1e40af}
+.hint{font-size:12px;line-height:1.7;color:var(--muted)}
+.grid-edit{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.matrix-scroll{overflow-x:auto;margin:12px 0}
+.matrix-entry{border-collapse:separate;border-spacing:5px;width:auto}
+.matrix-entry th,.matrix-entry td{padding:4px;border:0;text-align:center;background:transparent}
+.matrix-entry th{font-size:12px;color:#475569}
+.matrix-entry input{width:62px;min-width:55px;padding:8px;text-align:center}
+.results-heading{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.result-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:15px 0}
+.result-card{background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:13px;min-width:0}
+.result-card small{font-size:12px;color:#64748b;display:block}
+.result-card strong{display:block;font-size:clamp(18px,2.3vw,27px);margin:4px 0;overflow-wrap:anywhere;color:#1d4ed8;font-variant-numeric:tabular-nums}
+.result-card:nth-child(3n+2){background:#f0fdf4}
+.result-card:nth-child(3n+2) strong{color:var(--green)}
+.result-card:nth-child(3n+3){background:#fff7ed}
+.result-card:nth-child(3n+3) strong{color:var(--orange)}
+.result-card .caption{font-size:11px;line-height:1.5;color:var(--muted)}
+.error{border-left:3px solid var(--red);padding:12px;background:#fef2f2;color:#991b1b;border-radius:8px;line-height:1.7;margin:14px 0}
+.good{color:var(--green);font-weight:700}
+.chart-panel{padding:15px;background:#fff;border:1px solid var(--line);border-radius:12px;margin:17px 0}
+.chart-panel h3{margin:0 0 9px}
+.chart-panel svg{width:100%;height:auto;display:block}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin:10px 0;color:#475569;font-size:12px}
+.legend-item{display:flex;align-items:center;gap:6px}
+.legend-swatch{width:21px;height:4px;border-radius:2px;display:inline-block}
+#apa-output .research-table{margin:16px 0}
+#apa-output .research-apa{font-size:12px}
+#apa-output .research-apa th,#apa-output .research-apa td{padding:9px 8px!important}
+#apa-output .research-interpret{font-size:13px}
+.result-source{font-size:13px;color:var(--muted);line-height:1.75;margin:10px 0}
+.reference-links{display:flex;flex-wrap:wrap;gap:8px 16px;line-height:1.8;font-size:13px}
+.lab02-footer{text-align:center;color:#64748b;font-size:12px;padding:20px}
+@media(max-width:1000px){.lab02-layout{grid-template-columns:1fr}.result-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){.lab02-hero{margin:10px 10px 0;padding:20px}.lab02-wrap{padding:12px 10px 35px}.panel{border-radius:13px}.grid-edit{grid-template-columns:1fr}.result-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.mode-buttons{grid-template-columns:1fr 1fr}.matrix-entry input{width:54px}}
