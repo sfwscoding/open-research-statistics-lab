@@ -41,6 +41,15 @@ function attach(tableId,anchor){
 attach("apaKpa",$("hourStats"));
 attach("apaRubric",$("rubricBody").closest(".tablewrap"));
 attach("apaProject",$("pj-summary").closest(".tablewrap"));
+const picker=document.createElement("div");
+picker.className="row";
+picker.innerHTML='<label for="microHour">เลือกชั่วโมง Micro Task (1–12)</label><input id="microHour" type="range" min="1" max="12" value="12"><strong id="microHourText">12</strong>';
+$("hourBars").insertAdjacentElement("beforebegin",picker);
+$("microHour").oninput=()=>{
+ const h=Number($("microHour").value);
+ $("hour").value=String(h);$("editHour").value=String(h);
+ drawKPA();
+};
 const microTable=document.createElement("div");
 microTable.id="apaMicro";
 microTable.className="lab04-apa";
@@ -48,6 +57,7 @@ $("hourBars").insertAdjacentElement("afterend",microTable);
 attach("apaMicro",$("hourBars"));
 function renderMicro(){
  const h=Number($("hour").value),index=h-1,data=hourly()[index],n=rows().length;
+ $("microHour").value=String(h);$("microHourText").textContent=String(h);
  if(!data)return;
  const table=apaTable(2,"หลักฐาน Micro Task ในชั่วโมงที่ "+h,
   ["มิติหลักฐาน","คะแนนเฉลี่ย (%)","ผู้เรียน (n)"],
