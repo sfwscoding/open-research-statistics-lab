@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: '22'
       - name: Run MCQ reference tests
-        run: node tests/mcq.test.js
+        run: |\n          node tests/mcq.test.js\n          node tests/outcomes.test.js\n          node --check outcomes.js
       - name: Check JavaScript syntax in HTML
         run: |
           node - <<'NODE'
