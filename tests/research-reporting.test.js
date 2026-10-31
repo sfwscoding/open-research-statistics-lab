@@ -25,7 +25,7 @@ const ext=require("../stat-extensions.js").StatExtensions;
 close(ext.tP(2,22,"greater"),0.028997850851248,1e-10);
 close(ext.tP(2.073873067904,22,"two-sided"),0.05,1e-10);
 for(let i=1;i<=5;i++){const html=fs.readFileSync("lab0"+i+".html","utf8");
- const scripts=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(m=>m[1]).filter(Boolean);
+ const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m=>m[1]).filter(Boolean);
  if(i===2){
   assert.match(html,/rubric-reliability\.js/);
   assert.match(html,/lab02-app\.js/);
