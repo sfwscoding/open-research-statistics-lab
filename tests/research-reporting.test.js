@@ -38,7 +38,7 @@ const lab04=fs.readFileSync("lab04.html","utf8");
 const lab05=fs.readFileSync("lab05.html","utf8");
 assert.equal((lab01.match(/data-stat="/g)||[]).length,5);
 assert.equal((lab02.match(/data-metric="/g)||[]).length,4);
-assert.equal((lab03.match(/data-test="/g)||[]).length,5);
+assert.equal((lab03.match(/<button\b[^>]*data-test="/g)||[]).length,5);
 assert.equal((lab04.match(/data-stat="/g)||[]).length,4);
 assert.equal((lab05.match(/data-stat="/g)||[]).length,16);
 assert.doesNotMatch(lab05,/chapter4-builder\.js/);
