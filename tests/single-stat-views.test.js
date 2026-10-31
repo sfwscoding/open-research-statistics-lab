@@ -38,6 +38,7 @@ const URLP=URLSearchParams;
  }
  assert.equal(d.buttons.length,5);
  d.get("mcq-answers").value="Q1,Q2\nA,B\nA,B\nB,A\nB,B";
+ d.get("mcq-key").value="A,B";
  d.get("mcq-run").onclick();
  assert.equal(d.get("mcq-error").hidden,true);
 }
