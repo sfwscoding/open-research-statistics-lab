@@ -29,6 +29,7 @@ jobs:
           node tests/ui.test.js
           node tests/lab04.test.js
           node tests/research-reporting.test.js
+          node tests/rubric-reliability.test.js
           node tests/lab03.test.js
           node tests/lab03-routing.test.js
           node tests/stat-extensions.test.js
@@ -39,6 +40,8 @@ jobs:
           node --check kpa.js
           node --check evidence.js
           node --check research-reporting.js
+          node --check rubric-reliability.js
+          node --check lab02-app.js
           node --check chapter4-builder.js
           node --check project-tracking.js
       - name: Check JavaScript syntax in HTML
