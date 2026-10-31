@@ -90,8 +90,14 @@ function result(stat){
      "ข้อสอบ "+k+" ข้อ มีค่าเฉลี่ยรวม "+fmt(d.avg,2)+" คะแนนและ KR-20 = "+fmt(d.kr,4)+" ซึ่งสะท้อนความสอดคล้องภายใน ไม่ใช่ความตรงเชิงเนื้อหา")};
  }
  if(["cohen","linear","quadratic"].includes(stat)){
-  const cross=csv("c-kappa",4).rows;
-  if(cross.length!==4)throw Error("ตาราง Kappa ต้องมีคะแนน 4 แถว (ไม่รวมแถวหัวตาราง)");
+  const lines=$("c-kappa").value.trim().split(/\r?\n/).filter(Boolean).map(row=>row.split(",").map(v=>v.trim()));
+  if(![4,5].includes(lines.length)||lines.some(row=>row.length!==4))
+    throw Error("ตาราง Kappa ต้องมี 4 แถว × 4 คอลัมน์ (หัวตารางเป็นทางเลือก)");
+  const cross=(lines.length===5?lines.slice(1):lines).map(row=>row.map(value=>{
+    if(value===""||!Number.isSafeInteger(Number(value))||Number(value)<0)
+      throw Error("จำนวนในตาราง Kappa ต้องเป็นจำนวนเต็มไม่ติดลบ");
+    return Number(value);
+  }));
   const z=RR.analyzeMatrix(cross),kind=stat==="cohen"?"unweighted":stat;
   const x=z.methods[kind],ci=z.bootstrap.methods[kind],label=names[stat][0],confidence=ci.low===null?"N/A":"["+fmt(ci.low)+", "+fmt(ci.high)+"]";
   return {cards:[[label,fmt(x.kappa),"κ ที่ปรับจากความเห็นตรงกันโดยบังเอิญ"],["จำนวนคู่คะแนน",z.n,"คู่"],["95% CI",confidence,"Paired percentile bootstrap"]],
@@ -177,7 +183,7 @@ function createDemo(){
  const key=["A","B","C","D","A"],mcq=["Q1,Q2,Q3,Q4,Q5"];
  for(let i=0;i<23;i++)mcq.push(key.map((v,j)=>(i*7+j*11)%23<(18-j*2)?v:["A","B","C","D"][(i+j+1)%4]).join(","));
  $("c-mcq").value=mcq.join("\n");$("c-key").value=key.join(",");
- $("c-kappa").value="1,2,3,4\n4,1,0,0\n1,5,1,0\n0,1,5,1\n0,0,1,3"; // first row: column names
+ $("c-kappa").value="4,1,0,0\n1,5,1,0\n0,1,5,1\n0,0,1,3"; // same 4x4 format as Lab 02
  $("c-one").value=Array.from({length:23},(_,i)=>String(10+(i*7)%9)).join("\n");$("c-target").value="12";
  $("c-pre").value=Array.from({length:23},(_,i)=>String(8+i%7)).join("\n");
  $("c-post").value=Array.from({length:23},(_,i)=>String(10+i%7+(i%5===0?0:1))).join("\n");
