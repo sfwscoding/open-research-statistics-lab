@@ -9,6 +9,7 @@ function init(body){
  '<section class="research-section"><h3>3.1 One-Sample t และ Wilcoxon เทียบค่าเป้าหมาย</h3><div class="research-inputs"><div><label for="r-one">คะแนนรายคน (แยกบรรทัดหรือจุลภาค)</label><textarea id="r-one"></textarea></div><div><label for="r-target">ค่าเป้าหมาย</label><input id="r-target" type="number" value="12" step=".1"></div></div><p class="research-note">ทดสอบ H₁: คะแนนสูงกว่าเป้าหมาย (ทางเดียว); t ประเมินค่าเฉลี่ย ส่วน Wilcoxon ใช้เงื่อนไขความสมมาตรของผลต่าง</p></section>'+
  '<section class="research-section"><h3>4. Rubric 5 เกณฑ์ · Hybrid Rule</h3><label for="r-rubric">ระดับ 1–4: 5 คอลัมน์ / นักเรียนหนึ่งคนต่อแถว พร้อมหัวตาราง</label><textarea id="r-rubric" rows="6"></textarea></section>'+
  '<section class="research-section"><h3>5. หลักฐาน KPA 12 ชั่วโมง</h3><label for="r-kpa">CSV 36 คอลัมน์ K1,P1,A1,...,K12,P12,A12 ร้อยละ 0–100</label><textarea id="r-kpa" rows="6"></textarea><p class="research-note">ข้อมูล KPA รายชั่วโมงเป็นหลักฐานระหว่างเรียน ไม่ใช่คะแนนสมรรถนะ Rubric และยังไม่มีคะแนนโครงงานจริง 4 ชั่วโมง</p></section>'+
+ '<section class="research-section"><h3>6. หลักฐานโครงงาน 4 ชั่วโมง (13–16)</h3><label for="r-project">คะแนนหลักฐานโครงงานร้อยละ 0–100 (CSV สี่คอลัมน์ H13,H14,H15,H16)</label><textarea id="r-project" rows="6"></textarea><p class="research-note">ใช้เพื่อสรุปค่าเฉลี่ยหลักฐานโครงงาน ไม่ใช้แทนการประเมินสมรรถนะ Rubric โดยอัตโนมัติ</p></section>'+
  '<div class="research-actions"><button id="r-build" class="btn">คำนวณและสร้างรายงานใหม่</button><button id="r-copy" class="btn" type="button">คัดลอกรายงานและตาราง</button></div><p id="r-message" class="research-note" role="status" aria-live="polite"></p><div id="research-output"></div>';
  const $=id=>document.getElementById(id),f=R.f,mean=R.mean,parse=R.csv,num=R.numeric;
  const mcq=["Q1,Q2,Q3,Q4,Q5"],keys=["A","B","C","D","A"];
@@ -36,6 +37,7 @@ function init(body){
  const rubrows=rubric.slice(1).map(row=>row.map(num));
  const kpaRows=parse($("r-kpa").value);if(kpaRows.length<2||kpaRows.some(row=>row.length!==36))throw Error("KPA ต้องมี 36 คอลัมน์และข้อมูลอย่างน้อยหนึ่งคน");
  const kp=g.KPATracker.analyze(kpaRows.slice(1).map(row=>row.map(num)));
+ const pj=parse($("r-project").value);if(pj.length<2||pj.some(row=>row.length!==4))throw Error("โครงงานต้องมีหัวตารางและคะแนน 4 ชั่วโมง");const projects=pj.slice(1).map(row=>row.map(num));if(projects.some(row=>row.some(v=>v<0||v>100)))throw Error("คะแนนโครงงานต้องอยู่ในช่วง 0–100");
  const sd=diff.length>1?Math.sqrt(diff.reduce((s,v)=>s+(v-mean(diff))**2,0)/(diff.length-1)):NaN;
  const pLabel=p=>p<.001?"< .001":"= "+p.toFixed(3);
  const tText="ข้อมูลจับคู่ "+pre.length+" คน พบค่าเฉลี่ยผลต่าง (หลัง−ก่อน) = "+f(t.mean)+" คะแนน, t("+t.df+") = "+f(t.t)+", p "+pLabel(t.p)+", Cohen's dz = "+f(t.dz)+". Wilcoxon signed-rank: W⁺ = "+f(w.wPlus,1)+", W⁻ = "+f(w.wMinus,1)+", p "+pLabel(w.p)+". ควรตรวจข้อสมมติของแต่ละการทดสอบก่อนใช้รายงานผลจริง";
@@ -47,8 +49,9 @@ function init(body){
  html+=R.table(5,"ผลการทดสอบ Exact Binomial เทียบสัดส่วนเป้าหมาย",["n","ผ่าน (k)","สัดส่วน","p₀","p (exact)","α"],[[n,k,f(k/n),f(p0),f(bin,4),f(alpha,3)]],"สมมติฐานทางเลือก H₁: p > p₀; เป็นการทดสอบทางเดียว; ต้องตรวจความเป็นอิสระของข้อมูล","พบผู้ผ่านเกณฑ์ "+k+" จาก "+n+" คน ("+f(k/n*100,1)+"%) เทียบกับสัดส่วนอ้างอิง "+f(p0*100,1)+"% ได้ exact p "+pLabel(bin)+" จึง"+(bin<alpha?"ปฏิเสธ":"ไม่ปฏิเสธ")+" H₀ เมื่อ α = "+alpha);
  html+=R.hybrid(rubrows,rubric[0],6);
  html+=R.table(7,"หลักฐาน KPA รายชั่วโมงระหว่างการจัดการเรียนรู้",["ชั่วโมง","K (%)","P (%)","A (%)"],kp.hours.map(row=>[row.hour,f(row.K,1),f(row.P,1),f(row.A,1)]),"จำนวนผู้เรียน = "+kp.n+"; ค่าร้อยละเป็นการบรรยายหลักฐาน KPA ไม่ใช่การทดสอบนัยสำคัญ","ค่าเฉลี่ยหลักฐานรวมคือ K = "+f(kp.overall.K,1)+"%, P = "+f(kp.overall.P,1)+"% และ A = "+f(kp.overall.A,1)+"%. การเพิ่มขึ้นรายชั่วโมงต้องพิจารณาความเทียบเคียงของ Micro Task ก่อนตีความความก้าวหน้า");
- html+='<p class="research-note">ส่วนโครงงาน 4 ชั่วโมง (ชั่วโมง 13–16) และช่วงความเชื่อมั่นของ Kappa ยังไม่ถูกรายงานในตารางนี้ เพราะไม่มีข้อมูลผลโครงงานหรือวิธีประมาณ CI ที่ผ่านการตรวจสอบในระบบนี้</p>';
- $("research-output").innerHTML=html;$("r-message").textContent="สร้างรายงานใหม่แล้ว: ตารางที่ 1–7 (ข้อมูลที่กรอกปัจจุบัน)";
+ html+=R.table(8,"ผลหลักฐานโครงงานรายชั่วโมง (13–16)",["ชั่วโมง","n","M (%)"],[0,1,2,3].map(h=>[h+13,projects.length,f(mean(projects.map(row=>row[h])),2)]),"คะแนนหลักฐานรายชั่วโมง 0–100 เป็นข้อมูลเชิงพรรณนา ต้องตรวจความเทียบเคียงของภาระงานและคุณภาพการประเมินก่อนสรุป","จากข้อมูลโครงงาน "+projects.length+" คน ค่าเฉลี่ยหลักฐานชั่วโมง 13–16 เท่ากับ "+[0,1,2,3].map(h=>f(mean(projects.map(row=>row[h])),2)).join(", ")+" ตามลำดับ ไม่ถือเป็นผลการทดสอบนัยสำคัญหรือการตัดสินสมรรถนะโดยตรง");
+ html+='<p class="research-note">ยังไม่รายงานช่วงความเชื่อมั่นของ Kappa เนื่องจากต้องกำหนดและตรวจสอบวิธีประมาณค่าที่เหมาะสมก่อนใช้งานจริง</p>';
+ $("research-output").innerHTML=html;$("r-message").textContent="สร้างรายงานใหม่แล้ว: ตารางที่ 1–8 (ข้อมูลที่กรอกปัจจุบัน)";
  }catch(err){$("research-output").innerHTML="";$("r-message").textContent="ตรวจสอบข้อมูล: "+err.message}};
  $("r-build").onclick=calc;
  $("r-copy").onclick=()=>{const text=$("research-output").innerText;if(!text){$("r-message").textContent="กรุณาสร้างรายงานก่อนคัดลอก";return}if(navigator.clipboard?.writeText)navigator.clipboard.writeText(text).then(()=>$("r-message").textContent="คัดลอกรายงานแล้ว").catch(()=>$("r-message").textContent="ไม่สามารถคัดลอกอัตโนมัติ");else $("r-message").textContent="กรุณาเลือกข้อความและคัดลอกด้วยตนเอง"};
