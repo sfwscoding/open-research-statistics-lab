@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="ห้องปฏิบัติการสถิติการวิจัยทางการศึกษา แบบจำลองเชิงโต้ตอบ"><title>Open Research Statistics Lab</title>
+<style>
+:root{font-family:system-ui,"Noto Sans Thai",sans-serif;color:#183044;background:#f5f8fb}*{box-sizing:border-box}body{margin:0}header{background:#102c42;color:#fff;padding:32px max(24px,calc((100vw - 1120px)/2))}header p{color:#c5d9e5}h1{font-size:clamp(28px,4vw,44px);margin:0}main{max-width:1120px;margin:auto;padding:28px 20px 70px}.intro{color:#526878;line-height:1.8}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card,.panel{background:#fff;border:1px solid #dce6ec;border-radius:18px;padding:22px;box-shadow:0 4px 22px #1630470a}.card h2{font-size:19px;margin:8px 0}.card p{color:#586e7e;line-height:1.7;min-height:75px}.num{color:#007c8d;font-weight:800}.btn{display:inline-block;border:0;border-radius:10px;background:#086b7a;color:white;padding:11px 16px;font:inherit;cursor:pointer}.btn:hover{background:#07535f}.muted{color:#607688;font-size:14px}.panel{margin-top:22px}label{display:block;font-weight:600;margin:12px 0 5px}input{padding:10px;border:1px solid #bdced7;border-radius:9px;width:100%;max-width:220px;font:inherit}.inputs{display:flex;flex-wrap:wrap;gap:22px}.result{padding:16px;background:#edf8f8;border-radius:12px;margin-top:18px;line-height:1.8}footer{text-align:center;padding:30px;color:#657d8c}a{color:#086b7a}#lab-title{margin-top:0}small{color:#657d8c}
+</style></head><body>
+<header><div class="muted" style="color:#9ad8df">EDUCATIONAL RESEARCH · OPEN LAB</div><h1>Open Research Statistics Lab</h1><p>ห้องปฏิบัติการสถิติการวิจัยทางการศึกษา · เรียนรู้ ทดลอง และตีความผลอย่างมีหลักฐาน</p></header>
+<main><p class="intro">ต้นแบบสำหรับศึกษาสถิติการวิจัยด้านการจัดการเรียนรู้ฐานสมรรถนะ (CBE) โดยใช้ข้อมูลจำลองเท่านั้น ไม่จัดเก็บข้อมูลนักเรียนจริงบนเว็บไซต์</p>
+<section class="grid" id="rooms"></section>
+<section class="panel" id="workspace" aria-live="polite"><h2 id="lab-title">เริ่มต้นทดลอง</h2><p id="lab-desc" class="intro">เลือกห้องปฏิบัติการด้านบนเพื่อเริ่มเรียนรู้</p><div id="lab-body"></div></section>
+<section class="panel"><h2>หลักการใช้ผลวิเคราะห์</h2><p class="intro">แบบจำลองนี้ใช้เพื่อการเรียนรู้และตรวจสอบความเข้าใจ ไม่ใช้แทนการวิเคราะห์ข้อมูลจริงด้วย JASP หรือ jamovi การตีความนัยสำคัญต้องพิจารณาสมมติฐาน การออกแบบวิจัย ขนาดผล และความไม่แน่นอนประกอบเสมอ</p><p><a href="https://jasp-stats.org/" target="_blank" rel="noopener">JASP</a> · <a href="https://www.jamovi.org/" target="_blank" rel="noopener">jamovi</a> · <a href="https://www.itl.nist.gov/div898/handbook/" target="_blank" rel="noopener">NIST Statistical Handbook</a></p></section>
+</main><footer>Open Research Statistics Lab · Research prototype · ข้อมูลจำลอง</footer>
+<script>
+"use strict";
+const rooms=[
+["MCQ Item Analysis","ความยาก อำนาจจำแนก ความเที่ยง และตัวลวง"],
+["Rubric Reliability","ความสอดคล้องของผู้ประเมินและ Weighted Kappa"],
+["Learning Outcomes","ผลก่อน–หลังเรียน และ Exact Binomial Test"],
+["Competency Tracking","ติดตามสมรรถนะด้วย Rubric 5 เกณฑ์และ Hybrid Rule"],
+["Chapter 4 Builder","โครงร่างการรายงานผลวิจัยตามวัตถุประสงค์"]];
+const $=id=>document.getElementById(id);
+$("rooms").innerHTML=rooms.map((r,i)=>'<article class="card"><span class="num">LAB 0'+(i+1)+'</span><h2>'+r[0]+'</h2><p>'+r[1]+'</p><button class="btn" data-room="'+i+'">เปิดห้องทดลอง</button></article>').join("");
+document.querySelectorAll("[data-room]").forEach(b=>b.addEventListener("click",()=>openRoom(Number(b.dataset.room))));
+function field(id,label,value,min,max,step=1){return '<div><label for="'+id+'">'+label+'</label><input id="'+id+'" type="number" min="'+min+'" max="'+max+'" step="'+step+'" value="'+value+'"></div>'}
+function get(id){return Number($(id).value)}
+function valid(x,min,max){return Number.isFinite(x)&&x>=min&&x<=max}
+function choose(n,k){let p=1;for(let i=1;i<=k;i++)p=p*(n-i+1)/i;return p}
+function binTail(n,k,p){let s=0;for(let i=k;i<=n;i++)s+=choose(n,i)*Math.pow(p,i)*Math.pow(1-p,n-i);return Math.min(1,s)}
+function openRoom(i){
+$("lab-title").textContent=rooms[i][0];$("lab-desc").textContent=rooms[i][1];
+const body=$("lab-body");
+if(i===2){body.innerHTML='<p>ตัวอย่างการทดสอบทางเดียว H₀: p ≤ p₀ เทียบกับ H₁: p > p₀ (ใช้ค่า p₀ ที่ขอบสมมติฐานศูนย์)</p><div class="inputs">'+field("n","จำนวนนักเรียน (n)",23,1,200)+field("k","จำนวนผู้ผ่านเกณฑ์ (k)",19,0,200)+field("p0","สัดส่วนเป้าหมายภายใต้ H₀",0.7,0,1,0.01)+field("alpha","ระดับนัยสำคัญ (α)",0.05,0.001,0.5,0.001)+'</div><p><button class="btn" id="calc">คำนวณ Exact Binomial</button></p><div id="output" class="result"></div>';function run(){let n=get("n"),k=get("k"),p=get("p0"),a=get("alpha");if(!Number.isInteger(n)||!Number.isInteger(k)||!valid(n,1,200)||!valid(k,0,n)||!valid(p,0,1)||!valid(a,.001,.5)){$("output").textContent="กรุณาตรวจสอบข้อมูล: 0 ≤ k ≤ n และค่าความน่าจะเป็นอยู่ระหว่าง 0–1";return}let v=binTail(n,k,p);$("output").textContent="สัดส่วนที่สังเกต = "+(100*k/n).toFixed(1)+"% · Exact one-sided p-value = "+v.toFixed(6)+" · "+(v<a?"มีนัยสำคัญทางสถิติ":"ไม่มีนัยสำคัญทางสถิติ")+" ที่ α = "+a+" (ผลไม่ใช่หลักฐานยืนยันขนาดผลหรือความสำคัญเชิงปฏิบัติ)"}$("calc").onclick=run;run();return}
+if(i===3){body.innerHTML='<p>กฎปฏิบัติการวิจัยที่กำหนดไว้: ทุกเกณฑ์ต้องมี ≥80% ที่ระดับ 2 ขึ้นไป, ≥50% ที่ระดับ 3 ขึ้นไป และ ≥20% ที่ระดับ 4 (รวม 15 เงื่อนไขสำหรับ 5 เกณฑ์)</p><div class="inputs">'+field("n","จำนวนนักเรียน",23,1,200)+'</div><p><button class="btn" id="calc">คำนวณจำนวนขั้นต่ำ</button></p><div id="output" class="result"></div>';function run(){const n=get("n");$("output").textContent=Number.isInteger(n)&&valid(n,1,200)?"แต่ละเกณฑ์ต้องมีอย่างน้อย "+Math.ceil(.8*n)+" คนที่ระดับ ≥2, "+Math.ceil(.5*n)+" คนที่ระดับ ≥3 และ "+Math.ceil(.2*n)+" คนที่ระดับ 4 · ต้องตรวจผลจริงแยกทั้ง 5 เกณฑ์":"กรุณาใส่จำนวนเต็ม 1–200"}$("calc").onclick=run;run();return}
+if(i===0){body.innerHTML='<p>ตัวอย่างดัชนีความยากรายข้อ p = จำนวนผู้ตอบถูก / จำนวนผู้ตอบทั้งหมด (ค่ายิ่งสูงหมายถึงข้อสอบง่ายขึ้น)</p><div class="inputs">'+field("n","จำนวนผู้ตอบ",23,1,200)+field("correct","จำนวนตอบถูก",16,0,200)+'</div><p><button class="btn" id="calc">คำนวณค่า p</button></p><div id="output" class="result"></div>';function run(){const n=get("n"),k=get("correct");$("output").textContent=Number.isInteger(n)&&Number.isInteger(k)&&valid(n,1,200)&&valid(k,0,n)?"ค่าความยาก p = "+(k/n).toFixed(3)+" · ต้องใช้ข้อมูลการตอบรายคนและคะแนนรวมเพื่อวิเคราะห์อำนาจจำแนก ตัวลวง และ KR-20":"กรุณาตรวจสอบจำนวนผู้ตอบและจำนวนตอบถูก"}$("calc").onclick=run;run();return}
+if(i===1){body.innerHTML='<p>Weighted Cohen’s Kappa สำหรับข้อมูลอันดับ 1–4 ต้องใช้ตารางไขว้คะแนนผู้ประเมิน 2 คน พร้อมระบุชนิดน้ำหนัก (linear/quadratic) ก่อนคำนวณ</p><p class="muted">พื้นที่เตรียมการ: จะเพิ่มตารางป้อนข้อมูลและตัวอย่างเปรียบเทียบกับ JASP/jamovi ในระยะต่อไป</p>';return}
+body.innerHTML='<p>โครงสร้างบทที่ 4 (ฉบับเตรียมการ)</p><ol><li>คุณภาพเครื่องมือและความสอดคล้องของผู้ประเมิน</li><li>ผลการจัดการเรียนรู้และการเปลี่ยนแปลง</li><li>ผลการบรรลุสมรรถนะตาม Hybrid Rule</li><li>ตารางผล ค่าสถิติ และคำอธิบายข้อจำกัด</li></ol><p class="muted">การสร้างข้อความรายงานจริงจะเปิดใช้เมื่อเชื่อมผลวิเคราะห์ที่ผ่านการตรวจสอบแล้ว</p>';
+}
+</script></body></html>
