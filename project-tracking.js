@@ -4,7 +4,7 @@ const $=id=>document.getElementById(id);
 const host=$("projectSection")?.closest(".panel");if(!host)return;
 host.insertAdjacentHTML("beforeend",'<div class="research-section"><h3>จำลองผลโครงงาน ชั่วโมงที่ 13–16</h3><div class="research-inputs"><div><label for="pj-student">รหัสนักเรียน</label><select id="pj-student"></select></div><div><label for="pj-hour">ชั่วโมงโครงงาน</label><select id="pj-hour"><option value="0">13</option><option value="1">14</option><option value="2">15</option><option value="3">16</option></select></div><div><label for="pj-score">คะแนนหลักฐาน (%)</label><input id="pj-score" type="number" min="0" max="100" step=".1" value="75"></div></div><button type="button" class="btn" id="pj-save">อัปเดตคะแนนโครงงาน</button><p id="pj-message" class="hint" role="status"></p><div class="tablewrap"><table><thead><tr><th>ชั่วโมง</th><th>ค่าเฉลี่ย (%)</th><th>ผู้มีหลักฐาน</th></tr></thead><tbody id="pj-summary"></tbody></table></div></div>');
 $("pj-student").innerHTML=students.map(s=>'<option value="'+s.id+'">'+s.id+'</option>').join("");
-$("apaRubric").insertAdjacentHTML("afterend",'<div id="apaProject" style="margin-top:24px"></div>');
+host.insertAdjacentHTML("beforeend",'<div id="apaProject" class="lab04-apa"></div>');
 const ensure=()=>students.forEach((s,i)=>{if(!s.project)s.project=Array.from({length:4},(_,h)=>Math.min(100,58+h*5+(i*7+h*3)%21))});
 const round=x=>Number(x).toFixed(2);
 function renderProject(){ensure();const n=students.length;const stats=Array.from({length:4},(_,h)=>{const all=students.map(s=>s.project[h]).filter(Number.isFinite);return {h:h+13,count:all.length,mean:all.reduce((a,b)=>a+b,0)/all.length}});
