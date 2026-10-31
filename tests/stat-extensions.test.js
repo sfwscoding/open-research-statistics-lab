@@ -1,0 +1,6 @@
+"use strict";const assert=require("node:assert/strict"),S=require("../stat-extensions.js").StatExtensions,fs=require("node:fs"),vm=require("node:vm");function close(a,b,tol=1e-8){assert.ok(Math.abs(a-b)<tol,a+" vs "+b)}
+close(S.tP(0,9,"two-sided"),1);close(S.tP(0,9,"greater"),.5);close(S.tP(2.22813885,10,"two-sided"),.05,1e-6);
+const p=S.paired([1,2,3,4,5],[2,4,4,7,7]);assert.equal(p.n,5);assert.ok(p.t>0);assert.ok(p.p<1);
+const w=S.wilcoxon([1,1,-2,2],"two-sided");assert.equal(w.ties,true);assert.equal(w.n,4);close(w.p,1);
+const w2=S.wilcoxon([1,2,3],"greater");close(w2.p,.125);const w3=S.wilcoxon([0,1,2,3],"greater");assert.equal(w3.zeros,1);close(w3.p,.125);
+const html=fs.readFileSync("lab03.html","utf8");for(const id of ["pairedInputs","pairedN","pairedDiff","pairedSD","rawPaired"])assert.ok(html.includes('id="'+id+'"'));assert.ok(html.includes('data-test="paired"'));const js=[...html.matchAll(/<script(?:\\s[^>]*)?>([\\s\\S]*?)<\\/script>/g)];assert.equal(js.length,1);new vm.Script(js[0][1]);console.log("Extended statistics reference and Lab 03 syntax checks passed");
