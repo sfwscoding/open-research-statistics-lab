@@ -22,7 +22,9 @@ jobs:
         run: |
           node tests/mcq.test.js
           node tests/outcomes.test.js
+          node tests/competency.test.js
           node --check outcomes.js
+          node --check competency.js
       - name: Check JavaScript syntax in HTML
         run: |
           node - <<'NODE'
