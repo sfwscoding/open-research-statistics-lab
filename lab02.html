@@ -36,6 +36,11 @@ header{border-top:6px solid #2563eb;background:linear-gradient(105deg,#ffffff 0%
 
 /* Flat & Clean: no decorative shadows across all Lab surfaces. */
 *,*::before,*::after{box-shadow:none!important;text-shadow:none!important}
+
+/* Flat card surfaces: remove decorative thick color rails, retain APA table rules. */
+header,.intro,.shell,.panel,.stat-card,.stat,.stat-visual,.lab-navigation,.course,.summary,.result,.interpret,.apa-interpret,#workspace,.layout>.stack>.panel,.right>.panel,#lab-body .panel,.stat-cards .stat-card{border-top:0!important;box-shadow:none!important}
+/* Thin neutral outlines preserve grouping without colored edge emphasis. */
+.panel,.stat-card,.stat,.stat-visual,.lab-navigation,.course,.summary,.result,.interpret,.apa-interpret{border-color:#e2e8f0}
 </style><link rel="stylesheet" href="shared-nav.css"></head><body>
 <header><div class="muted" style="color:#9ad8df">OPEN RESEARCH STATISTICS LAB · LAB 02</div><h1>Lab 02 · Rubric Reliability</h1><p>เครื่องมือวิเคราะห์และทดลองทางสถิติสำหรับการวิจัยทางการศึกษา</p></header>
 <main><p class="intro">ต้นแบบสำหรับศึกษาสถิติการวิจัยด้านการจัดการเรียนรู้ฐานสมรรถนะ (CBE) โดยใช้ข้อมูลจำลองเท่านั้น ไม่จัดเก็บข้อมูลนักเรียนจริงบนเว็บไซต์</p>
