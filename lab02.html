@@ -41,7 +41,7 @@ header{border-top:6px solid #2563eb;background:linear-gradient(105deg,#ffffff 0%
 header,.intro,.shell,.panel,.stat-card,.stat,.stat-visual,.lab-navigation,.course,.summary,.result,.interpret,.apa-interpret,#workspace,.layout>.stack>.panel,.right>.panel,#lab-body .panel,.stat-cards .stat-card{border-top:0!important;box-shadow:none!important}
 /* Thin neutral outlines preserve grouping without colored edge emphasis. */
 .panel,.stat-card,.stat,.stat-visual,.lab-navigation,.course,.summary,.result,.interpret,.apa-interpret{border-color:#e2e8f0}
-</style><link rel="stylesheet" href="shared-nav.css"></head><body>
+</style><link rel="stylesheet" href="shared-nav.css"><link rel="stylesheet" href="research-reporting.css?v=1"></head><body>
 <header><div class="muted" style="color:#9ad8df">OPEN RESEARCH STATISTICS LAB · LAB 02</div><h1>Lab 02 · Rubric Reliability</h1><p>เครื่องมือวิเคราะห์และทดลองทางสถิติสำหรับการวิจัยทางการศึกษา</p></header>
 <main><p class="intro">ต้นแบบสำหรับศึกษาสถิติการวิจัยด้านการจัดการเรียนรู้ฐานสมรรถนะ (CBE) โดยใช้ข้อมูลจำลองเท่านั้น ไม่จัดเก็บข้อมูลนักเรียนจริงบนเว็บไซต์</p>
 <section class="lab-overview" style="display:none"><div class="lab-eyebrow">YOUR INTERACTIVE RESEARCH WORKSPACE</div><h2>เลือกห้องทดลอง แล้วปรับค่าดูผลได้ทันที</h2><p>5 ห้องทดลอง · ข้อมูลจำลอง · แสดงผลเป็นภาพและคำอธิบายภาษาไทย</p></section><section class="panel" style="display:none;background:#e5f7f1;border:4px solid white"><h2>Lab 04 · Dashboard รุ่นทดลองใหม่</h2><p class="intro">กราฟเส้น KPA 12 ชั่วโมง · เลือกนักเรียน · แก้คะแนนจำลอง · Hybrid Rule 5 เกณฑ์</p><a class="btn" href="lab04.html" style="text-decoration:none">เปิด Lab 04 แบบ Dashboard ใหม่</a></section><section class="panel" style="display:none;background:#f2eaff;border:4px solid white"><h2>Lab 03 · Learning Outcomes Dashboard ใหม่</h2><p>Exact Binomial · One-Sample t · Exact Wilcoxon พร้อมกราฟการแจกแจง โหมดทดลอง/ข้อมูลดิบแยกกัน และตาราง APA 7</p><a class="btn" href="lab03.html" style="text-decoration:none">เปิด Lab 03 แบบ Dashboard ใหม่</a></section><section class="panel" id="catalog" style="display:none"><h2>สารบัญสถิติ Lab 01–05</h2><p class="intro">เลือกหัวข้อจากหมวดเลขลำดับชั้น โดยแต่ละค่าสถิติจะมีกราฟ ตาราง APA 7 คำบรรยายผล และอ้างอิงอยู่ในรายการเดียวกัน</p><div class="grid"><article class="card"><h2>1. คุณภาพข้อสอบ</h2><p>1.1 Item Analysis</p><p>1.1.1 ความยาก (p)<br>1.1.2 อำนาจจำแนก<br>1.1.3 ตัวลวง</p><p>1.2 Reliability · KR-20</p><a href="#workspace">เปิด Lab 01 ด้านล่าง</a></article><article class="card"><h2>2. ความเที่ยงของ Rubric</h2><p>2.1 Inter-rater Agreement</p><p>2.1.1 Cohen’s Kappa<br>2.1.2 Weighted Kappa</p><p>2.2 ตารางความสอดคล้อง</p><a href="#workspace">เปิด Lab 02 ด้านล่าง</a></article><article class="card"><h2>3. ผลการเรียนรู้</h2><p>3.1 ค่าเฉลี่ยเทียบเกณฑ์<br>3.1.1 One-Sample t<br>3.1.2 Wilcoxon เทียบเกณฑ์</p><p>3.2 ข้อมูลแบบจับคู่<br>3.2.1 Paired t<br>3.2.2 Wilcoxon ก่อน–หลัง</p><p>3.3 สัดส่วนเทียบเป้าหมาย<br>3.3.1 Exact Binomial</p><a href="lab03.html">เปิด Lab 03 Dashboard</a></article><article class="card"><h2>4. ติดตามสมรรถนะ</h2><p>4.1 KPA / Micro Task<br>4.1.1 KPA 12 ชั่วโมง<br>4.1.2 Micro Task</p><p>4.2 Rubric / Hybrid Rule<br>4.3 โครงงาน</p><a href="lab04.html">เปิด Lab 04 Dashboard</a></article><article class="card"><h2>5. รายงานผลวิจัย</h2><p>5.1 รายงานตามวัตถุประสงค์<br>5.1.1 ผลการตรวจสอบเครื่องมือ<br>5.1.2 ผลการพัฒนาผู้เรียน</p><p>5.2 บูรณาการผลจาก Lab 01–04</p><a href="#workspace">เปิด Lab 05 ด้านล่าง</a></article></div><p class="muted">หมายเหตุ: Lab 01, 02 และ 05 ยังใช้เครื่องมือเดิมในหน้าแรก ส่วนการย้ายเป็น Dashboard และจัด APA 7 รายสถิติจะทยอยพัฒนาต่อ</p></section><section class="grid" id="rooms" style="display:none"></section>
@@ -51,7 +51,7 @@ header,.intro,.shell,.panel,.stat-card,.stat,.stat-visual,.lab-navigation,.cours
 <script src="outcomes.js"></script>
 <script src="competency.js"></script>
 <script src="kpa.js"></script>
-<script src="evidence.js"></script>
+<script src="evidence.js"></script><script src="research-reporting.js?v=1"></script>
 <script>
 "use strict";
 const roomIcons=["📝","⚖️","📈","🎯","📚"];
@@ -125,9 +125,9 @@ for(let r=0;r<4;r++){m[r]=[];for(let c=0;c<4;c++){let v=get("m"+r+c);if(!Number.
 if(n===0){$("output").textContent="ต้องมีการประเมินอย่างน้อยหนึ่งคู่";return}
 let quadratic=$("weight").value==="quadratic";
 for(let r=0;r<4;r++)for(let c=0;c<4;c++){let d=Math.abs(r-c)/3,w=quadratic?d*d:d;observed+=w*m[r][c]/n;expected+=w*rows[r]*cols[c]/(n*n)}
-if(expected<1e-12){$("output").textContent=observed<1e-12?"ไม่สามารถคำนวณ κ ได้: ความไม่เห็นพ้องที่คาดหมายเป็นศูนย์ (ทุกคะแนนอยู่ระดับเดียวกัน)":"ไม่สามารถคำนวณ κ ได้: ค่าคาดหมายเป็นศูนย์";return}
+if(expected<1e-12){$("output").innerHTML=ResearchReports.kappa(m);return}
 let kappa=1-observed/expected;
-$("output").innerHTML=statCards([["คู่ประเมิน",n,"จำนวนคู่"],["Weighted κ",kappa.toFixed(4),quadratic?"Quadratic":"Linear"],["Observed",observed.toFixed(4),"ความไม่เห็นพ้อง"],["Expected",expected.toFixed(4),"ความไม่เห็นพ้องคาดหมาย"]])+visualBars([["Observed",observed],["Expected",expected]])+"<p class=stat-note>ควรรายงานช่วงความเชื่อมั่น และตรวจสอบผลกับ JASP/jamovi</p>";
+$("output").innerHTML=statCards([["คู่ประเมิน",n,"จำนวนคู่"],["Weighted κ",kappa.toFixed(4),quadratic?"Quadratic":"Linear"],["Observed",observed.toFixed(4),"ความไม่เห็นพ้อง"],["Expected",expected.toFixed(4),"ความไม่เห็นพ้องคาดหมาย"]])+visualBars([["Observed",observed],["Expected",expected]])+"<p class=stat-note>ควรตรวจช่วงความเชื่อมั่นและสมมติฐานเพิ่มเติมก่อนใช้งานวิจัยจริง</p>"+ResearchReports.kappa(m);
 }
 $("calc").onclick=run;run();return}
 body.innerHTML='<p>โครงสร้างบทที่ 4 (ฉบับเตรียมการ)</p><ol><li>คุณภาพเครื่องมือและความสอดคล้องของผู้ประเมิน</li><li>ผลการจัดการเรียนรู้และการเปลี่ยนแปลง</li><li>ผลการบรรลุสมรรถนะตาม Hybrid Rule</li><li>ตารางผล ค่าสถิติ และคำอธิบายข้อจำกัด</li></ol><p class="muted">การสร้างข้อความรายงานจริงจะเปิดใช้เมื่อเชื่อมผลวิเคราะห์ที่ผ่านการตรวจสอบแล้ว</p>';
