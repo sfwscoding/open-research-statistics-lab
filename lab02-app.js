@@ -280,22 +280,51 @@ $("matrix-calc").onclick=()=>{state.matrixSource=state.source="ตาราง�
 $("matrix-restore").onclick=restoreMatrix;
 $("template").onclick=()=>copy(Engine.HEAD.join(",")+
   "\n"+Engine.toCSV(Engine.demoData(3)).split("\n").slice(1).join("\n"),"คัดลอกแม่แบบ CSV แล้ว");
-$("copy-report").onclick=()=>copy($("apa-output").innerText,
-  "คัดลอกตารางและคำบรรยาย APA แล้ว");
+$("copy-report").onclick=async()=>{
+  if($("result-body").hidden){announce("ข้อมูลยังไม่ผ่านการตรวจสอบ กรุณาคำนวณใหม่ก่อน");return}
+  const text=$("analysis-context").innerText+"\n\n"+$("apa-output").innerText;
+  if(typeof ClipboardItem!=="undefined" && navigator.clipboard && navigator.clipboard.write){
+    try{
+      const contents=$("apa-output").innerHTML
+        .replace(/<table class="research-apa">/g,'<table style="width:100%;border-collapse:collapse">')
+        .replace(/<thead>/g,'<thead style="border-top:2px solid #334155;border-bottom:1px solid #334155">')
+        .replace(/<tbody>/g,'<tbody style="border-bottom:2px solid #334155">')
+        .replace(/<th>/g,'<th style="padding:8px;text-align:left">')
+        .replace(/<td>/g,'<td style="padding:8px;text-align:left">');
+      const item=new ClipboardItem({"text/html":new Blob([contents],{type:"text/html"}),
+        "text/plain":new Blob([text],{type:"text/plain"})});
+      await navigator.clipboard.write([item]);
+      announce("คัดลอกตาราง APA 7 พร้อมคำบรรยายและโครงสร้างตารางแล้ว");
+      return;
+    }catch(_) {/* Fall back to plain-text copy. */}
+  }
+  copy(text,"คัดลอกตารางและคำบรรยาย APA แล้ว");
+};
 $("copy-matrix").onclick=()=>{
   if($("result-body").hidden){announce("กรุณาคำนวณให้ถูกต้องก่อน");return}
   const stats=state.mode==="records"?state.summary.criteria[getSelected()]:state.matrixSummary;
   copy(stats.matrix.map(row=>row.join(",")).join("\n"),"คัดลอกเมทริกซ์ 4×4 แล้ว สามารถวางลง Lab 05 ได้");
+};
+function saveFile(filename,text,mime){
+  const blob=new Blob([text],{type:mime});
+  const url=URL.createObjectURL(blob),link=document.createElement("a");
+  link.href=url;link.download=filename;
+  document.body.appendChild(link);link.click();link.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+$("download-csv").onclick=()=>{
+  try{
+    const records=Engine.readCSV($("csv-data").value);
+    saveFile("lab02-two-rater-five-criteria.csv",Engine.toCSV(records),"text/csv;charset=utf-8");
+    announce("เตรียมบันทึกคะแนน CSV แล้ว · เก็บไฟล์ไว้ในเครื่องของคุณ");
+  }catch(err){showError(err);}
 };
 $("download-report").onclick=()=>{
   if($("result-body").hidden){announce("กรุณาคำนวณให้ถูกต้องก่อน");return}
   const text="Open Research Statistics Lab · Lab 02\n"+
     $("analysis-context").innerText+"\n\n"+$("apa-output").innerText+
     "\n\nข้อมูลเริ่มต้นเป็นข้อมูลจำลอง; ตรวจผลกับซอฟต์แวร์สถิติอิสระก่อนใช้จริง";
-  const blob=new Blob([text],{type:"text/plain;charset=utf-8"});
-  const url=URL.createObjectURL(blob),link=document.createElement("a");
-  link.href=url;link.download="lab02-rubric-reliability-apa.txt";
-  document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  saveFile("lab02-rubric-reliability-apa.txt",text,"text/plain;charset=utf-8");
   announce("เตรียมบันทึกไฟล์รายงาน .txt แล้ว");
 };
 analyze();
