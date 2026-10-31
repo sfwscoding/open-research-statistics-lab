@@ -28,6 +28,7 @@ jobs:
           node tests/integration.test.js
           node tests/ui.test.js
           node tests/lab04.test.js
+          node tests/research-reporting.test.js
           node tests/lab03.test.js
           node tests/stat-extensions.test.js
           node --check stat-extensions.js
@@ -36,6 +37,9 @@ jobs:
           node --check competency.js
           node --check kpa.js
           node --check evidence.js
+          node --check research-reporting.js
+          node --check chapter4-builder.js
+          node --check project-tracking.js
       - name: Check JavaScript syntax in HTML
         run: |
           node - <<'NODE'
