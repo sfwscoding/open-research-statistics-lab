@@ -9,5 +9,5 @@ t=Outcomes.paired([1,2,3,4],[2,2,4,4]);near(t.mean,.5);near(t.t,Math.sqrt(3));ne
 let w=Outcomes.wilcoxon([0,0,0,0],[1,2,3,4]);near(w.wPlus,10);near(w.p,.125);
 w=Outcomes.wilcoxon([0,0,0,0],[1,-1,2,-2]);near(w.p,1);
 w=Outcomes.wilcoxon([1,2,3],[1,2,3]);near(w.p,1);assert.equal(w.n,0);
-near(Outcomes.binomial(3,2,.5),.5);near(Outcomes.binomial(23,19,.7),0.13409525269718492,1e-9);
+near(Outcomes.binomial(3,2,.5),.5);near(Outcomes.binomial(23,19,.7),0.13560296695947663,1e-9);
 console.log("Learning outcomes reference tests: passed");
