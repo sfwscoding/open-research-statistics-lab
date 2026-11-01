@@ -65,7 +65,7 @@ const URLP=URLSearchParams;
  assert.equal(d.get("c-results").hidden,true);
 }
 const lab03=read("lab03.html");
-assert.equal((lab03.match(/<button\b[^>]*data-test="/g)||[]).length,5);
+assert.equal((lab03.match(/<button\b[^>]*data-test="/g)||[]).length,0);
 assert.ok(lab03.indexOf("APA 7 · ตารางและคำบรรยาย")<lab03.indexOf("<h2>หลักการและการตีความ</h2>"));
 const lab04=read("lab04.html");
 assert.equal((lab04.match(/data-stat="/g)||[]).length,4);
