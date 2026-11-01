@@ -19,7 +19,7 @@ assert.match(R.table(1,"Test",["A"],[[2]],"sample note","sample interpretation")
 const spec=[
  ["lab01.html",["lab01-app.js","id=\"stat-menu\"","id=\"mcq-apa\""]],
  ["lab02.html",["lab02-app.js","id=\"lab02-stat-menu\"","id=\"apa-output\""]],
- ["lab03.html",["id=\"tests\"","id=\"apa\"","wilcoxon-criterion"]],
+ ["lab03.html",["function selectTest(requested)","id=\"apa\"","wilcoxon-criterion"]],
  ["lab04.html",["lab04-views.js","id=\"lab04-stat-menu\"","id=\"apaKpa\"","id=\"apaRubric\""]],
  ["lab05.html",["chapter4-single.js","id=\"chapter-stat-menu\"","id=\"c-apa\""]]
 ];
@@ -38,7 +38,7 @@ const lab04=fs.readFileSync("lab04.html","utf8");
 const lab05=fs.readFileSync("lab05.html","utf8");
 assert.equal((lab01.match(/data-stat="/g)||[]).length,5);
 assert.equal((lab02.match(/data-metric="/g)||[]).length,4);
-assert.equal((lab03.match(/<button\b[^>]*data-test="/g)||[]).length,5);
+assert.equal((lab03.match(/<button\b[^>]*data-test="/g)||[]).length,0);
 assert.equal((lab04.match(/data-stat="/g)||[]).length,4);
 assert.equal((lab05.match(/data-stat="/g)||[]).length,16);
 assert.doesNotMatch(lab05,/chapter4-builder\.js/);
