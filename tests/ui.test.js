@@ -11,7 +11,7 @@ for(let i=1;i<=5;i++){
  const required={
   1:["lab01-app.js",'id="stat-menu"'],
   2:["lab02-app.js",'id="lab02-stat-menu"'],
-  3:['id="tests"','id="apa"'],
+  3:['function selectTest(requested)','id="apa"'],
   4:["lab04-views.js",'id="lab04-stat-menu"'],
   5:["chapter4-single.js",'id="chapter-stat-menu"']
  }[i];
