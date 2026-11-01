@@ -27,6 +27,7 @@ jobs:
           node tests/evidence.test.js
           node tests/integration.test.js
           node tests/ui.test.js
+          node tests/kpa-window-theme.test.js
           node tests/lab04.test.js
           node tests/lab04-isolated.test.js
           node tests/research-reporting.test.js
@@ -46,6 +47,7 @@ jobs:
           node --check lab02-app.js
           node --check lab01-app.js
           node --check chapter4-single.js
+          node --check kpa-window-theme.js
           node --check lab04-views.js
           node --check chapter4-builder.js
           node --check project-tracking.js
