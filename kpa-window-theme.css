@@ -1,0 +1,326 @@
+/*
+ * Open Research Statistics Lab — KPA Window Theme
+ * Visual reference: user-provided "ผลการเรียน K P A.html".
+ * Pure presentation layer: no statistical algorithms, observations or report text.
+ * Added last in <head> of index.html + Lab 01–05 to override legacy gradients.
+ */
+:root {
+  color-scheme: light;
+  --bg:#eaf1ff; --card:#ffffff; --ink:#0f1b3d; --soft:#e3ecff;
+  --muted:#5b6788; --grid:#c9d5f2;
+  --k:#1e4fd6; --p:#16a34a; --a:#f58220;
+  --red:#e5322d; --blue:#1e4fd6; --green:#16a34a; --orange:#f58220;
+  --on-orange:#1a1200; --line:var(--grid); --white:var(--card);
+  --sem-blue:var(--blue); --sem-green:var(--green);
+  --sem-orange:#b85a08; --sem-red:#d3282a; --sem-ink:var(--ink);
+  --sem-line:var(--grid); --sem-focus:var(--blue);
+  --sem-blue-soft:var(--soft);
+  --sem-green-soft:#e7f8ed; --sem-red-soft:#fff0f0; --sem-orange-soft:#fff2e6;
+  --window-border:2px solid var(--ink);
+}
+:root[data-theme="dark"] {
+  color-scheme:dark;
+  --bg:#0a1228; --card:#131d3a; --ink:#e9eeff;
+  --soft:#1f2d57; --muted:#abb7db; --grid:#324571;
+  --k:#6f9cff; --p:#34d17a; --a:#ffa24d;
+  --blue:#6f9cff; --green:#34d17a; --orange:#ffa24d; --red:#ff6a63;
+  --on-orange:#1a1200; --line:var(--grid); --white:var(--card);
+  --sem-orange:#ffa24d; --sem-red:#ff6a63;
+  --sem-green-soft:#163b2c; --sem-red-soft:#442225; --sem-orange-soft:#462d1e;
+}
+@media (prefers-color-scheme:dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme:dark;
+    --bg:#0a1228; --card:#131d3a; --ink:#e9eeff;
+    --soft:#1f2d57; --muted:#abb7db; --grid:#324571;
+    --k:#6f9cff; --p:#34d17a; --a:#ffa24d;
+    --blue:#6f9cff; --green:#34d17a; --orange:#ffa24d; --red:#ff6a63;
+    --on-orange:#1a1200; --line:var(--grid); --white:var(--card);
+    --sem-orange:#ffa24d; --sem-red:#ff6a63;
+    --sem-green-soft:#163b2c; --sem-red-soft:#442225; --sem-orange-soft:#462d1e;
+  }
+}
+/* Global typography and flat-blue canvas */
+html { scroll-behavior:smooth; scroll-padding-top:20px; }
+html body {
+  background:var(--bg)!important;
+  color:var(--ink)!important;
+  font:500 15px/1.55 "Prompt","Noto Sans Thai",system-ui,sans-serif!important;
+  min-height:100vh;
+}
+html body * { box-shadow:none!important; text-shadow:none!important; }
+html body h1,html body h2,html body h3,html body strong,html body b { color:var(--ink); }
+html body a { color:var(--blue); }
+html body :where(p,small,.hint,.note,.muted,.sub,.section-lead,.result-source,.apa-note,.research-note) {
+  color:var(--muted);
+}
+html body :where(button,input,select,textarea,summary) {
+  font-family:"Prompt","Noto Sans Thai",system-ui,sans-serif;
+}
+html body :where(a,button,input,select,textarea,summary):focus-visible {
+  outline:3px solid var(--blue)!important; outline-offset:3px;
+}
+html body [hidden] { display:none!important; }
+
+/* Central window framing, intentionally square like the supplied HTML */
+html body :where(.shell,.lab02-hero,.hero,.panel,.card,.course,.stat,.stat-card,.result-card,
+  .chart-panel,.chart,.summary,.read,.intro,.lab-navigation,.stat-visual,.research-section,
+  .research-table,.statgrid,.right-stat,.right>.panel) {
+  background:var(--card)!important;
+  color:var(--ink)!important;
+  border:1.5px solid var(--ink)!important;
+  border-radius:2px!important;
+  box-shadow:none!important;
+}
+html body .shell {
+  border:var(--window-border)!important;
+  padding:clamp(12px,2.4vw,28px)!important;
+  background:var(--card)!important;
+  max-width:1380px;
+}
+html body :where(.lab02-hero,.hero,.intro) {
+  position:relative;
+  overflow:hidden;
+  background:var(--card)!important;
+  border:var(--window-border)!important;
+  border-radius:2px!important;
+}
+html body .lab02-hero,
+html body .hero { padding:0 clamp(16px,3vw,34px) 26px!important; }
+html body .intro { padding:0 clamp(15px,3vw,29px) 24px!important; margin-bottom:16px; }
+/* Three window controls (red/orange/green) and a centered application bar. */
+html body :where(.lab02-hero,.hero,.intro)::before {
+  content:"Open Research Statistics Lab";
+  display:block;
+  height:38px;
+  line-height:36px;
+  margin:0 calc(-1 * clamp(16px,3vw,34px)) 18px;
+  background-color:var(--soft);
+  background-image:
+    linear-gradient(var(--red),var(--red)),
+    linear-gradient(var(--orange),var(--orange)),
+    linear-gradient(var(--green),var(--green));
+  background-repeat:no-repeat;
+  background-size:13px 13px,13px 13px,13px 13px;
+  background-position:12px center,32px center,52px center;
+  border-bottom:1.5px solid var(--ink);
+  color:var(--ink);
+  text-align:center;
+  padding:0 66px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:0;
+}
+html body .intro::before { margin-left:calc(-1 * clamp(15px,3vw,29px)); margin-right:calc(-1 * clamp(15px,3vw,29px)); }
+html body :where(.hero,.intro,.lab02-hero) h1 { color:var(--blue)!important; }
+html body :where(.hero,.intro,.lab02-hero) :where(p,.muted,.eyebrow,.mini) {
+  color:var(--muted)!important;
+}
+html body :where(.eyebrow,.mini,.lab-eyebrow) {
+  color:var(--blue)!important; font-weight:750;
+}
+
+/* Lightweight button treatment from the supplied outlined dashboard cards */
+html body :where(.stat-menu,.metric-nav,.tabs,.modes,.mode-buttons,.stat-nav) {
+  background:var(--card)!important;
+  border-color:var(--grid)!important;
+}
+html body :where(.stat-menu button,.metric-nav button,.tabs button,.modes button,.mode-buttons button,.stat-nav button,
+  .lab-navigation button,.nav a,.mini-pill,.chip,.pick) {
+  background:var(--soft)!important;
+  color:var(--ink)!important;
+  border:1.5px solid var(--ink)!important;
+  border-radius:2px!important;
+}
+html body :where(.stat-menu button[aria-current="true"],.metric-nav button[aria-current="true"],
+  .stat-nav button.active,.tabs button.active,.modes button.active,.mode-buttons button[aria-pressed="true"],
+  .stat-nav button[aria-selected="true"]) {
+  background:var(--blue)!important;
+  color:var(--card)!important;
+  border-color:var(--blue)!important;
+}
+html body :where(.stat-menu button,.metric-nav button,.tabs button,.modes button,.mode-buttons button,
+  .stat-nav button) { font-weight:650; }
+html body button.btn,
+html body .btn,
+html body .card a,
+html body button#recalc,
+html body button#copy {
+  background:var(--blue)!important;
+  color:var(--card)!important;
+  border:1.5px solid var(--blue)!important;
+  border-radius:2px!important;
+  font-weight:700;
+}
+html body :where(.btn.secondary,.btn.alt,button.secondary,.export-btn,.photo) {
+  background:var(--card)!important;
+  color:var(--blue)!important;
+  border:1.5px solid var(--blue)!important;
+}
+html body :where(.btn.green) {
+  background:var(--green)!important;
+  border-color:var(--green)!important;
+  color:#071a10!important;
+}
+html body :where(.badge,.tag,.pill,.mini-pill,.chip,.lab02-hero .mini-pill) {
+  background:var(--soft)!important;
+  color:var(--ink)!important;
+  border:1px solid var(--ink)!important;
+  border-radius:2px!important;
+}
+html body :where(.mini-pill.green,.chip.green,.status-success,.stat-pass) {
+  background:var(--sem-green-soft)!important;
+  color:var(--green)!important;
+}
+html body :where(.mini-pill.orange,.chip.orange) {
+  background:var(--sem-orange-soft)!important;
+  color:var(--sem-orange)!important;
+}
+html body :where(.callout,.warning,.caution) {
+  background:var(--sem-orange-soft)!important;
+  color:var(--ink)!important;
+  border:1px solid var(--grid)!important;
+  border-left:3px solid var(--orange)!important;
+  border-radius:2px!important;
+}
+html body :where(.callout.neutral,.interpret,.research-interpret,.apa-interpret) {
+  background:var(--soft)!important;
+  color:var(--ink)!important;
+  border-left:3px solid var(--blue)!important;
+  border-radius:2px!important;
+}
+html body :where(.error,.status.bad,.stat-fail) {
+  color:var(--red)!important;
+}
+/* Form controls: dark-mode-safe and suitable for dense raw-data input */
+html body :where(input:not([type="range"]):not([type="checkbox"]):not([type="radio"]),
+  select,textarea) {
+  background:var(--card)!important;
+  color:var(--ink)!important;
+  border:1.5px solid var(--grid)!important;
+  border-radius:2px!important;
+  outline-offset:2px;
+}
+html body :where(input[type="range"],input[type="checkbox"],input[type="radio"]) {
+  accent-color:var(--blue)!important;
+}
+html body :where(label,.control label) { color:var(--ink)!important; }
+html body :where(.result-card,.stat,.stat-card,.sm,.course,.summary) {
+  background:var(--card)!important;
+  border-color:var(--ink)!important;
+}
+html body :where(.stat:nth-child(2),.stat-card:nth-child(2),.result-card:nth-child(2),.course:nth-child(2)) {
+  background:var(--sem-green-soft)!important;
+}
+html body :where(.stat:nth-child(3),.stat-card:nth-child(3),.result-card:nth-child(3),.course:nth-child(3)) {
+  background:var(--sem-orange-soft)!important;
+}
+html body :where(.stat strong,.stat-card strong,.result-card strong) { color:var(--blue)!important; }
+html body :where(.stat:nth-child(2) strong,.stat-card:nth-child(2) strong,.result-card:nth-child(2) strong) { color:var(--green)!important; }
+html body :where(.stat:nth-child(3) strong,.stat-card:nth-child(3) strong,.result-card:nth-child(3) strong) { color:var(--sem-orange)!important; }
+html body :where(.track,.item-track) { background:var(--soft)!important; border-radius:2px!important; }
+html body :where(.fill,.item-fill) { border-radius:2px!important; }
+html body :where(.chart svg,.chart-panel svg,svg.chart) text {
+  fill:var(--muted);
+  font-family:"Prompt","Noto Sans Thai",system-ui,sans-serif;
+}
+
+/* Consistent navigation, aligned with the window title-bar style */
+html body .unified-nav {
+  background:var(--card)!important;
+  color:var(--ink)!important;
+  border:1.5px solid var(--ink)!important;
+  border-radius:2px!important;
+  font-family:"Prompt","Noto Sans Thai",system-ui,sans-serif!important;
+  position:sticky;
+}
+html body .unified-brand {color:var(--blue)!important}
+html body .unified-nav summary {color:var(--ink)!important; border-radius:2px!important;}
+html body .unified-nav details.current>summary,
+html body .unified-nav details[open]>summary {
+  background:var(--soft)!important;
+  color:var(--blue)!important;
+}
+html body .unified-dropdown {
+  background:var(--card)!important;
+  border:1.5px solid var(--ink)!important;
+  border-radius:2px!important;
+  color:var(--ink)!important;
+}
+html body .unified-dropdown a {color:var(--ink)!important;}
+html body .unified-dropdown a:hover,
+html body .unified-dropdown a:focus-visible {background:var(--soft)!important;}
+html body .unified-group {color:var(--muted)!important;}
+
+/* The scientific APA tables retain journal-style horizontal rules.
+   Important: do NOT wrap every cell in thick decorative borders. */
+html body :where(.research-table,.research-section) {
+  background:var(--card)!important;
+  border:1px solid var(--grid)!important;
+  color:var(--ink)!important;
+  border-radius:2px!important;
+}
+html body :where(.research-apa,.apa,.apa-table,table) {
+  color:var(--ink)!important;
+}
+html body :where(.research-apa th,.research-apa td,.apa th,.apa td,.apa-table th,.apa-table td) {
+  background:var(--card)!important;
+  color:var(--ink)!important;
+}
+html body :where(.apa thead,.apa-table thead,.research-apa thead) {
+  border-top:2px solid var(--ink)!important;
+  border-bottom:1px solid var(--ink)!important;
+}
+html body :where(.apa tbody,.apa-table tbody,.research-apa tbody) {
+  border-bottom:2px solid var(--ink)!important;
+}
+html body :where(.research-apa tr+tr,.apa tr+tr,.apa-table tr+tr) {
+  border-top:1px solid var(--grid);
+}
+html body :where(.research-interpret,.apa-interpret,.interpret) {
+  color:var(--ink)!important;
+  background:var(--soft)!important;
+}
+html body :where(.apa-label,.apa-title,.research-table .apa-title,.research-table .apa-label) {
+  color:var(--ink)!important;
+}
+html body :where(.apa-note,.research-note,.research-table .apa-note) {
+  color:var(--muted)!important;
+}
+
+/* Theme mode selector: optional presentation-only enhancement */
+html body .theme-control {
+  display:flex; gap:4px; margin-left:auto; align-items:center;
+}
+html body .theme-control button {
+  background:var(--card)!important; color:var(--ink)!important;
+  border:1.5px solid var(--grid)!important; border-radius:2px!important;
+  padding:6px 9px!important; min-width:35px;
+  font:650 12px/1.4 "Prompt",sans-serif!important;
+}
+html body .theme-control button[aria-pressed="true"] {
+  border-color:var(--blue)!important;
+  background:var(--soft)!important;
+  color:var(--blue)!important;
+}
+
+/* Maintain readable layout on phones */
+@media(max-width:760px) {
+  html body {padding:12px 10px 36px!important;}
+  html body .shell{padding:12px!important;}
+  html body .lab02-hero {margin:10px 0 0!important;}
+  html body .lab02-wrap {padding:12px 0 30px!important;}
+  html body .hero {margin:12px auto!important;}
+  html body .unified-nav {position:relative;}
+  html body :where(.lab02-hero,.intro,.hero)::before {
+    font-size:10px; padding:0 68px;
+  }
+  html body .theme-control {margin-left:0;}
+  html body .statgrid,html body .stats,html body .result-cards {min-width:0;}
+}
+@media(prefers-reduced-motion:reduce) {
+  html body * {transition:none!important;animation:none!important;}
+}
