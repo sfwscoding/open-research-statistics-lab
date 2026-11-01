@@ -45,7 +45,7 @@ html { scroll-behavior:smooth; scroll-padding-top:20px; }
 html body {
   background:var(--bg)!important;
   color:var(--ink)!important;
-  font:500 15px/1.55 "Prompt","Noto Sans Thai",system-ui,sans-serif!important;
+  font:500 16px/1.50 "Prompt","Noto Sans Thai",system-ui,sans-serif!important;
   min-height:100vh;
 }
 html body * { box-shadow:none!important; text-shadow:none!important; }
