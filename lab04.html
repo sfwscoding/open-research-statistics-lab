@@ -41,7 +41,11 @@ header,.intro,.shell,.panel,.stat-card,.stat,.stat-visual,.lab-navigation,.cours
 .lab04-copy{display:block;margin:8px 0 15px}
 .lab04-copy-status{font-size:12px;color:#15803d}
 [hidden]{display:none!important}
-</style><link rel="stylesheet" href="shared-nav.css"><link rel="stylesheet" href="research-reporting.css?v=1"><link rel="stylesheet" href="semantic-theme.css?v=20261031c"></head><body><div class="shell">
+</style><link rel="stylesheet" href="shared-nav.css"><link rel="stylesheet" href="research-reporting.css?v=1"><link rel="stylesheet" href="semantic-theme.css?v=20261031c">
+<!-- Theme only: reference design from user-provided ผลการเรียน K P A.html -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="kpa-window-theme.css?v=20261101a">
+</head><body><div class="shell">
 <header class="top"><div class="brand">◉ Open Research Lab</div><span class="badge">DEMO · ไม่ใช่ข้อมูลจริง</span></header>
 <div class="intro"><div class="mini">RESEARCH DASHBOARD / COMPETENCY-BASED EDUCATION</div><h1>ติดตามพัฒนาการสมรรถนะนักเรียน</h1><p>Stackable KPA + Micro Task · 12 ชั่วโมงเรียนรู้ + 4 ชั่วโมงโครงงาน · นักเรียนจำลอง 23 คน</p></div>
 <nav class="metric-nav" id="lab04-stat-menu" aria-label="เลือกผลวิเคราะห์หนึ่งหัวข้อต่อหนึ่งหน้า">
@@ -78,4 +82,5 @@ $("distributionCriterion").onchange=drawDistribution;$("copyAPA").onclick=()=>{c
 $("save").onclick=()=>{const h=Number($("editHour").value),v=Number($("editValue").value),id=$("editStudent").value,d=$("editDim").value;if(!Number.isInteger(h)||h<1||h>12||!Number.isFinite(v)||v<0||v>100||$("editValue").value.trim()===""){$("editMessage").textContent="กรุณากรอกชั่วโมง 1–12 และคะแนน 0–100";$("editMessage").className="status bad";return}const s=students.find(s=>s.id===id);s[d][h-1]=v;$("hour").value=h;$("student").value=id;$("editMessage").textContent="บันทึกคะแนนจำลอง "+id+" ชั่วโมง "+h+" มิติ "+d+" = "+v+"% แล้ว";$("editMessage").className="status";drawKPA()};
 $("saveRub").onclick=()=>{const id=$("rubStudent").value,j=Number($("rubCriterion").value),v=Number($("rubLevel").value);students.find(s=>s.id===id).rubric[j]=v;$("rubMessage").textContent="บันทึก "+id+" เกณฑ์ "+(j+1)+" ระดับ "+v+" แล้ว";drawRubric()};
 $("reset").onclick=()=>{students=makeData();$("student").value="all";$("hour").value=12;$("editHour").value=12;$("editMessage").textContent="คืนค่าข้อมูลจำลองเรียบร้อย";$("rubMessage").textContent="คืนค่ารูบริกจำลองเรียบร้อย";drawKPA();drawRubric()};drawKPA();drawRubric();
-</script><script src="project-tracking.js?v=2"></script><script src="lab04-views.js?v=2"></script><script src="shared-nav.js?v=single-stat-20261031"></script></body></html>
+</script><script src="project-tracking.js?v=2"></script><script src="lab04-views.js?v=2"></script><script src="shared-nav.js?v=single-stat-20261031"></script>
+<script src="kpa-window-theme.js?v=20261101a"></script></body></html>
