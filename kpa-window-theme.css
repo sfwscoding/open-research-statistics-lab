@@ -324,3 +324,71 @@ html body .theme-control button[aria-pressed="true"] {
 @media(prefers-reduced-motion:reduce) {
   html body * {transition:none!important;animation:none!important;}
 }
+
+
+/* Higher-specificity patches for legacy !important declarations.
+   Keep full window/card outlines and APA horizontal rules in dark mode. */
+html body .shell,
+html body .intro,
+html body .panel,
+html body .lab02-hero,
+html body .hero,
+html body .course,
+html body .stat,
+html body .stat-card,
+html body .chart-panel {
+  border-top:1.5px solid var(--ink)!important;
+}
+html body .shell,
+html body .intro,
+html body .lab02-hero,
+html body .hero {border-top-width:2px!important;}
+html body button.btn.secondary,
+html body .btn.secondary,
+html body button.btn.alt,
+html body .btn.alt,
+html body button.export-btn {
+  background:var(--card)!important;
+  color:var(--blue)!important;
+  border-color:var(--blue)!important;
+}
+html body .research-apa th,
+html body .research-apa td,
+html body .apa th,
+html body .apa td,
+html body .apa-table th,
+html body .apa-table td {
+  background:var(--card)!important;
+  color:var(--ink)!important;
+}
+html body .research-apa thead,
+html body .apa thead,
+html body .apa-table thead {
+  border-top:2px solid var(--ink)!important;
+  border-bottom:1px solid var(--ink)!important;
+}
+html body .research-apa tbody,
+html body .apa tbody,
+html body .apa-table tbody {
+  border-bottom:2px solid var(--ink)!important;
+}
+html body .research-table .apa-label,
+html body .research-table .apa-title,
+html body .research-table .research-interpret,
+html body .research-table .research-note,
+html body .research-table .apa-note {
+  color:var(--ink)!important;
+}
+html body .research-table .apa-note,
+html body .research-table .research-note {
+  color:var(--muted)!important;
+}
+html body .result-card small,
+html body .stat small,
+html body .stat-card small,
+html body .course small,
+html body .result-card .caption,
+html body .stat em {color:var(--muted)!important;}
+html body .unified-nav summary,
+html body .unified-nav .unified-group {color:var(--ink)!important;}
+html body .unified-nav .unified-group {opacity:.72;}
