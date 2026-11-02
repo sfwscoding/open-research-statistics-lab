@@ -9,15 +9,43 @@
 <section class="panel summary"><h2>สรุปท้ายบทเพื่อทำความเข้าใจ</h2><p class="muted">ส่วนนี้เป็นคำอธิบายสำหรับการศึกษา ไม่ใช่ข้อความแปลจากหนังสือ</p><ul id="summary"></ul></section></main>
 <script>
 const params=new URLSearchParams(location.search),id=params.get('id')||'preface';
-function el(tag,cls,text){let n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n}
+function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=String(text);return n}
 function setMode(m){document.body.classList.toggle('mode-a',m!=='b');document.getElementById('a').classList.toggle('active',m!=='b');document.getElementById('b').classList.toggle('active',m==='b');const u=new URL(location.href);u.searchParams.set('view',m);history.replaceState(null,'',u)}
-async function render(){if(!/^[a-z0-9-]+$/.test(id)){document.getElementById('title').textContent='รหัสบทไม่ถูกต้อง';return}
-try{const r=await fetch('chapters/'+id+'.json',{cache:'no-store'});if(!r.ok)throw Error('ยังไม่พบบทแปลนี้');const doc=await r.json();document.title='Lab 06 · '+doc.title_th;document.getElementById('title').textContent=doc.title_th+' / '+doc.title_en;
-document.getElementById('meta').textContent='PDF หน้า '+doc.pdf_pages[0]+'–'+doc.pdf_pages[doc.pdf_pages.length-1]+' · หนังสือหน้า '+doc.printed_pages.join(', ')+' · '+doc.blocks.length+' ช่วงข้อความ';
-document.getElementById('source').href='https://www.slo.nl/publish/pages/8837/educational-design-research-b-total.pdf#page='+doc.pdf_pages[0];
-const c=document.getElementById('content');c.replaceChildren();
-doc.blocks.forEach((b,i)=>{let sec=el('article','piece'+(b.k==='heading'?' section':''));sec.appendChild(el('div','muted','PDF หน้า '+b.p+' · '+(i+1)+'/'+doc.blocks.length));let pair=el('div','parallel'),en=el('div','en'),th=el('div','th');en.append(el('div','label','ENGLISH ORIGINAL'),el('div','',b.en));th.append(el('div','label','คำแปลภาษาไทย'),el('div','',b.th));pair.append(en,th);sec.append(pair);c.append(sec)});
-const sum=document.getElementById('summary');sum.replaceChildren();(doc.summary?.points||[]).forEach(t=>sum.append(el('li','',t)));
-}catch(e){document.getElementById('title').textContent='ยังไม่สามารถเปิดบทนี้ได้';document.getElementById('content').textContent=String(e.message||e)}}
+async function loadJson(url){const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw Error('ไม่พบไฟล์ '+url);return r.json()}
+async function render(){
+if(!/^[a-z0-9-]+$/.test(id)){document.getElementById('title').textContent='รหัสบทไม่ถูกต้อง';return}
+try{
+ const doc=await loadJson('chapters/'+id+'.json');
+ let blocks=doc.blocks;
+ if(Array.isArray(doc.parts)){
+ const files=await Promise.all(doc.parts.map(f=>loadJson('chapters/'+f)));
+ blocks=files.flatMap(f=>f.blocks);
+ }
+ if(!Array.isArray(blocks)||blocks.length===0)throw Error('บทนี้ยังไม่มีข้อความแปล');
+ document.title='Lab 06 · '+doc.title_th;
+ document.getElementById('title').textContent=doc.title_th+' / '+doc.title_en;
+ document.getElementById('meta').textContent='PDF หน้า '+doc.pdf_pages[0]+'–'+doc.pdf_pages[doc.pdf_pages.length-1]+' · หนังสือหน้า '+doc.printed_pages.join(', ')+' · '+blocks.length+' ช่วงข้อความ';
+ const base='https://www.slo.nl/publish/pages/8837/educational-design-research-b-total.pdf';
+ document.getElementById('source').href=base+'#page='+doc.pdf_pages[0];
+ const c=document.getElementById('content');c.replaceChildren();
+ blocks.forEach((b,i)=>{
+ const sec=el('article','piece'+(b.k==='heading'?' section':''));
+ sec.append(el('div','muted','PDF หน้า '+b.p+' · '+(i+1)+'/'+blocks.length));
+ const pair=el('div','parallel'),en=el('div','en'),th=el('div','th');
+ en.append(el('div','label',b.k==='reference'?'REFERENCE (original preserved)':'ENGLISH ORIGINAL'),el('div','',b.en));
+ th.append(el('div','label',b.k==='reference'?'เอกสารอ้างอิง (คงภาษาเดิม)':'คำแปลภาษาไทย'),el('div','',b.th));
+ pair.append(en,th);sec.append(pair);
+ if(/^Figure \d+:/.test(b.en||'')||/^\[Diagram/.test(b.en||'')){
+  const link=el('a','','เปิดภาพ/กราฟต้นฉบับ PDF หน้า '+b.p);link.href=base+'#page='+b.p;link.target='_blank';link.rel='noopener';sec.append(link);
+ }
+ c.append(sec);
+ });
+ if(Array.isArray(doc.translation_notes)&&doc.translation_notes.length){
+ const intro=el('div','muted','หมายเหตุของฉบับแปล: '+doc.translation_notes.join(' • '));c.prepend(intro);
+ }
+ const sum=document.getElementById('summary');sum.replaceChildren();(doc.summary?.points||[]).forEach(t=>sum.append(el('li','',t)));
+ if(doc.summary?.application_note){const p=el('p','',doc.summary.application_note);sum.parentElement.append(p)}
+}catch(e){document.getElementById('title').textContent='ยังไม่สามารถเปิดบทนี้ได้';document.getElementById('content').textContent=String(e.message||e)}
+}
 setMode(params.get('view')==='b'?'b':'a');render();
 </script><script src="../shared-nav.js"></script><script>document.querySelectorAll('.unified-nav a[href]').forEach(a=>{const u=a.getAttribute('href');if(u&&!u.startsWith('../')&&!u.startsWith('/')&&!u.includes('://')&&!u.startsWith('#'))a.setAttribute('href','../'+u)});</script><script src="../kpa-window-theme.js"></script></body></html>
