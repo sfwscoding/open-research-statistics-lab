@@ -19,11 +19,11 @@
       "B: English–Thai aligned"
     ],
     "tracking": "PDF page numbers starting at 1",
-    "source_of_truth": "lab06/pages/NNNN.json",
+    "source_of_truth": "lab06/chapters/<id>.json + optional introduction-partNN.json",
     "status_legend": {
       "translated_first_pass": "แปลครบตามข้อความที่อ่านได้และตรวจเทียบเบื้องต้น แต่ยังไม่ได้ตรวจทานโดยผู้เชี่ยวชาญ"
     },
-    "primary_unit": "chapter (one instruction creates A/B and separate study summary)",
+    "primary_unit": "one complete chapter per instruction",
     "page_unit": "legacy front matter pages 1–4 only; later chapters use chapters/id.json"
   },
   "completed_pages": [
@@ -54,13 +54,39 @@
       "blank_pdf_pages": [
         13
       ]
+    },
+    {
+      "id": "introduction",
+      "title_th": "บทนำสู่การรวบรวมกรณีศึกษาตัวอย่างของการวิจัยเชิงออกแบบทางการศึกษา",
+      "pdf_pages": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "status": "translated_first_pass",
+      "parts": 4,
+      "segments": 187,
+      "note": "แปลข้อความทุกหัวข้อ พร้อมคำอธิบายภาพ/ตัวเลขและลิงก์กราฟต้นฉบับ; รายการอ้างอิงคงภาษาอังกฤษ"
     }
   ],
   "next_chapter": {
-    "id": "introduction",
-    "title_th": "บทนำสู่กรณีศึกษาการวิจัยเชิงออกแบบทางการศึกษา",
-    "pdf_start": 14,
-    "pdf_end": 29,
+    "id": "chapter-01",
+    "title_th": "A formative experiment to enhance teacher-child interactions in a preschool classroom",
+    "pdf_start": 30,
+    "pdf_end": 50,
     "status": "not_started"
   },
   "untranslated_front_matter_pdf_pages": [
