@@ -25,7 +25,8 @@
     },
     "primary_unit": "one complete chapter per instruction",
     "page_unit": "legacy front matter pages 1–4 only; later chapters use chapters/id.json",
-    "chapter_01_bilingual_note": "English original is linked by PDF page; paragraph-level bilingual alignment is pending"
+    "chapter_01_bilingual_note": "English original is linked by PDF page; paragraph-level bilingual alignment is pending",
+    "chapter_02_bilingual_note": "The Thai translation is complete in first pass, English compared against source PDF by page, not paragraph aligned."
   },
   "completed_pages": [
     1,
@@ -111,13 +112,46 @@
       "status": "thai_first_pass_with_source_pdf",
       "parts": 6,
       "completeness": "Thai translation full chapter, references maintained in original language, Table 1 translated; English PDF page-linked but not paragraph aligned"
+    },
+    {
+      "id": "chapter-02",
+      "title_th": "การพัฒนาโปรแกรมการสอนคำศัพท์แบบครอบคลุมสำหรับเด็กอายุ 9–11 ปี โดยใช้แนวทางการทดลองเชิงออกแบบ",
+      "pdf_pages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75
+      ],
+      "status": "thai_first_pass_with_source_pdf",
+      "parts": 5,
+      "note": "แปลเนื้อหาไทยรอบแรก PDF 51–75 ครบทุกช่วง รวมส่วนอ้างอิง (คงรายการภาษาอังกฤษ) และประวัติผู้เขียน; ฉบับ B เทียบตามหน้า PDF ไม่ใช่รายย่อหน้า"
     }
   ],
   "next_chapter": {
-    "id": "chapter-02",
-    "title_th": "การพัฒนาโปรแกรมสอนคำศัพท์แบบครอบคลุมสำหรับเด็กอายุ 9–11 ปี โดยใช้การทดลองเชิงออกแบบ",
-    "pdf_start": 51,
-    "pdf_end": 75,
+    "id": "chapter-03",
+    "title_th": "การออกแบบสภาพแวดล้อมการเรียนรู้ฟิสิกส์ผ่านเว็บระดับประถมศึกษา: บทบาทของครูในการวิจัยเชิงออกแบบทางการศึกษา",
+    "pdf_start": 76,
     "status": "not_started"
   },
   "untranslated_front_matter_pdf_pages": [
