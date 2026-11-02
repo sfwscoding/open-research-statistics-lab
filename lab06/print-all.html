@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lab 06 · รวมหน้าที่แปลแล้วสำหรับพิมพ์ PDF A/B</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{font-family:Prompt,"Noto Sans Thai",system-ui;background:#eaf1ff;color:#0f1b3d;margin:0;padding:20px}*{box-sizing:border-box}main{max-width:1020px;margin:auto}header,article{background:white;padding:25px;border:1px solid #ccd7ef;border-radius:12px;margin:15px 0}h1{font-size:28px}.ctrl{display:flex;gap:10px;align-items:center;flex-wrap:wrap}button{background:#1e4fd6;color:white;border:0;border-radius:8px;padding:11px 16px;font:600 14px Prompt;cursor:pointer}button:disabled{opacity:.4;cursor:not-allowed}a{color:#1e4fd6}.block{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #e0e8f5;break-inside:avoid}.en{padding:10px;background:#f2f6ff;border-radius:8px}.th{padding:10px}.text{white-space:pre-line;overflow-wrap:anywhere;line-height:1.85}.note{font-size:12px;color:#66758a}.view-a .block{grid-template-columns:1fr}.view-a .en{display:none}@media(max-width:680px){.block{grid-template-columns:1fr}}@media print{@page{size:A4;margin:15mm}body{background:white;padding:0;font-size:10pt}main{max-width:none}header,article{padding:0;border:0;margin:0;border-radius:0}article{break-before:page}.ctrl,.hideprint{display:none!important}.en,.th{padding:6px}.block{gap:8px}h2{font-size:14pt}}</style></head>
+<body class="view-a"><main>
+<header><h1>Educational Design Research — Part B</h1>
+<p>ฉบับแปลสะสมจาก PDF ต้นฉบับ (Plomp &amp; Nieveen, 2013)</p>
+<p id="status">กำลังตรวจรายการหน้าที่แปลแล้ว…</p>
+<div class="ctrl"><button onclick="setMode('a')">A ภาษาไทย</button><button onclick="setMode('b')">B อังกฤษ–ไทย</button><button id="print" onclick="window.print()" disabled>พิมพ์ / บันทึก PDF</button>
+<a href="../lab06.html">กลับหน้า Lab 06</a></div>
+<p class="note">เอกสารนี้สร้างจากไฟล์คำแปลรายหน้าเดียวกับตัวอ่าน A/B จึงไม่ต้องแก้ไข PDF แยกต่างหาก และไม่รวมหน้าที่ไม่มีคำแปล</p>
+</header><div id="pages"></div>
+</main>
+<script>
+function setMode(mode){document.body.classList.toggle('view-a',mode!=='b')}
+function node(tag,cls,t){const e=document.createElement(tag);if(cls)e.className=cls;if(t!==undefined)e.textContent=String(t);return e}
+async function init(){const box=document.getElementById('pages');try{
+ const m=await (await fetch('manifest.json',{cache:'no-store'})).json();
+ const data=await Promise.all(m.completed_pages.map(async n=>{const r=await fetch('pages/'+String(n).padStart(4,'0')+'.json',{cache:'no-store'});if(!r.ok)throw Error('ไฟล์หน้า '+n+' ไม่พร้อม');return r.json()}));
+ for(const p of data){const a=node('article');a.append(node('h2','','PDF หน้า '+p.pdf_page+' — '+p.title_th));
+  for(const b of p.blocks){const section=node('section','block');const en=node('div','en'),th=node('div','th');en.append(node('div','note','ENGLISH'),node('div','text',b.en));th.append(node('div','note','ภาษาไทย'),node('div','text',b.th));
+  if(b.by){en.append(node('div','note','Authors: '+b.by));th.append(node('div','note','ผู้เขียน: '+b.by))}
+  if(b.loc){en.append(node('div','note','Printed page: '+b.loc));th.append(node('div','note','หน้าในหนังสือ: '+b.loc))}
+  section.append(en,th);a.append(section)}
+  if(p.note_th)a.append(node('p','note',p.note_th));box.append(a)}
+ document.getElementById('status').textContent='ประกอบฉบับ PDF จากคำแปลหน้า '+m.completed_pages.join(', ')+' รวม '+m.completed_pages.length+' จาก '+m.book.pdf_total_pages+' หน้า · สถานะ: คำแปลรอบแรก';
+ document.getElementById('print').disabled=false;
+}catch(e){document.getElementById('status').textContent='อ่านข้อมูลไม่สำเร็จ: '+e.message}}
+const q=new URLSearchParams(location.search);setMode(q.get('view')||'a');init();
+</script></body></html>
