@@ -57,6 +57,12 @@
     },
     {
       "p": 22,
+      "k": "figure-data",
+      "en": "Figure 2 bars (number of studies): USA 14; UK 2; Uganda 1; The Netherlands 11; Tanzania 1; Sweden 1; Spain 1; South Korea 1; South Africa 3; Singapore 2; Oman 1; Namibia 1; Mozambique 1; Israel 1; Ireland 1; Indonesia 1; Greece 1; Germany 3; Finland 1; Egypt 1; China 2; Canada 1; Belgium 1; Multi countries 1.",
+      "th": "ข้อมูลแท่งกราฟภาพที่ 2 (จำนวนกรณีศึกษา): สหรัฐอเมริกา 14; สหราชอาณาจักร 2; ยูกันดา 1; เนเธอร์แลนด์ 11; แทนซาเนีย 1; สวีเดน 1; สเปน 1; เกาหลีใต้ 1; แอฟริกาใต้ 3; สิงคโปร์ 2; โอมาน 1; นามิเบีย 1; โมซัมบิก 1; อิสราเอล 1; ไอร์แลนด์ 1; อินโดนีเซีย 1; กรีซ 1; เยอรมนี 3; ฟินแลนด์ 1; อียิปต์ 1; จีน 2; แคนาดา 1; เบลเยียม 1; หลายประเทศ 1"
+    },
+    {
+      "p": 22,
       "k": "paragraph",
       "en": "Educational sectors",
       "th": "ระดับและภาคส่วนการศึกษา"
@@ -90,6 +96,12 @@
       "k": "paragraph",
       "en": "Figure 4: Educational domains represented in the design research studies (N=51).",
       "th": "ภาพที่ 4 ขอบเขตทางการศึกษาที่ปรากฏในกรณีศึกษาวิจัยเชิงออกแบบ (N = 51) [หมวดหมู่อาจทับซ้อนกัน จึงไม่นับผลรวมเป็น 51 โปรดดูกราฟต้นฉบับ PDF หน้า 23]"
+    },
+    {
+      "p": 23,
+      "k": "figure-data",
+      "en": "Figure 4 bars: Curriculum 16; Learning and instruction 29; Subject-related teaching methods: math 8, science 15, languages 8, other 3; School organization and management 3; Instructional technology 7; ICT in education 11; Other 6.",
+      "th": "ข้อมูลแท่งกราฟภาพที่ 4: หลักสูตร 16; การเรียนรู้และการสอน 29; วิธีสอนเฉพาะวิชา ได้แก่ คณิตศาสตร์ 8 วิทยาศาสตร์ 15 ภาษา 8 และอื่น ๆ 3; การจัดองค์กรและการบริหารโรงเรียน 3; เทคโนโลยีการสอน 7; ICT ในการศึกษา 11; สาขาอื่น ๆ 6 (หนึ่งกรณีอาจอยู่ได้หลายสาขา)"
     },
     {
       "p": 24,
