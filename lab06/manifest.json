@@ -22,7 +22,9 @@
     "source_of_truth": "lab06/pages/NNNN.json",
     "status_legend": {
       "translated_first_pass": "แปลครบตามข้อความที่อ่านได้และตรวจเทียบเบื้องต้น แต่ยังไม่ได้ตรวจทานโดยผู้เชี่ยวชาญ"
-    }
+    },
+    "primary_unit": "chapter (one instruction creates A/B and separate study summary)",
+    "page_unit": "legacy front matter pages 1–4 only; later chapters use chapters/id.json"
   },
   "completed_pages": [
     1,
@@ -32,5 +34,40 @@
   ],
   "next_page": 5,
   "content_status": "initial translation; not professionally proofread",
-  "updated_on": "2026-11-02"
+  "updated_on": "2026-11-02",
+  "completed_chapters": [
+    {
+      "id": "preface",
+      "title_th": "คำนำ",
+      "pdf_pages": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "status": "translated_first_pass",
+      "content_pdf_pages": [
+        10,
+        11,
+        12
+      ],
+      "blank_pdf_pages": [
+        13
+      ]
+    }
+  ],
+  "next_chapter": {
+    "id": "introduction",
+    "title_th": "บทนำสู่กรณีศึกษาการวิจัยเชิงออกแบบทางการศึกษา",
+    "pdf_start": 14,
+    "pdf_end": 29,
+    "status": "not_started"
+  },
+  "untranslated_front_matter_pdf_pages": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ]
 }
