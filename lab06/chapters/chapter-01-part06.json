@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "chapter-01",
+  "part": 6,
+  "pdf_pages": [
+    50
+  ],
+  "status": "translated_first_pass",
+  "blocks": [
+    {
+      "p": 50,
+      "k": "author-bio",
+      "en": "Barbara A. Bradley (1963) is associate professor in the Department of Curriculum and Teaching at the University of Kansas, USA. Her primary research interests are related to early literacy and the oral language development of young children. She has been engaged in design research related to information books in early childhood classrooms, instructional coaching in middle schools, and integrating technology in teacher education. She co-authored the book, On Formative and Design Experiments, with David Reinking. Barbara also teaches undergraduate and graduate classes focused on literacy in the elementary grades, reading comprehension, and reading research.\n\nEmail: barbarab@ku.edu",
+      "th": "ประวัติผู้เขียน\n\nBarbara A. Bradley (เกิด ค.ศ. 1963) เป็นรองศาสตราจารย์ประจำภาควิชาหลักสูตรและการสอน มหาวิทยาลัยแคนซัส สหรัฐอเมริกา ความสนใจหลักทางการวิจัยของเธอเกี่ยวข้องกับการรู้หนังสือระยะเริ่มต้นและพัฒนาการภาษาพูดของเด็กเล็ก เธอทำวิจัยเชิงออกแบบเกี่ยวกับหนังสือสารสนเทศในห้องเรียนปฐมวัย การโค้ชด้านการสอนในโรงเรียนมัธยมศึกษาตอนต้น และการบูรณาการเทคโนโลยีในการศึกษาครู เธอร่วมเขียนหนังสือ On Formative and Design Experiments กับ David Reinking นอกจากนี้ Barbara ยังสอนรายวิชาระดับปริญญาตรีและบัณฑิตศึกษาเกี่ยวกับการรู้หนังสือระดับประถมศึกษา ความเข้าใจในการอ่าน และการวิจัยด้านการอ่าน\n\nอีเมล: barbarab@ku.edu"
+    }
+  ]
+}
