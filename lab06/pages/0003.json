@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "source": "Educational design research — Part B: Illustrative cases (SLO, 2013)",
+  "status": "translated_first_pass",
+  "pdf_page": 3,
+  "title_en": "Credits",
+  "title_th": "ข้อมูลการจัดพิมพ์",
+  "printed_page": null,
+  "blocks": [
+    {
+      "type": "heading",
+      "en": "Credits",
+      "th": "ข้อมูลการจัดพิมพ์"
+    },
+    {
+      "type": "text",
+      "en": "2013 SLO (Netherlands institute for curriculum development), Enschede",
+      "th": "ค.ศ. 2013 SLO (สถาบันพัฒนาหลักสูตรแห่งเนเธอร์แลนด์), เอนสเคเด"
+    },
+    {
+      "type": "paragraph",
+      "en": "All rights reserved. This publication may be reproduced in whole or in part by photocopying or any other means, provided the source is mentioned.",
+      "th": "สงวนลิขสิทธิ์ทั้งหมด สามารถทำสำเนาสิ่งพิมพ์นี้ทั้งเล่มหรือบางส่วนด้วยการถ่ายเอกสารหรือวิธีการอื่นใดได้ โดยต้องระบุแหล่งที่มา"
+    },
+    {
+      "type": "text",
+      "en": "Editors: Tjeerd Plomp (University of Twente), Nienke Nieveen (SLO)",
+      "th": "บรรณาธิการ: Tjeerd Plomp (มหาวิทยาลัยทเวนเต) และ Nienke Nieveen (SLO)"
+    },
+    {
+      "type": "text",
+      "en": "ISBN: 978 90 329 2335 8",
+      "th": "เลขมาตรฐานสากลประจำหนังสือ (ISBN): 978 90 329 2335 8"
+    }
+  ]
+}
