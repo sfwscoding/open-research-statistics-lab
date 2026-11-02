@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="th">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lab 06 · Educational Design Research — Reader A/B</title>
+<link rel="stylesheet" href="../shared-nav.css"><link rel="stylesheet" href="../kpa-window-theme.css">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:20px;background:#eaf1ff;color:#0f1b3d;font-family:Prompt,"Noto Sans Thai",system-ui,sans-serif}
+main{max-width:1120px;margin:26px auto}
+.panel{background:#fff;border:2px solid #0f1b3d;border-radius:15px;padding:24px;margin-bottom:16px}
+.colorbar{height:7px;background:linear-gradient(90deg,#1e4fd6 0 34%,#16a34a 34% 67%,#f58220 67%)}
+h1{font-size:clamp(25px,4vw,36px);margin:18px 0 8px;line-height:1.4}
+h2{font-size:clamp(19px,3vw,26px);margin-bottom:10px}
+small,.meta{font-size:12px;color:#52627a}
+p{line-height:1.85}
+#progress{font-size:14px;font-weight:600;color:#1e4fd6}
+.meter{height:8px;border-radius:9px;background:#dfe7f4;overflow:hidden}
+.meter>span{display:block;background:#16a34a;height:100%;min-width:0}
+.controls{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:14px}
+button,.linkbtn{border-radius:10px;padding:10px 14px;border:1px solid #1e4fd6;background:#fff;color:#1e4fd6;font:600 13px Prompt,system-ui;cursor:pointer;text-decoration:none}
+button.active,.linkbtn.primary{color:white;background:#1e4fd6}
+button:disabled{opacity:.4;cursor:not-allowed}
+.pair{border-bottom:1px solid #d7e0ee;padding:16px 0}
+.pair:last-child{border-bottom:0}
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.original,.translated{padding:12px 16px;border-radius:9px;min-width:0}
+.original{background:#f0f5ff}
+.translated{background:#fff}
+.kicker{font-size:11px;color:#52627a;letter-spacing:.04em;font-weight:700}
+.content{white-space:pre-line;overflow-wrap:anywhere;line-height:1.85}
+.entry-title{font-size:14px;font-weight:600}
+.bookpage{font-size:12px;color:#65748c}
+body.view-a .twocol{grid-template-columns:1fr}
+body.view-a .original{display:none}
+.warning{padding:12px 15px;border-left:4px solid #f58220;background:#fff6e9;border-radius:4px}
+.reference{font-size:13px;color:#52627a}
+a{color:#1e4fd6}
+@media(max-width:720px){.twocol{grid-template-columns:1fr}}
+@media print{@page{size:A4;margin:15mm}body{padding:0;background:white}.unified-nav,.controls,.noprint,.warning{display:none!important}main{max-width:100%;margin:0}.panel{border:0;padding:0;margin:0}.pair{break-inside:avoid}.twocol{gap:8px}.original,.translated{padding:8px}h1{font-size:22px}#page-contents{font-size:10pt}}
+</style>
+</head>
+<body class="view-a">
+<main>
+<section class="panel">
+<div class="colorbar"></div>
+<p class="meta">LAB 06 · หนังสือ EDR ฉบับแปลภาษาไทย</p>
+<h1>Educational Design Research<br>ภาค B — กรณีศึกษาตัวอย่าง</h1>
+<p class="meta">บรรณาธิการ Tjeerd Plomp &amp; Nienke Nieveen · SLO (2013)</p>
+<p id="progress">กำลังโหลดสถานะ...</p>
+<div class="meter" aria-label="ความคืบหน้าการแปล"><span id="bar"></span></div>
+<p class="warning">เนื้อหาที่แสดงเป็นคำแปลรอบแรกเทียบกับต้นฉบับ PDF ยังไม่ได้ผ่านการตรวจทานโดยผู้เชี่ยวชาญ ไม่แสดงหน้าที่ยังไม่ได้แปลว่าเสร็จแล้ว</p>
+<div class="controls noprint">
+<button id="viewA" type="button" onclick="setView('a')">A · ภาษาไทยล้วน</button>
+<button id="viewB" type="button" onclick="setView('b')">B · อังกฤษ–ไทยเทียบเคียง</button>
+<button type="button" onclick="window.print()">พิมพ์ / บันทึก PDF ของหน้าที่อ่าน</button>
+</div>
+<div class="controls noprint">
+<button id="prev" type="button" onclick="step(-1)">← หน้าก่อน</button>
+<span id="page-label" class="meta"></span>
+<button id="next" type="button" onclick="step(1)">หน้าถัดไป →</button>
+</div>
+<div id="jump" class="controls noprint" aria-label="เลือกหน้าที่แปลแล้ว"></div>
+<p class="reference noprint">ดู <a href="../lab06.html">หน้าแรก Lab 06</a> · <a id="source-link" href="https://www.slo.nl/publish/pages/8837/educational-design-research-b-total.pdf" target="_blank" rel="noopener">ต้นฉบับ PDF (SLO)</a></p>
+</section>
+<section class="panel" id="content-panel" aria-live="polite"><h2 id="page-title"></h2><div id="page-contents"></div><p id="page-note" class="meta"></p></section>
+<section class="panel noprint"><h2>หลักการอ่านและตรวจสอบ</h2><p>ฉบับ A และ B ใช้ไฟล์คำแปลเดียวกัน รายการในสารบัญจะรักษาหมายเลขหน้าที่พิมพ์ในหนังสือ ส่วนตัวนำทางด้านบนใช้หมายเลขหน้าไฟล์ PDF เป็นหลัก ข้อมูลในแต่ละหน้าเปิดตรวจได้จาก <a href="manifest.json">ทะเบียนความคืบหน้า</a> และ <a href="README.md">วิธีจัดระบบการแปล</a></p></section>
+</main>
+<script>
+let manifest=null;
+let page=1,view='a';
+const $=id=>document.getElementById(id);
+const src='https://www.slo.nl/publish/pages/8837/educational-design-research-b-total.pdf';
+function el(tag,cls,txt){const x=document.createElement(tag);if(cls)x.className=cls;if(txt!==undefined&&txt!==null)x.textContent=String(txt);return x}
+function setView(v){view=v==='b'?'b':'a';document.body.classList.toggle('view-a',view==='a');$('viewA').classList.toggle('active',view==='a');$('viewB').classList.toggle('active',view==='b');setUrl()}
+function setUrl(){const u=new URL(location.href);u.searchParams.set('page',page);u.searchParams.set('view',view);history.replaceState({},'',u)}
+function setNav(){const pages=manifest.completed_pages;const i=pages.indexOf(page);$('prev').disabled=i<=0;$('next').disabled=i>=pages.length-1;$('page-label').textContent='PDF หน้า '+page+' / '+manifest.book.pdf_total_pages;const jump=$('jump');jump.replaceChildren();pages.forEach(n=>{const b=el('button','','PDF '+n);b.type='button';b.classList.toggle('active',n===page);b.onclick=()=>loadPage(n);jump.appendChild(b)})}
+async function step(n){const list=manifest.completed_pages;const i=list.indexOf(page);if(list[i+n])await loadPage(list[i+n])}
+function addPair(b){const art=el('article','pair');
+const grid=el('div','twocol');
+const left=el('div','original'),right=el('div','translated');
+left.append(el('div','kicker','ENGLISH ORIGINAL'),el('div','content',b.en||''));
+right.append(el('div','kicker','คำแปลภาษาไทย'),el('div','content',b.th||''));
+if(b.by){left.append(el('div','bookpage','Authors: '+b.by));right.append(el('div','bookpage','ผู้เขียน: '+b.by))}
+if(b.loc){left.append(el('div','bookpage','Printed page: '+b.loc));right.append(el('div','bookpage','หน้าในหนังสือ: '+b.loc))}
+grid.append(left,right);art.append(grid);
+if(b.type==='section'){art.classList.add('section')} 
+$('page-contents').append(art)}
+async function loadPage(n){if(!manifest.completed_pages.includes(n))return;
+page=n;
+$('page-title').textContent='กำลังโหลด PDF หน้า '+page+'...';$('page-contents').replaceChildren();$('page-note').textContent='';
+try {
+ const res=await fetch('pages/'+String(n).padStart(4,'0')+'.json',{cache:'no-store'});if(!res.ok)throw new Error('ไม่พบไฟล์คำแปลหน้า '+n);
+ const data=await res.json();
+ if(data.pdf_page!==n||!Array.isArray(data.blocks))throw new Error('ข้อมูลเลขหน้าไม่ตรงกับที่ร้องขอ');
+ $('page-title').textContent='PDF หน้า '+n+' · '+data.title_th+(data.printed_page?' · หนังสือหน้า '+data.printed_page:'');
+ data.blocks.forEach(addPair);
+ $('page-note').textContent=(data.note_th||'')+' สถานะ: คำแปลรอบแรก (ยังไม่ได้ตรวจทานโดยผู้เชี่ยวชาญ)';
+ $('source-link').href=src+'#page='+n;
+ setNav();setUrl();
+} catch(err){$('page-title').textContent='ไม่สามารถเปิด PDF หน้า '+n;$('page-contents').append(el('p','warning',String(err.message||err)));setNav()}}
+async function start(){
+try{const res=await fetch('manifest.json',{cache:'no-store'});if(!res.ok)throw new Error('ไม่พบทะเบียนหน้า');manifest=await res.json();
+$('progress').textContent='แปลรอบแรกแล้ว '+manifest.completed_pages.length+' จาก '+manifest.book.pdf_total_pages+' หน้า · หน้าถัดไปที่ต้องแปลคือ PDF หน้า '+manifest.next_page;
+$('bar').style.width=(100*manifest.completed_pages.length/manifest.book.pdf_total_pages)+'%';
+const p=new URLSearchParams(location.search);const desired=Number(p.get('page'))||1;page=manifest.completed_pages.includes(desired)?desired:manifest.completed_pages[0];
+setView(p.get('view')==='b'?'b':'a');
+await loadPage(page);
+}catch(err){$('progress').textContent='เปิดข้อมูลไม่สำเร็จ';$('page-contents').append(el('p','warning',String(err.message||err)))}}
+start();
+</script>
+<script src="../shared-nav.js"></script><script src="../kpa-window-theme.js"></script>
+</body></html>
