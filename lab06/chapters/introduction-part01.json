@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "id": "introduction",
+  "part": 1,
+  "pdf_pages": [
+    14,
+    15,
+    16,
+    17
+  ],
+  "status": "translated_first_pass",
+  "blocks": [
+    {
+      "p": 14,
+      "k": "paragraph",
+      "en": "Introduction to the collection of illustrative cases of educational design research",
+      "th": "บทนำสู่การรวบรวมกรณีศึกษาตัวอย่างของการวิจัยเชิงออกแบบทางการศึกษา"
+    },
+    {
+      "p": 14,
+      "k": "paragraph",
+      "en": "Tjeerd Plomp & Nienke Nieveen",
+      "th": "Tjeerd Plomp และ Nienke Nieveen"
+    },
+    {
+      "p": 14,
+      "k": "paragraph",
+      "en": "1. Introduction",
+      "th": "1. บทนำ"
+    },
+    {
+      "p": 14,
+      "k": "paragraph",
+      "en": "This chapter introduces the reader to this book with a collection of illustrative cases of design research in education. This section summarizes the background and the aim of this collection of cases.",
+      "th": "บทนี้แนะนำให้ผู้อ่านรู้จักหนังสือที่รวบรวมกรณีศึกษาตัวอย่างของการวิจัยเชิงออกแบบทางการศึกษา โดยส่วนนี้สรุปภูมิหลังและวัตถุประสงค์ของการรวบรวมกรณีศึกษาเหล่านี้"
+    },
+    {
+      "p": 14,
+      "k": "paragraph",
+      "en": "In 2009 we edited and published the book ‘An introduction to educational design research’ (Plomp & Nieveen, 2009), the proceedings of a seminar on educational design research (EDR), conducted in November 2007 at the East China Normal University, Shanghai, PR China. In that book, we introduced educational design research as a research approach or research design¹ appropriate to address complex problems in educational practice for which no how-to-do guidelines are available. During the years, many researchers (experts and novices to the field of design research) found their way to this book. Our ideas about how to conduct and communicate about design research developed as a result of our own educational design research studies, the mentoring and supervision of (PhD) students and the many discussions during seminars and after presentations. After five years, we felt the need to revise some parts of the book.",
+      "th": "ในปี ค.ศ. 2009 เราได้เป็นบรรณาธิการและจัดพิมพ์หนังสือ An Introduction to Educational Design Research (Plomp & Nieveen, 2009) ซึ่งเป็นรายงานจากการสัมมนาเรื่องการวิจัยเชิงออกแบบทางการศึกษา (EDR) ที่จัดขึ้นเมื่อเดือนพฤศจิกายน ค.ศ. 2007 ณ มหาวิทยาลัยอีสต์ไชนานอร์มอล นครเซี่ยงไฮ้ สาธารณรัฐประชาชนจีน ในหนังสือเล่มนั้น เราเสนอ EDR ในฐานะแนวทางการวิจัยหรือแบบแผนการวิจัย¹ ที่เหมาะสำหรับจัดการปัญหาซับซ้อนในการปฏิบัติทางการศึกษา ซึ่งยังไม่มีแนวปฏิบัติสำเร็จรูปบอกว่าควรทำอย่างไร หลายปีต่อมานักวิจัยจำนวนมาก ทั้งผู้เชี่ยวชาญและผู้เริ่มต้นทำวิจัยเชิงออกแบบ ได้เข้ามาศึกษาหนังสือดังกล่าว แนวคิดของเราเกี่ยวกับวิธีดำเนินงานและสื่อสารผลการวิจัยเชิงออกแบบก็พัฒนาขึ้นจากงาน EDR ที่เราได้ทำเอง จากการเป็นพี่เลี้ยงและที่ปรึกษานักศึกษาปริญญาเอก ตลอดจนการแลกเปลี่ยนอภิปรายมากมายทั้งระหว่างการสัมมนาและหลังการนำเสนอ เมื่อเวลาผ่านไปห้าปี เราจึงเห็นความจำเป็นที่จะต้องปรับปรุงเนื้อหาบางส่วนของหนังสือ"
+    },
+    {
+      "p": 14,
+      "k": "paragraph",
+      "en": "But, maybe more importantly, we also got signals of a growing interest in exemplary case studies of design research that can be used as one of the means to introduce graduate students and novice researchers to the variety of approaches and examples of designing and conducting educational design research – this is the main aim of this book. By presenting a varied collection of 51 examples of successful EDR projects, this book should be seen as an extension to our 2009 book. This means that the complete book now comprises of two volumes, viz Part A being a revision of our 2009 book, and Part B – this book – the collection of a rich variety of examples of successful EDR.",
+      "th": "อย่างไรก็ดี ที่อาจสำคัญยิ่งกว่านั้นคือ เราเห็นความสนใจที่เพิ่มขึ้นต่อกรณีศึกษาตัวอย่างที่ดีของการวิจัยเชิงออกแบบ ซึ่งสามารถใช้เป็นวิธีหนึ่งในการแนะนำนักศึกษาระดับบัณฑิตศึกษาและนักวิจัยมือใหม่ให้รู้จักแนวทางและตัวอย่างอันหลากหลายของการออกแบบและดำเนินการวิจัย EDR นี่คือวัตถุประสงค์หลักของหนังสือเล่มนี้ หนังสือรวบรวมตัวอย่างโครงการ EDR ที่ประสบความสำเร็จ 51 กรณี จึงควรถือเป็นส่วนขยายของหนังสือปี ค.ศ. 2009 ทำให้หนังสือฉบับสมบูรณ์ประกอบด้วยสองภาค คือ ภาค A ที่ปรับปรุงจากหนังสือปี 2009 และภาค B ซึ่งเป็นเล่มนี้ รวบรวมตัวอย่าง EDR ที่ประสบความสำเร็จอย่างหลากหลาย"
+    },
+    {
+      "p": 14,
+      "k": "paragraph",
+      "en": "Part A (Plomp & Nieveen, 2013) presents an introduction to educational design research (Chapter 1 by Plomp), as well as a chapter that discusses how formative evaluation in educational design research can be designed and conducted (Chapter 6 by Nieveen & Folmer). Other chapters discuss design research from various angles: the curriculum perspective, the learning design perspective, a chapter with an example from the domain of instructional technology, and also a chapter discussing when design research is an appropriate research design. Part B – this book – presents a collection of 51 cases of successful design research coming from many domains in the field of education (such as curriculum, learning and instruction, subject related pedagogy, instructional technology, ICT in education) and reflecting various purposes of design research. The cases cover all education levels, including a few cases on workplace learning), and report research conducted in a wide variety of countries.",
+      "th": "ภาค A (Plomp & Nieveen, 2013) นำเสนอบทนำเกี่ยวกับ EDR (บทที่ 1 โดย Plomp) และบทที่กล่าวถึงวิธีออกแบบและดำเนินการประเมินระหว่างพัฒนา (formative evaluation) ใน EDR (บทที่ 6 โดย Nieveen และ Folmer) บทอื่น ๆ อภิปรายการวิจัยเชิงออกแบบจากหลายมุมมอง เช่น มุมมองด้านหลักสูตร ด้านการออกแบบการเรียนรู้ ตัวอย่างจากเทคโนโลยีการสอน และประเด็นว่าเมื่อใดการวิจัยเชิงออกแบบจึงเป็นแบบแผนการวิจัยที่เหมาะสม ส่วนภาค B ซึ่งเป็นหนังสือเล่มนี้ รวบรวมกรณีศึกษางานวิจัยเชิงออกแบบที่ประสบความสำเร็จ 51 เรื่องจากหลายสาขาทางการศึกษา เช่น หลักสูตร การเรียนรู้และการสอน ศาสตร์การสอนเฉพาะวิชา เทคโนโลยีการสอน และ ICT เพื่อการศึกษา รวมทั้งสะท้อนวัตถุประสงค์การวิจัยที่หลากหลาย กรณีศึกษาเหล่านี้ครอบคลุมทุกระดับการศึกษา รวมถึงบางกรณีที่ศึกษาการเรียนรู้ในที่ทำงาน และดำเนินการในหลายประเทศ"
+    },
+    {
+      "p": 14,
+      "k": "paragraph",
+      "en": "¹ In this chapter we use research approach and research design synonymously.",
+      "th": "¹ ในบทนี้ใช้คำว่า research approach (แนวทางการวิจัย) และ research design (แบบแผนการวิจัย) ในความหมายเดียวกัน"
+    },
+    {
+      "p": 15,
+      "k": "paragraph",
+      "en": "This collection of cases supplements other books and articles introducing educational design research (– sometimes using another names for this research approach). Examples are the books of Kelly, Lesh and Baek (2008), McKenney and Reeves (2012), Reinking and Bradley (2008), Richey and Klein (2007), and Van den Akker, Gravemeijer, McKenney and Nieveen (2006). Of the many articles, we mention here Ann Brown’s (1992) article introducing the idea of design experiments, Barab and Squire (2004) on design-based research, Cobb, Confrey, DiSessa, Lehrer and Schauble (2003) on design experiments, Eilks and Ralle (2002) about participatory action research and Fishman, Penuel, Allen and Cheng (in press) about design based implementation research. Moreover, over the years, a number of special issues of journals have been published about design(-based) research and EDR projects have been reported in many articles. Please, refer to part A of this book (chapter 7) for details of these and other publications on educational design research.",
+      "th": "ชุดกรณีศึกษานี้เป็นเนื้อหาเสริมหนังสือและบทความอื่นที่แนะนำ EDR ซึ่งบางแห่งเรียกแนวทางวิจัยนี้ด้วยชื่ออื่น ตัวอย่างหนังสือ ได้แก่ งานของ Kelly, Lesh และ Baek (2008), McKenney และ Reeves (2012), Reinking และ Bradley (2008), Richey และ Klein (2007) และ Van den Akker, Gravemeijer, McKenney และ Nieveen (2006) สำหรับบทความจำนวนมากนั้น ตัวอย่างที่กล่าวถึง ได้แก่ บทความของ Ann Brown (1992) ที่เสนอแนวคิด design experiments, Barab และ Squire (2004) เกี่ยวกับ design-based research, Cobb, Confrey, DiSessa, Lehrer และ Schauble (2003) เกี่ยวกับ design experiments, Eilks และ Ralle (2002) เกี่ยวกับ participatory action research และ Fishman, Penuel, Allen และ Cheng (กำลังตีพิมพ์ในขณะนั้น) เกี่ยวกับ design-based implementation research นอกจากนี้ ในช่วงหลายปีที่ผ่านมา วารสารวิชาการยังจัดทำฉบับพิเศษว่าด้วยการวิจัยเชิงออกแบบ และมีบทความที่รายงานโครงการ EDR เป็นจำนวนมาก รายละเอียดของงานเผยแพร่เหล่านี้และงานอื่น ๆ อยู่ในภาค A บทที่ 7"
+    },
+    {
+      "p": 15,
+      "k": "paragraph",
+      "en": "The next section presents a brief introduction to educational design research including a number of characteristics of this research approach or research design, with a reference to Part A where these are discussed in greater detail. This overview will be followed by an account of how the collection of cases presented in this book was assembled. We describe how we aimed for a variety of cases, what guidelines were given to authors, and how the review process was organized. Next, we will provide an overview of the collection, describing – from a helicopter view – what readers can expect when browsing through the collection and reading the cases. In the final section the structure of the book of cases will be presented, as well as some recommendations for how this collection can be used.",
+      "th": "ส่วนต่อไปจะแนะนำ EDR โดยสังเขปและกล่าวถึงลักษณะสำคัญของแนวทางหรือแบบแผนการวิจัยนี้ พร้อมอ้างถึงภาค A ที่อภิปรายรายละเอียดไว้มากกว่า จากนั้นจะเล่าถึงวิธีรวบรวมกรณีศึกษาในหนังสือ โดยอธิบายความตั้งใจให้ได้กรณีศึกษาที่หลากหลาย แนวทางที่กำหนดให้ผู้เขียน และการจัดกระบวนการตรวจประเมิน ต่อมาจะให้ภาพรวมจากมุมมองกว้าง ๆ ว่าผู้อ่านจะพบอะไรเมื่อสำรวจและอ่านกรณีศึกษาต่าง ๆ และในส่วนสุดท้ายจะนำเสนอโครงสร้างของหนังสือพร้อมข้อเสนอแนะในการใช้ชุดกรณีศึกษานี้"
+    },
+    {
+      "p": 15,
+      "k": "paragraph",
+      "en": "2. Brief introduction to educational design research",
+      "th": "2. บทนำโดยสังเขปสู่การวิจัยเชิงออกแบบทางการศึกษา"
+    },
+    {
+      "p": 15,
+      "k": "paragraph",
+      "en": "Educational design research is a research approach (or research design) appropriate to address complex problems in educational practice for which no how-to-do guidelines are available, or to develop or validate theories (e.g.) about learning processes, learning environments and the like. This variation in purpose is reflected in the definition of design research discussed in Part A, Chapter 1, where we introduce the distinction between development studies and validation studies respectively – see also Nieveen, McKenney and Van den Akker (2006).",
+      "th": "EDR เป็นแนวทางหรือแบบแผนการวิจัยที่เหมาะสำหรับแก้ปัญหาซับซ้อนในการปฏิบัติทางการศึกษาซึ่งยังไม่มีแนวปฏิบัติสำเร็จรูป หรือสำหรับพัฒนาและตรวจสอบความตรงของทฤษฎี เช่น ทฤษฎีเกี่ยวกับกระบวนการเรียนรู้ สภาพแวดล้อมการเรียนรู้ และเรื่องในทำนองเดียวกัน ความหลากหลายของวัตถุประสงค์นี้ปรากฏอยู่ในนิยามของการวิจัยเชิงออกแบบในภาค A บทที่ 1 ซึ่งจำแนกระหว่าง development studies กับ validation studies (ดู Nieveen, McKenney และ Van den Akker, 2006 ประกอบ)"
+    },
+    {
+      "p": 15,
+      "k": "paragraph",
+      "en": "In the remainder of this section we will briefly summarize some aspects of educational design research: its definition and twofold yield, the type of research question and its cyclical nature, its scientific character, and generalizability in design research. These issues are discussed more extensively in part A of this book.",
+      "th": "ส่วนที่เหลือจะสรุปประเด็นของ EDR ได้แก่ นิยามและผลผลิตสองประการ ประเภทของคำถามวิจัยและลักษณะการดำเนินงานเป็นวงจร ความเป็นงานวิจัยทางวิทยาศาสตร์ และการขยายผลข้อค้นพบในการวิจัยเชิงออกแบบ ซึ่งอภิปรายรายละเอียดมากกว่านี้ในภาค A"
+    },
+    {
+      "p": 15,
+      "k": "paragraph",
+      "en": "Definition of design research and its twofold yield",
+      "th": "นิยามของการวิจัยเชิงออกแบบและผลผลิตสองประการ"
+    },
+    {
+      "p": 15,
+      "k": "paragraph",
+      "en": "As stated above, two possible purposes of design research can be identified. Dependent on the purpose of the design research, we distinguish between development studies and validation studies respectively.",
+      "th": "ดังที่กล่าวแล้ว การวิจัยเชิงออกแบบมีวัตถุประสงค์หลักที่เป็นไปได้สองแบบ และจำแนกเป็นการศึกษาประเภทพัฒนา (development studies) หรือการศึกษาประเภทพัฒนาหรือตรวจสอบความตรงของทฤษฎี (validation studies) ตามวัตถุประสงค์ของการวิจัย"
+    },
+    {
+      "p": 15,
+      "k": "paragraph",
+      "en": "In the case of development studies, the purpose of educational design research is to develop research-based solutions for complex problems in educational practice. This type of design research is defined as the systematic study of designing, developing and evaluating educational interventions (such as programs, teaching-learning strategies and materials, products and systems) as solutions for complex problems in educational practice, which also aims at advancing our knowledge about the characteristics of these interventions and the processes of designing and developing them.",
+      "th": "สำหรับ development studies เป้าหมายของ EDR คือพัฒนาวิธีแก้ปัญหาซับซ้อนทางการศึกษาบนฐานงานวิจัย การวิจัยประเภทนี้นิยามว่าเป็นการศึกษาอย่างเป็นระบบเกี่ยวกับการออกแบบ การพัฒนา และการประเมินสิ่งแทรกแซงทางการศึกษา (เช่น โปรแกรม กลยุทธ์และสื่อการเรียนการสอน ผลิตภัณฑ์ และระบบ) เพื่อเป็นคำตอบของปัญหาซับซ้อนในการปฏิบัติทางการศึกษา ทั้งยังมุ่งเพิ่มพูนความรู้เกี่ยวกับลักษณะของสิ่งแทรกแซงและกระบวนการออกแบบพัฒนาสิ่งเหล่านั้น"
+    },
+    {
+      "p": 16,
+      "k": "paragraph",
+      "en": "On the other hand, in validation studies the purpose of design research is the development or validation of a theory, and this type design research is defined as the systematic study of designing, developing and evaluating educational interventions (i.e. learning processes, learning environments and the like) with the purpose to develop or validate such theories.",
+      "th": "ส่วน validation studies มีเป้าหมายเพื่อพัฒนาหรือตรวจสอบความตรงของทฤษฎี โดยเป็นการศึกษาอย่างเป็นระบบเกี่ยวกับการออกแบบ การพัฒนา และการประเมินสิ่งแทรกแซงทางการศึกษา เช่น กระบวนการเรียนรู้ สภาพแวดล้อมการเรียนรู้ และสิ่งอื่นในลักษณะเดียวกัน เพื่อพัฒนาหรือตรวจสอบทฤษฎีเหล่านั้น"
+    },
+    {
+      "p": 16,
+      "k": "paragraph",
+      "en": "Design research always has a twofold yield, namely, on the one hand research-based interventions, and on the other hand knowledge about these interventions (in development studies), or theories based on them (in validation studies). The twofold yield of design research is one of its key characteristics and is also found in definitions and descriptions of other authors who sometimes use another name for this type of research. But all authors aim to what Barab and Squire (2004, p. 2) describe as “new theories, artefacts, and practices that account for and potentially impact learning and teaching in naturalistic setting”. We use ‘intervention’ to capture the rich variety of research-based curricula, artefacts and teaching-learning practices.",
+      "th": "การวิจัยเชิงออกแบบมีผลผลิตสองประการเสมอ ด้านหนึ่งคือสิ่งแทรกแซงที่พัฒนาบนฐานงานวิจัย อีกด้านหนึ่งคือความรู้เกี่ยวกับสิ่งแทรกแซงนั้น (สำหรับ development studies) หรือทฤษฎีที่พัฒนาจากสิ่งแทรกแซงนั้น (สำหรับ validation studies) ผลผลิตคู่เป็นลักษณะสำคัญที่พบในนิยามของผู้เขียนท่านอื่น แม้บางคนจะใช้ชื่อเรียกการวิจัยต่างออกไป แต่ต่างก็มีเป้าหมายอย่างที่ Barab และ Squire (2004, น. 2) กล่าวไว้ คือการสร้างทฤษฎี สิ่งประดิษฐ์หรือผลงาน และแนวปฏิบัติใหม่ที่สามารถอธิบายและอาจส่งผลต่อการเรียนรู้และการสอนในสภาพการณ์ธรรมชาติ ในหนังสือนี้ใช้คำว่า ‘สิ่งแทรกแซง’ (intervention) ครอบคลุมหลักสูตร ผลงาน และแนวปฏิบัติด้านการเรียนการสอนที่พัฒนาบนฐานงานวิจัยอันหลากหลาย"
+    },
+    {
+      "p": 16,
+      "k": "paragraph",
+      "en": "A further differentiation of design research is conceivable. For example, one can imagine that the dissemination and implementation of a particular program is supported by design research – the resulting intervention is the successfully disseminated and implemented program (e.g. at the level of a school system), whilst the systematic reflection and documentation of the process may lead to a set of procedures and conditions for successful dissemination and implementation (the design principles) for such programs.",
+      "th": "ยังอาจจำแนกการวิจัยเชิงออกแบบเพิ่มเติมได้ เช่น การใช้วิจัยเชิงออกแบบสนับสนุนการเผยแพร่และนำโปรแกรมไปปฏิบัติ ผลผลิตในกรณีนี้คือโปรแกรมที่เผยแพร่และนำไปใช้ได้สำเร็จ เช่น ในระดับระบบโรงเรียน ขณะเดียวกัน การสะท้อนคิดและจัดทำเอกสารกระบวนการอย่างเป็นระบบอาจนำไปสู่ชุดขั้นตอนและเงื่อนไขในการเผยแพร่และนำโปรแกรมไปใช้ให้ประสบความสำเร็จ ซึ่งก็คือหลักการออกแบบ (design principles) สำหรับโปรแกรมเหล่านั้น"
+    },
+    {
+      "p": 16,
+      "k": "paragraph",
+      "en": "The differentiation between these types of design research, serves mainly conceptual purposes. In practice, design researchers may combine orientations in their research. For example, starting from a complex and persistent problem in education practice, the research group may decide to apply design principles (‘local theories’) that resulted from other studies. In doing so they are not only developing an intervention, but at the same time exploring the validity of design principles (theory) developed in another context for their own problem context.",
+      "th": "การแบ่งประเภทเหล่านี้มีประโยชน์หลักในเชิงมโนทัศน์ ในทางปฏิบัติ นักวิจัยอาจผสมผสานแนวทางต่าง ๆ ในงานเดียวกัน เช่น เริ่มจากปัญหาทางการศึกษาที่ซับซ้อนและเกิดขึ้นต่อเนื่อง แล้วนำหลักการออกแบบหรือ ‘ทฤษฎีเฉพาะบริบท’ (local theories) จากการศึกษาอื่นมาใช้ วิธีนี้ไม่เพียงเป็นการพัฒนาสิ่งแทรกแซง แต่ยังตรวจสอบความตรงของหลักการออกแบบหรือทฤษฎีที่พัฒนาจากบริบทอื่นเมื่อนำมาใช้กับปัญหาในบริบทของตนเองด้วย"
+    },
+    {
+      "p": 16,
+      "k": "paragraph",
+      "en": "Research question and design research phases",
+      "th": "คำถามวิจัยและระยะของการวิจัยเชิงออกแบบ"
+    },
+    {
+      "p": 16,
+      "k": "paragraph",
+      "en": "Researchers may have various reasons to embark on design research efforts, but all studies combine two orientations, viz design and research. This is nicely characterized by Kelly, Lesh and Baek (2008, p.xiii) who characterize design research as an emerging methodology in education “whose goal is to synergize the study of learning and teaching at the intersection of design processes and research methods (Italics by us). Design processes are systematic, creative, dynamic, generative, and directed at solutions to real problems; whereas, research methods are systematized, rule-governed, tied to standards of evidence and warrant, and directed at establishing principles, theories, and laws.”",
+      "th": "นักวิจัยอาจมีเหตุผลแตกต่างกันในการทำวิจัยเชิงออกแบบ แต่ทุกการศึกษาผสมผสานจุดมุ่งหมายสองด้าน คือ ‘การออกแบบ’ และ ‘การวิจัย’ Kelly, Lesh และ Baek (2008, น. xiii) อธิบายไว้ว่าเป็นระเบียบวิธีวิจัยที่กำลังก่อตัวขึ้นในวงการศึกษา ซึ่งมุ่งผสานการศึกษาการเรียนรู้และการสอน ณ จุดตัดระหว่างกระบวนการออกแบบกับวิธีวิจัย (ตัวเอนในต้นฉบับเพิ่มโดยบรรณาธิการ) กระบวนการออกแบบมีลักษณะเป็นระบบ สร้างสรรค์ เปลี่ยนแปลงได้ ก่อให้เกิดสิ่งใหม่ และมุ่งแก้ปัญหาจริง ส่วนวิธีวิจัยมีแบบแผน อยู่ภายใต้กฎเกณฑ์ เชื่อมโยงกับมาตรฐานของหลักฐานและเหตุผลรองรับ และมุ่งสร้างหลักการ ทฤษฎี และกฎ"
+    },
+    {
+      "p": 16,
+      "k": "paragraph",
+      "en": "Design researchers are striving to design an optimal intervention and to identify valid design principles (or a local theory) for these interventions in a certain context. Typical research questions in a development study type of design research can be phrased as: “What are the characteristics of a good quality <intervention X> for the purpose/outcome Y (Y1, Y2, …, Yn) in context Z?” An example of such a research question can be found in Chapter 40 of this book where Dowse and Howie phrase as their research question “What are the characteristics of an intervention for promoting academic research writing which will best support master’s students in education in the proposal stage of their research?”. Please, refer to the chapters in this book (for instance chapters 30 and 51) for other examples. Based on prior work, Nieveen (1999; see also 2009 and part A – Chapter 6) proposes criteria for good quality interventions, implying that a complete and final version of an intervention should be:",
+      "th": "นักวิจัยเชิงออกแบบพยายามออกแบบสิ่งแทรกแซงที่เหมาะสมที่สุด และค้นหาหลักการออกแบบที่มีความตรงหรือทฤษฎีเฉพาะบริบทสำหรับสิ่งแทรกแซงนั้น คำถามวิจัยทั่วไปของการศึกษาประเภทพัฒนาอาจเขียนว่า ‘สิ่งแทรกแซง X ที่มีคุณภาพดี เพื่อให้บรรลุวัตถุประสงค์หรือผลลัพธ์ Y (Y1, Y2, …, Yn) ในบริบท Z ควรมีลักษณะอย่างไร?’ ตัวอย่างในบทที่ 40 คือคำถามของ Dowse และ Howie ว่า ‘สิ่งแทรกแซงเพื่อส่งเสริมการเขียนงานวิจัยเชิงวิชาการที่ช่วยสนับสนุนนักศึกษาปริญญาโทสาขาการศึกษาในระยะจัดทำข้อเสนอโครงร่างการวิจัยได้ดีที่สุด ควรมีลักษณะอย่างไร?’ ดูตัวอย่างอื่นในบทที่ 30 และ 51 ด้วย จากผลงานก่อนหน้า Nieveen (1999; ดู 2009 และภาค A บทที่ 6) เสนอเกณฑ์คุณภาพของสิ่งแทรกแซงฉบับสมบูรณ์ดังต่อไปนี้"
+    },
+    {
+      "p": 17,
+      "k": "paragraph",
+      "en": "Relevant: There is a need for the intervention and its design is based on state-of the art (scientific) knowledge – also called content validity;",
+      "th": "มีความเกี่ยวข้องเหมาะสม (Relevant): มีความจำเป็นต้องใช้สิ่งแทรกแซงนั้น และออกแบบโดยอาศัยความรู้ทางวิทยาศาสตร์ที่ทันสมัยที่สุด เรียกอีกอย่างว่า ความตรงเชิงเนื้อหา (content validity)"
+    },
+    {
+      "p": 17,
+      "k": "paragraph",
+      "en": "Consistent: The intervention is 'logically' designed – also called construct validity;",
+      "th": "มีความสอดคล้องภายใน (Consistent): ออกแบบสิ่งแทรกแซงอย่างสมเหตุสมผลในเชิงตรรกะ เรียกอีกอย่างว่า ความตรงเชิงโครงสร้าง (construct validity)"
+    },
+    {
+      "p": 17,
+      "k": "paragraph",
+      "en": "Practical: The intervention is usable in the setting for which it has been designed;",
+      "th": "นำไปใช้ได้จริง (Practical): สามารถใช้สิ่งแทรกแซงได้ในสภาพแวดล้อมหรือบริบทที่ออกแบบไว้"
+    },
+    {
+      "p": 17,
+      "k": "paragraph",
+      "en": "Effective: Using the product results in desired outcomes.",
+      "th": "มีประสิทธิผล (Effective): การใช้ผลิตภัณฑ์หรือสิ่งแทรกแซงก่อให้เกิดผลลัพธ์ตามที่ต้องการ"
+    },
+    {
+      "p": 17,
+      "k": "paragraph",
+      "en": "In development studies, we usually distinguish a number of phases in which design and research activities are intertwined:",
+      "th": "ในการศึกษาประเภทพัฒนา โดยทั่วไปแบ่งการดำเนินงานออกเป็นหลายระยะ ซึ่งกิจกรรมการออกแบบและการวิจัยประสานกัน ดังนี้"
+    },
+    {
+      "p": 17,
+      "k": "paragraph",
+      "en": "preliminary research: needs and context analysis, review of literature, development of a conceptual or theoretical framework for the study;",
+      "th": "การวิจัยเบื้องต้น (preliminary research): วิเคราะห์ความต้องการและบริบท ทบทวนวรรณกรรม และพัฒนากรอบแนวคิดหรือกรอบทฤษฎีของการศึกษา"
+    },
+    {
+      "p": 17,
+      "k": "paragraph",
+      "en": "development or prototyping phase: phase consisting of iterations of analysis, design and formative evaluation, each being a micro-cycle of research with formative evaluation as the most important research activity aimed at improving and refining the intervention;",
+      "th": "ระยะพัฒนาหรือสร้างต้นแบบ (development or prototyping phase): ประกอบด้วยการวนรอบของการวิเคราะห์ การออกแบบ และการประเมินระหว่างพัฒนา แต่ละรอบเป็นวงจรวิจัยขนาดย่อย โดยการประเมินระหว่างพัฒนาเป็นกิจกรรมวิจัยสำคัญที่สุดเพื่อปรับปรุงและขัดเกลาสิ่งแทรกแซง"
+    },
+    {
+      "p": 17,
+      "k": "paragraph",
+      "en": "assessment phase: summative evaluation to conclude whether the solution or intervention meets the pre-determined specifications.",
+      "th": "ระยะประเมินผล (assessment phase): ใช้การประเมินสรุปผลเพื่อตัดสินว่าวิธีแก้ปัญหาหรือสิ่งแทรกแซงเป็นไปตามข้อกำหนดที่วางไว้ล่วงหน้าหรือไม่"
+    },
+    {
+      "p": 17,
+      "k": "paragraph",
+      "en": "Similar research phases are found in validation studies. For example, Cobb et al. (2003) distinguish between the phases of preparing for a design experiment, conducting a design experiment and conducting a retrospective analysis.",
+      "th": "การศึกษาประเภทตรวจสอบความตรงของทฤษฎีก็มีระยะคล้ายคลึงกัน เช่น Cobb และคณะ (2003) จำแนกเป็นระยะเตรียมการทดลองเชิงออกแบบ ระยะดำเนินการทดลองเชิงออกแบบ และระยะวิเคราะห์ย้อนหลัง (retrospective analysis)"
+    },
+    {
+      "p": 17,
+      "k": "paragraph",
+      "en": "Throughout all these activities the researcher or research group will do systematic reflection and documentation to produce the theories or design principles as the scientific yield from the design research. Some authors include the implementation of the intervention, i.e. putting the intervention into practice, also as a phase in design research - for example McKenney and Reeves (2012) and Penuel, Fishman, Cheng and Sabelli (2011) who are speaking of design-based implementation research. We acknowledge that the dissemination and implementation of a particular program (intervention) can be a real challenge and suggest that such processes of upscaling can be supported by design research as well. However, we think that it is important to distinguish the research-based development of an intervention (‘proof of existence’) from the processes of dissemination and upscaling.",
+      "th": "ตลอดกิจกรรมเหล่านี้ นักวิจัยหรือคณะวิจัยจะสะท้อนคิดและจัดทำหลักฐานเอกสารอย่างเป็นระบบ เพื่อให้ได้ทฤษฎีหรือหลักการออกแบบเป็นผลผลิตทางวิทยาศาสตร์ของการวิจัย บางผู้เขียนนับการนำสิ่งแทรกแซงไปใช้จริงเป็นอีกระยะหนึ่ง เช่น McKenney และ Reeves (2012) และ Penuel, Fishman, Cheng และ Sabelli (2011) ซึ่งกล่าวถึง design-based implementation research เราตระหนักว่าการเผยแพร่และนำโปรแกรมไปใช้ในวงกว้างเป็นความท้าทายจริง และกระบวนการขยายขนาดดังกล่าวอาจได้รับการสนับสนุนจากการวิจัยเชิงออกแบบเช่นกัน อย่างไรก็ตาม จำเป็นต้องแยกการพัฒนาสิ่งแทรกแซงบนฐานวิจัยเพื่อแสดงว่าสามารถเกิดขึ้นจริง (‘proof of existence’) ออกจากการเผยแพร่และขยายผล"
+    },
+    {
+      "p": 17,
+      "k": "paragraph",
+      "en": "The iterative nature of the development or prototyping phase is needed for the ‘successive approximation of the practical products’ (or ‘interventions’) and the ‘successive approximation of theory’ (or ‘design principles’) – terminology taken from Wademan (2005). Each iteration or cycle is a micro-cycle of research, i.e. a step in the process of conducting the design research. Each iteration will have its own research or evaluation questions and consequently its own research design and will include systematic reflection on the theoretical aspects or design principles in relationship to the status of the intervention, resulting in either the decision that the intervention is not yet optimal so that another iteration is needed, or in the conclusion that the intervention is ´good enough´, i.e. meeting the expectations of the research group for that iteration. In the first case a re-design, refinement or revision of the intervention is needed, which goes hand-in-hand with the refinement of the intervention theory or design theory.",
+      "th": "ลักษณะการวนรอบในระยะพัฒนาหรือสร้างต้นแบบจำเป็นต่อ ‘การค่อย ๆ เข้าใกล้ผลิตภัณฑ์หรือสิ่งแทรกแซงที่ใช้ได้จริง’ และ ‘การค่อย ๆ เข้าใกล้ทฤษฎีหรือหลักการออกแบบ’ ตามศัพท์ของ Wademan (2005) แต่ละรอบเป็นวงจรวิจัยย่อย หรือหนึ่งขั้นในกระบวนการ EDR ซึ่งมีคำถามวิจัยหรือคำถามประเมินและแบบแผนการวิจัยเฉพาะรอบของตน พร้อมสะท้อนคิดอย่างเป็นระบบต่อประเด็นทฤษฎีหรือหลักการออกแบบโดยเชื่อมกับสถานะปัจจุบันของสิ่งแทรกแซง ผลคืออาจตัดสินว่าสิ่งแทรกแซงยังไม่เหมาะสมพอ จำเป็นต้องวนรอบอีกครั้ง หรือสรุปว่า ‘ดีเพียงพอ’ ตามความคาดหวังของคณะวิจัยในรอบนั้น หากยังไม่ดีพอต้องออกแบบใหม่ ขัดเกลา หรือปรับแก้สิ่งแทรกแซงไปพร้อมกับการปรับทฤษฎีของสิ่งแทรกแซงหรือทฤษฎีการออกแบบ"
+    },
+    {
+      "p": 17,
+      "k": "paragraph",
+      "en": "These features and characteristics of design research are nicely captured by Wademan (2005) in what he calls the generic design research model (see also Part A, Chapter 1).",
+      "th": "ลักษณะสำคัญเหล่านี้สะท้อนอย่างชัดเจนในแบบจำลองทั่วไปของการวิจัยเชิงออกแบบ (generic design research model) ที่ Wademan (2005) เสนอไว้ (ดูภาค A บทที่ 1 ด้วย)"
+    }
+  ]
+}
