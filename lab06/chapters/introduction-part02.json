@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "id": "introduction",
+  "part": 2,
+  "pdf_pages": [
+    18,
+    19,
+    20,
+    21
+  ],
+  "status": "translated_first_pass",
+  "figures": [
+    {
+      "pdf_page": 18,
+      "caption_en": "Figure 1: Generic design research model (Wademan, 2005)",
+      "caption_th": "ภาพที่ 1 แบบจำลองทั่วไปของการวิจัยเชิงออกแบบ (Wademan, 2005)",
+      "source_pdf_page_link": "https://www.slo.nl/publish/pages/8837/educational-design-research-b-total.pdf#page=18",
+      "note": "รูปต้นฉบับมีตัวหนังสืออยู่ภายในภาพ จึงแสดงคำแปลและลิงก์ตรวจภาพเดิม"
+    }
+  ],
+  "blocks": [
+    {
+      "p": 18,
+      "k": "paragraph",
+      "en": "Figure 1: Generic design research model (Wademan, 2005)",
+      "th": "ภาพที่ 1 แบบจำลองทั่วไปของการวิจัยเชิงออกแบบ (Wademan, 2005)"
+    },
+    {
+      "p": 18,
+      "k": "paragraph",
+      "en": "[Diagram: Practitioner and User Participation; Problem and Context; Preliminary Investigation of Problems, Needs & Perspectives; Tentative Products & Theories; Prototyping & Assessment of Preliminary Products & Theories; Problem Resolution & Advancing Theory. Recurring formative evaluation, redesign, refinement, and reflection.]",
+      "th": "[ผังภาพต้นฉบับ: การมีส่วนร่วมของผู้ปฏิบัติและผู้ใช้ตลอดกระบวนการ เริ่มจากปัญหาและบริบท → การศึกษาเบื้องต้นเกี่ยวกับปัญหา ความต้องการ และมุมมอง → ผลิตภัณฑ์และทฤษฎีเบื้องต้น → การสร้างต้นแบบและประเมินผลิตภัณฑ์กับทฤษฎีระหว่างพัฒนา → การแก้ปัญหาและพัฒนาทฤษฎี โดยมีการประเมินระหว่างพัฒนา การออกแบบใหม่ การปรับปรุง และการสะท้อนคิดวนซ้ำ ดูรูปเต็มที่ PDF ต้นฉบับหน้า 18]"
+    },
+    {
+      "p": 19,
+      "k": "paragraph",
+      "en": "Scientific nature of design research",
+      "th": "ลักษณะความเป็นวิทยาศาสตร์ของการวิจัยเชิงออกแบบ"
+    },
+    {
+      "p": 19,
+      "k": "paragraph",
+      "en": "Like other researchers, educational design researchers need to meet criteria of good research and therefore to apply the guiding principles for scientific research (Shavelson & Towne, 2002), viz:",
+      "th": "เช่นเดียวกับนักวิจัยประเภทอื่น นักวิจัย EDR ต้องดำเนินงานให้เป็นไปตามเกณฑ์ของการวิจัยที่ดี และประยุกต์หลักการชี้นำการวิจัยเชิงวิทยาศาสตร์ของ Shavelson และ Towne (2002) ดังนี้"
+    },
+    {
+      "p": 19,
+      "k": "paragraph",
+      "en": "Pose significant questions that can be investigated;",
+      "th": "ตั้งคำถามสำคัญที่สามารถศึกษาตรวจสอบได้"
+    },
+    {
+      "p": 19,
+      "k": "paragraph",
+      "en": "Link research to relevant theory;",
+      "th": "เชื่อมโยงงานวิจัยกับทฤษฎีที่เกี่ยวข้อง"
+    },
+    {
+      "p": 19,
+      "k": "paragraph",
+      "en": "Use methods that permit direct investigation of the question;",
+      "th": "ใช้วิธีการที่เปิดโอกาสให้ตรวจสอบคำถามวิจัยได้โดยตรง"
+    },
+    {
+      "p": 19,
+      "k": "paragraph",
+      "en": "Provide a coherent and explicit chain of reasoning;",
+      "th": "แสดงลำดับเหตุผลที่สอดคล้องเชื่อมโยงและชัดเจน"
+    },
+    {
+      "p": 19,
+      "k": "paragraph",
+      "en": "Replicate and generalize across studies;",
+      "th": "ทำซ้ำการศึกษาและขยายผลข้อค้นพบข้ามการศึกษา"
+    },
+    {
+      "p": 19,
+      "k": "paragraph",
+      "en": "Disclose research to encourage professional scrutiny and critique.",
+      "th": "เปิดเผยงานวิจัยเพื่อส่งเสริมการตรวจสอบและวิพากษ์จากผู้เชี่ยวชาญในวิชาชีพ"
+    },
+    {
+      "p": 19,
+      "k": "paragraph",
+      "en": "For each cycle the researcher (or research team) applies the methodological ‘rules’ for doing research, i.e. for identifying the target audience and sampling, for instrument development and apply triangulation to obtain good quality data. Given the layers of formative evaluation in design research, in the later stages of development the evaluation design needs to be more rigorous than in earlier stages.",
+      "th": "ในแต่ละวงจร นักวิจัยหรือคณะวิจัยต้องใช้กฎเกณฑ์ทางระเบียบวิธี เช่น การกำหนดกลุ่มเป้าหมายและการสุ่มตัวอย่าง การพัฒนาเครื่องมือ และการใช้การตรวจสอบข้อมูลจากหลายแหล่งหรือหลายวิธี (triangulation) เพื่อให้ได้ข้อมูลที่มีคุณภาพ เนื่องจากการประเมินระหว่างพัฒนาใน EDR มีหลายชั้น การออกแบบการประเมินในระยะหลังของการพัฒนาจึงต้องมีความเข้มงวดมากกว่าระยะแรก"
+    },
+    {
+      "p": 19,
+      "k": "paragraph",
+      "en": "Design research is conducted in close collaboration with educational practice. Educational practitioners are actively involved, often as members of the research team. This leads to a number of challenges that are typical for this type of research, such as the risk that possible multiple roles of the researcher may jeopardize the quality of the research and the fact that real-world settings may imply real-world complications. Several measures can be taken to compensate for potential conflicts of interest - with reference to the guiding principles for scientific research (mentioned above) one may think of:",
+      "th": "การวิจัยเชิงออกแบบดำเนินการโดยร่วมมืออย่างใกล้ชิดกับผู้ปฏิบัติงานด้านการศึกษา ผู้ปฏิบัติเข้าร่วมอย่างกระตือรือร้นและมักเป็นสมาชิกของทีมวิจัยด้วย จึงเกิดความท้าทายเฉพาะ เช่น ความเสี่ยงที่บทบาทหลายอย่างของนักวิจัยอาจกระทบคุณภาพงานวิจัย และความซับซ้อนที่เกิดขึ้นในสภาพแวดล้อมจริง สามารถใช้มาตรการหลายประการเพื่อชดเชยหรือจัดการความขัดแย้งทางผลประโยชน์ที่อาจเกิดขึ้น โดยอ้างอิงหลักการวิจัยเชิงวิทยาศาสตร์ดังกล่าว ได้แก่"
+    },
+    {
+      "p": 19,
+      "k": "paragraph",
+      "en": "make research open to professional scrutiny and critique by people outside the project;",
+      "th": "เปิดงานวิจัยให้ผู้เชี่ยวชาญภายนอกโครงการตรวจสอบและวิพากษ์"
+    },
+    {
+      "p": 19,
+      "k": "paragraph",
+      "en": "have a good quality research design with a strong chain of reasoning, triangulation, empirical testing and a systematic documentation and reflection of the design, development, evaluation and implementation process and their results;",
+      "th": "มีแบบแผนการวิจัยที่มีคุณภาพ พร้อมลำดับเหตุผลที่หนักแน่น การตรวจสอบข้อมูลแบบสามเส้า การทดสอบเชิงประจักษ์ ตลอดจนการบันทึกและสะท้อนคิดอย่างเป็นระบบเกี่ยวกับการออกแบบ การพัฒนา การประเมิน การนำไปใช้ และผลลัพธ์"
+    },
+    {
+      "p": 19,
+      "k": "paragraph",
+      "en": "pay attention for validity and reliability of instruments and data.",
+      "th": "ใส่ใจความตรงและความเที่ยงของเครื่องมือและข้อมูล"
+    },
+    {
+      "p": 19,
+      "k": "paragraph",
+      "en": "See for a more detailed discussion Plomp in part A of this book, Chapter 1.",
+      "th": "อ่านการอภิปรายที่ละเอียดกว่านี้จากบทของ Plomp ในภาค A บทที่ 1"
+    },
+    {
+      "p": 19,
+      "k": "paragraph",
+      "en": "Generalizability in design research",
+      "th": "การขยายผลข้อค้นพบในการวิจัยเชิงออกแบบ"
+    },
+    {
+      "p": 19,
+      "k": "paragraph",
+      "en": "In design research, like in case studies and experimental studies, the findings cannot be generalized automatically to a larger universe (there is no statistical generalization from a small sample to a population, as in the case of survey research). Building on Yin (2003) we argue that yet design researchers have to strive to generalize their findings to a broader theory (Plomp, 2009, 2013). Design principles or local (instruction) theories must be tested through replications of the findings in a second, third or in more cases in various contexts with the purpose that the same results should occur. Once such replications have been made, the results might be accepted for a much larger number of similar contexts, even though further replications have not been performed. This replication logic is the same that underlies the use of experiments and allows experimental scientists to generalize from one experiment to another. Yin (2003) calls this analytical generalizability.",
+      "th": "เช่นเดียวกับกรณีศึกษาและการวิจัยทดลอง ข้อค้นพบจากการวิจัยเชิงออกแบบไม่อาจขยายผลสู่กลุ่มที่กว้างขึ้นโดยอัตโนมัติ (ไม่ใช่การอนุมานทางสถิติจากกลุ่มตัวอย่างขนาดเล็กสู่ประชากรเช่นการวิจัยสำรวจ) อย่างไรก็ดี ตามแนวคิดของ Yin (2003) นักวิจัยเชิงออกแบบควรมุ่งขยายผลข้อค้นพบไปสู่ทฤษฎีที่กว้างขึ้น (Plomp, 2009, 2013) หลักการออกแบบหรือทฤษฎีการสอนเฉพาะบริบทต้องได้รับการทดสอบผ่านการศึกษาซ้ำครั้งที่สอง ครั้งที่สาม หรือหลายกรณีในบริบทต่างกัน โดยคาดหวังให้เกิดผลลัพธ์ลักษณะเดียวกัน เมื่อมีการทำซ้ำเช่นนั้น ผลอาจได้รับการยอมรับว่าใช้ได้กับบริบทคล้ายกันจำนวนมากขึ้น แม้ยังไม่ทดลองซ้ำในทุกบริบท ตรรกะการทำซ้ำนี้เป็นรากฐานของการทดลองและการขยายผลจากการทดลองหนึ่งสู่อีกการทดลองหนึ่งเช่นกัน Yin (2003) เรียกสิ่งนี้ว่า ‘การขยายผลเชิงวิเคราะห์’ (analytical generalizability)"
+    },
+    {
+      "p": 19,
+      "k": "paragraph",
+      "en": "3. The act of assembling the collection",
+      "th": "3. กระบวนการรวบรวมกรณีศึกษา"
+    },
+    {
+      "p": 19,
+      "k": "paragraph",
+      "en": "The general purpose of this book (providing a rich number of examples to give students and novice researchers examples and insights in how to design and conduct an EDR-project) implied that we strived for cases reflecting a good variation of design research studies. In this section we describe the process of preparing the collection of cases. First we summarize some important dimensions that we wanted to be well-represented in the book. Then the guidelines for the authors will be summarized, which will be followed by a description of the thorough review process.",
+      "th": "จุดประสงค์ทั่วไปของหนังสือ คือจัดหาตัวอย่างจำนวนมากให้นักศึกษาและนักวิจัยใหม่เข้าใจวิธีออกแบบและดำเนินโครงการ EDR จึงทำให้เราพยายามคัดเลือกกรณีศึกษาที่หลากหลาย ส่วนนี้อธิบายกระบวนการรวบรวม โดยเริ่มจากสรุปมิติสำคัญที่ต้องการให้มีตัวแทนอย่างเหมาะสม ตามด้วยแนวทางที่ให้ผู้เขียน และคำอธิบายกระบวนการตรวจประเมินที่รอบคอบ"
+    },
+    {
+      "p": 20,
+      "k": "paragraph",
+      "en": "Variety of cases",
+      "th": "ความหลากหลายของกรณีศึกษา"
+    },
+    {
+      "p": 20,
+      "k": "paragraph",
+      "en": "As researchers may have various reasons to embark on design research, we aimed for a variation in focus of the cases of design research, such as the focus on the development of innovative interventions, on the development and validation of (instructional, pedagogical or learning) theories and on the dissemination and implementation of interventions. Moreover, the collection of cases was to cover studies in all educational sectors, was to represent a wide variety of domains in the field of education sciences (such as curriculum, learning and instruction, subject-related teaching methods, school organization, instructional technology, ICT in education) and was to provide studies on a variety of types of interventions (curriculum (units), authentic tasks, assessment tasks, monitoring systems). Based on our network of researchers and using the 'snowball approach’ (inviting experts in the field of EDR to nominate good examples of design research), we found researchers from more than 23 countries from all over the world willing to contribute to this book, eventually leading to a collection of 51 cases. In section 4, we will describe the collection of cases on a number of dimensions.",
+      "th": "นักวิจัยมีเหตุผลต่างกันในการทำวิจัยเชิงออกแบบ เราจึงต้องการกรณีศึกษาที่มีจุดเน้นต่างกัน ทั้งการพัฒนาสิ่งแทรกแซงเชิงนวัตกรรม การพัฒนาและตรวจสอบทฤษฎีด้านการสอน การจัดการเรียนรู้ หรือการเรียนรู้ ตลอดจนการเผยแพร่และนำสิ่งแทรกแซงไปใช้ นอกจากนี้ยังต้องการให้ครอบคลุมทุกภาคส่วนการศึกษาและหลายสาขาของวิทยาศาสตร์การศึกษา เช่น หลักสูตร การเรียนรู้และการสอน วิธีสอนเฉพาะวิชา การจัดองค์กรโรงเรียน เทคโนโลยีการสอน และ ICT เพื่อการศึกษา รวมทั้งชนิดของสิ่งแทรกแซงต่าง ๆ เช่น หน่วยหลักสูตร ภารกิจที่เชื่อมโยงสถานการณ์จริง งานประเมิน และระบบติดตามผล เราอาศัยเครือข่ายนักวิจัยและวิธีแบบลูกหิมะ (snowball approach) โดยเชิญผู้เชี่ยวชาญ EDR เสนอชื่อกรณีศึกษาที่ดี ทำให้มีนักวิจัยจากกว่า 23 ประเทศทั่วโลกยินดีร่วมจัดทำหนังสือ และได้กรณีศึกษาทั้งสิ้น 51 เรื่อง ส่วนที่ 4 จะอธิบายลักษณะของกรณีศึกษาตามมิติต่าง ๆ"
+    },
+    {
+      "p": 20,
+      "k": "paragraph",
+      "en": "Author guidelines",
+      "th": "แนวทางสำหรับผู้เขียน"
+    },
+    {
+      "p": 20,
+      "k": "paragraph",
+      "en": "An important starting point was that authors should have as much freedom as possible in describing their cases. However, as the cases are meant as examples from which graduate students and novice researchers should be able to learn how to design and conduct a project utilizing EDR as the research approach, we proposed that each chapter should address a number of topics that are not only characteristic for good research, but are also exemplary for a good case of educational design research. We considered it important that a reader will get a good understanding of the research design which implied that a clear description of the ‘chain of reasoning’ for the research was necessary. We therefore suggested the authors to address in their chapter at least the following six issues or topics (each containing more detailed guidelines):",
+      "th": "หลักเริ่มต้นสำคัญคือให้ผู้เขียนมีอิสระในการบรรยายกรณีศึกษาของตนมากที่สุดเท่าที่ทำได้ อย่างไรก็ตาม เนื่องจากกรณีศึกษาใช้เป็นตัวอย่างให้นักศึกษาระดับบัณฑิตศึกษาและนักวิจัยมือใหม่เรียนรู้วิธีออกแบบและดำเนินโครงการ EDR เราจึงเสนอให้ทุกบทครอบคลุมหัวข้อที่เป็นลักษณะของงานวิจัยที่ดีและเป็นตัวอย่างที่ดีของ EDR ผู้อ่านควรเข้าใจแบบแผนการวิจัยอย่างชัดเจน จึงต้องบรรยาย ‘ลำดับเหตุผล’ (chain of reasoning) ของงานวิจัยให้ชัด และผู้เขียนควรกล่าวถึงอย่างน้อยหกประเด็นดังต่อไปนี้"
+    },
+    {
+      "p": 20,
+      "k": "paragraph",
+      "en": "1. Introduction to the problem.",
+      "th": "1. การนำเสนอปัญหา"
+    },
+    {
+      "p": 20,
+      "k": "paragraph",
+      "en": "2. Development of conceptual framework/conceptualization of study.",
+      "th": "2. การพัฒนากรอบแนวคิดหรือการกำหนดกรอบมโนทัศน์ของการศึกษา"
+    },
+    {
+      "p": 20,
+      "k": "paragraph",
+      "en": "3. Research design.",
+      "th": "3. แบบแผนการวิจัย"
+    },
+    {
+      "p": 20,
+      "k": "paragraph",
+      "en": "4. If applicable for the project: Assessment phase.",
+      "th": "4. ระยะการประเมินผล หากโครงการมีระยะนี้"
+    },
+    {
+      "p": 20,
+      "k": "paragraph",
+      "en": "5. Yield of the project.",
+      "th": "5. ผลผลิตที่ได้จากโครงการ"
+    },
+    {
+      "p": 20,
+      "k": "paragraph",
+      "en": "6. Reflection, lessons learned.",
+      "th": "6. การสะท้อนคิดและบทเรียนที่ได้รับ"
+    },
+    {
+      "p": 20,
+      "k": "paragraph",
+      "en": "As indicated, we did not want to impose a ‘straitjacket’ of guidelines, as each researcher did conduct the research within the context and culture of their research group. But by requesting to address the issues mentioned, we hoped that graduate students and novice researchers will be able to understand how a particular design research project has been designed and conducted. Finally, as we can imagine that readers would be interested in further details of the study, we asked the authors to include, at the end of their chapter, a few key sources for the research they reported in the chapter.",
+      "th": "ดังที่กล่าวแล้ว เราไม่ต้องการให้แนวทางเหล่านี้เป็นข้อบังคับที่รัดตัวจนเกินไป เพราะนักวิจัยแต่ละกลุ่มดำเนินงานภายใต้บริบทและวัฒนธรรมของกลุ่มตน อย่างไรก็ดี การขอให้ครอบคลุมประเด็นเหล่านี้จะช่วยให้นักศึกษาและนักวิจัยใหม่เข้าใจการออกแบบและดำเนินโครงการวิจัยแต่ละเรื่อง และเพื่อผู้อ่านที่สนใจรายละเอียดมากขึ้น เราขอให้ผู้เขียนเพิ่ม ‘แหล่งข้อมูลสำคัญ’ (key sources) ของโครงการที่รายงานไว้ท้ายบท"
+    },
+    {
+      "p": 20,
+      "k": "paragraph",
+      "en": "Reviewing process",
+      "th": "กระบวนการตรวจประเมินต้นฉบับ"
+    },
+    {
+      "p": 20,
+      "k": "paragraph",
+      "en": "As we strove for optimal quality of the contributions, a thorough reviewing process was set up comprising of three layers. First of all, each manuscript was reviewed by the two volume editors. For this first review, we used the author guidelines as a check list, but also checked whether the overall ‘chain of reasoning’ for research had been applied in a way that the target reader would be able to understand how a particular piece of research was designed and conducted. In a few cases, we considered a further revision desirable.",
+      "th": "เพื่อให้ต้นฉบับมีคุณภาพดีที่สุด เราวางกระบวนการตรวจประเมินสามชั้น ชั้นแรก บรรณาธิการหนังสือทั้งสองคนตรวจต้นฉบับทุกเรื่อง โดยใช้แนวทางสำหรับผู้เขียนเป็นรายการตรวจสอบ รวมทั้งพิจารณาว่าลำดับเหตุผลโดยรวมของการวิจัยชัดเจนพอให้ผู้อ่านเป้าหมายเข้าใจการออกแบบและดำเนินงานหรือไม่ บางกรณีมีการขอให้ปรับแก้เพิ่มเติม"
+    },
+    {
+      "p": 21,
+      "k": "paragraph",
+      "en": "In the second round, each (revised) manuscript has been blindly reviewed by two peers of which at least one was not from the same country as the author(s). We also tried to find for each manuscript peer reviewers of whom at least one had another background than the author(s). Two examples to illustrate this principle: a chapter focusing on mathematics education has been peer reviewed by another math educator and curriculum specialist, whereas a chapter on an ICT application in teacher education has been peer reviewed by an instructional technologist and a language educator. The peer reviewers were given as the ‘key criterion’ whether the chapter was written in a way that we may expect that graduate students and novice researchers (many not being native English speakers) can learn how the particular EDR project has been designed and conducted. Specific aspects for their review were:",
+      "th": "ในรอบที่สอง ต้นฉบับที่ปรับแก้แล้วแต่ละเรื่องถูกประเมินแบบไม่เปิดเผยข้อมูลโดยผู้ทรงคุณวุฒิสองคน โดยอย่างน้อยหนึ่งคนไม่ได้มาจากประเทศเดียวกับผู้เขียน และพยายามให้มีอย่างน้อยหนึ่งคนที่มีภูมิหลังต่างจากผู้เขียน ตัวอย่างเช่น บทที่เน้นคณิตศาสตร์ศึกษาจะถูกประเมินโดยนักคณิตศาสตร์ศึกษาอีกคนและผู้เชี่ยวชาญหลักสูตร ส่วนบทที่ว่าด้วยการประยุกต์ ICT ในครุศึกษาจะถูกประเมินโดยนักเทคโนโลยีการสอนและนักภาษาศึกษา เกณฑ์หลักที่ให้ผู้ประเมินพิจารณาคือ บทนั้นเขียนชัดเจนเพียงพอให้นักศึกษาบัณฑิตศึกษาและนักวิจัยใหม่ ซึ่งหลายคนไม่ได้ใช้ภาษาอังกฤษเป็นภาษาแม่ เรียนรู้วิธีออกแบบและดำเนินโครงการ EDR นั้นหรือไม่ ประเด็นเฉพาะประกอบด้วย"
+    },
+    {
+      "p": 21,
+      "k": "paragraph",
+      "en": "Does the title clearly describe the case reported?",
+      "th": "ชื่อเรื่องบรรยายกรณีศึกษาที่รายงานได้ชัดเจนหรือไม่"
+    },
+    {
+      "p": 21,
+      "k": "paragraph",
+      "en": "Does the abstract clearly summarize the case reported?",
+      "th": "บทคัดย่อสรุปกรณีศึกษาที่รายงานได้ชัดเจนหรือไม่"
+    },
+    {
+      "p": 21,
+      "k": "paragraph",
+      "en": "Does the manuscript provide a sufficient account of the ‘chain of reasoning’ (or the various steps) for the research presented, i.e. is the research design sufficiently clear?",
+      "th": "ต้นฉบับแสดงลำดับเหตุผลหรือขั้นตอนต่าง ๆ ของการวิจัยอย่างเพียงพอหรือไม่ กล่าวคือ แบบแผนการวิจัยชัดเจนเพียงพอหรือไม่"
+    },
+    {
+      "p": 21,
+      "k": "paragraph",
+      "en": "Do the findings and conclusions follow up on these? Has been discussed at the end of the manuscript to what extent the main question is answered?",
+      "th": "ข้อค้นพบและข้อสรุปสอดคล้องกับกระบวนการเหล่านี้หรือไม่ และท้ายบทอภิปรายไว้หรือไม่ว่าตอบคำถามวิจัยหลักได้มากน้อยเพียงใด"
+    },
+    {
+      "p": 21,
+      "k": "paragraph",
+      "en": "Is the manuscript written in a style that is expected to be clear and understandable for graduate students and novice researchers who are not native English speakers.",
+      "th": "รูปแบบการเขียนชัดเจนและเข้าใจได้สำหรับนักศึกษาระดับบัณฑิตศึกษาและนักวิจัยใหม่ที่ไม่ได้ใช้ภาษาอังกฤษเป็นภาษาแม่หรือไม่"
+    },
+    {
+      "p": 21,
+      "k": "paragraph",
+      "en": "Authors revised their manuscript on the basis of the peer reviews and were asked to submit also a memo indicating how they had dealt with the peer feedback. In a few cases the peer reviews resulted in a major revision of a chapter, after which the volume editors did another close review.",
+      "th": "ผู้เขียนปรับแก้ต้นฉบับตามผลการประเมิน และถูกขอให้ส่งบันทึกชี้แจงด้วยว่าจัดการข้อเสนอแนะของผู้ประเมินอย่างไร บางกรณีต้องแก้ไขบทอย่างมาก และบรรณาธิการจึงกลับมาตรวจอย่างใกล้ชิดอีกครั้ง"
+    },
+    {
+      "p": 21,
+      "k": "paragraph",
+      "en": "Finally, as a third layer, for a period of two months chapters were placed on a website only accessible for the authors of case chapters allowing them to read the other chapters and to do – if they would like so – an ‘open peer review’ and to provide feedback to colleagues and/or to include in their own chapters a reference to relevant other chapters. This has resulted in a few cases to some alterations in the chapters.",
+      "th": "ชั้นที่สาม มีการเผยแพร่บทต่าง ๆ บนเว็บไซต์ที่ให้เฉพาะผู้เขียนกรณีศึกษาเข้าใช้งานได้เป็นเวลาสองเดือน เพื่อให้ผู้เขียนอ่านบทของกันและกัน ทำ ‘การประเมินโดยผู้ทรงคุณวุฒิแบบเปิด’ (open peer review) ได้ตามสมัครใจ ให้ข้อเสนอแนะเพื่อนร่วมงาน หรือเพิ่มการอ้างอิงบทอื่นที่เกี่ยวข้องลงในบทของตน ซึ่งทำให้บางบทมีการปรับแก้เพิ่มเติม"
+    },
+    {
+      "p": 21,
+      "k": "paragraph",
+      "en": "The entire reviewing process resulted in a collection of cases of successful design research, that may vary in focus and approach to design research and in the details of reporting the research, but that in our view also resulted in a set of case chapters that meets the purpose of the book.",
+      "th": "กระบวนการตรวจประเมินทั้งหมดทำให้ได้ชุดกรณีศึกษาการวิจัยเชิงออกแบบที่ประสบความสำเร็จ แม้มีจุดเน้น แนวทาง และรายละเอียดการรายงานต่างกัน แต่ตามทัศนะของเรา บทกรณีศึกษาเหล่านี้ตอบวัตถุประสงค์ของหนังสือ"
+    },
+    {
+      "p": 21,
+      "k": "paragraph",
+      "en": "4. Describing the collection of cases",
+      "th": "4. การอธิบายลักษณะของชุดกรณีศึกษา"
+    },
+    {
+      "p": 21,
+      "k": "paragraph",
+      "en": "The collection of cases represents a wide variety educational design research studies. To provide those who want to explore the collection of EDR cases with a tool to select a subset of cases appropriate for her/his use, we have asked the authors to describe their case on a number of dimensions of which we think that these will be relevant for exploring the collection of EDR cases. The description dimensions were deducted from our perspective on the purpose of the book, but we also included dimensions developed by Anderson and Shattuck (2012). See the Appendix for the description of the dimensions sent to the authors. The case descriptions formed the input for the case selection tool (available at the website of this book http://international.slo.nl/edr). In the remainder of this section we provide – with an helicopter view – an impression of the collection of cases.",
+      "th": "ชุดกรณีศึกษานี้แสดงความหลากหลายของงาน EDR เพื่อให้ผู้สำรวจสามารถเลือกกลุ่มกรณีศึกษาที่เหมาะกับการใช้งาน เราขอให้ผู้เขียนบรรยายกรณีศึกษาของตนตามมิติที่เห็นว่าเกี่ยวข้องกับการสำรวจชุดกรณีศึกษา มิติเหล่านี้พัฒนาจากมุมมองต่อวัตถุประสงค์ของหนังสือ และรวมมิติบางส่วนจาก Anderson และ Shattuck (2012) ด้วย ดูรายละเอียดมิติที่ส่งให้ผู้เขียนได้ในภาคผนวก คำบรรยายกรณีศึกษาถูกนำไปเป็นข้อมูลของเครื่องมือเลือกกรณีศึกษาในเว็บไซต์หนังสือ (http://international.slo.nl/edr) ส่วนที่เหลือของหัวข้อนี้จะให้ภาพรวมในมุมกว้างของชุดกรณีศึกษา"
+    }
+  ]
+}
