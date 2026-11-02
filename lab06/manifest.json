@@ -146,12 +146,44 @@
       "status": "thai_first_pass_with_source_pdf",
       "parts": 5,
       "note": "แปลเนื้อหาไทยรอบแรก PDF 51–75 ครบทุกช่วง รวมส่วนอ้างอิง (คงรายการภาษาอังกฤษ) และประวัติผู้เขียน; ฉบับ B เทียบตามหน้า PDF ไม่ใช่รายย่อหน้า"
+    },
+    {
+      "id": "chapter-03",
+      "title_th": "การออกแบบสภาพแวดล้อมการเรียนรู้ฟิสิกส์ผ่านเว็บสำหรับโรงเรียนประถมศึกษา: บทบาทของครูในโครงการวิจัยเชิงออกแบบทางการศึกษา",
+      "pdf_pages": [
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96
+      ],
+      "status": "thai_first_pass_with_source_pdf",
+      "parts": 4,
+      "summary_points": 10,
+      "comparison_status": "Thai translation and English PDF page comparison; paragraph-level bilingual matching remains pending"
     }
   ],
   "next_chapter": {
-    "id": "chapter-03",
-    "title_th": "การออกแบบสภาพแวดล้อมการเรียนรู้ฟิสิกส์ผ่านเว็บระดับประถมศึกษา: บทบาทของครูในการวิจัยเชิงออกแบบทางการศึกษา",
-    "pdf_start": 76,
+    "id": "chapter-04",
+    "title_th": "South Africa: Optimising a feedback system for monitoring learner performance in primary schools",
+    "pdf_start": 97,
+    "pdf_end": 119,
     "status": "not_started"
   },
   "untranslated_front_matter_pdf_pages": [
