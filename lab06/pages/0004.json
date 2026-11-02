@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "source": "Educational design research — Part B: Illustrative cases (SLO, 2013)",
+  "status": "translated_first_pass",
+  "pdf_page": 4,
+  "title_en": "Contents",
+  "title_th": "สารบัญ",
+  "printed_page": null,
+  "blocks": [
+    {
+      "type": "heading",
+      "en": "Contents",
+      "th": "สารบัญ"
+    },
+    {
+      "type": "toc",
+      "en": "Preface",
+      "th": "คำนำ",
+      "loc": "I"
+    },
+    {
+      "type": "toc",
+      "en": "Introduction to the collection of illustrative cases of educational design research",
+      "th": "บทนำสู่การรวบรวมกรณีศึกษาตัวอย่างของการวิจัยเชิงออกแบบทางการศึกษา",
+      "by": "Tjeerd Plomp & Nienke Nieveen",
+      "loc": "V"
+    },
+    {
+      "type": "section",
+      "en": "SECTION 1: (PRE-)PRIMARY EDUCATION",
+      "th": "ส่วนที่ 1: การศึกษาระดับปฐมวัยและประถมศึกษา"
+    },
+    {
+      "type": "toc",
+      "number": 1,
+      "en": "A formative experiment to enhance teacher-child interactions in a preschool classroom",
+      "th": "การทดลองเพื่อปรับปรุงระหว่างดำเนินการเพื่อส่งเสริมปฏิสัมพันธ์ระหว่างครูกับเด็กในห้องเรียนปฐมวัย",
+      "by": "Barbara Bradley",
+      "loc": "1"
+    },
+    {
+      "type": "toc",
+      "number": 2,
+      "en": "The development of a comprehensive vocabulary instruction program for nine- to eleven-year-old children using a design experiment approach",
+      "th": "การพัฒนาโปรแกรมสอนคำศัพท์แบบครอบคลุมสำหรับเด็กอายุ 9–11 ปี โดยใช้แนวทางการทดลองเชิงออกแบบ",
+      "by": "James Baumann, Camille Blachowicz, Ann Bates, Char Cieply, Patrick Manyak, Heather Peterson, Jeni Davis, Justin Arner & Michael Graves",
+      "loc": "23"
+    },
+    {
+      "type": "toc",
+      "number": 3,
+      "en": "Design of a primary school physics web-based learning environment: The teacher’s role in the educational design research project",
+      "th": "การออกแบบสภาพแวดล้อมการเรียนรู้ฟิสิกส์ระดับประถมศึกษาผ่านเว็บ: บทบาทของครูในโครงการวิจัยเชิงออกแบบทางการศึกษา",
+      "by": "Kalle Juuti & Jari Lavonen",
+      "loc": "49"
+    },
+    {
+      "type": "toc",
+      "number": 4,
+      "en": "South Africa: Optimising a feedback system for monitoring learner performance in primary schools",
+      "th": "แอฟริกาใต้: การปรับปรุงระบบข้อมูลป้อนกลับให้เหมาะสมที่สุดสำหรับติดตามผลการเรียนรู้ของผู้เรียนในโรงเรียนประถมศึกษา",
+      "by": "Elizabeth Archer & Sarah Howie",
+      "loc": "71"
+    },
+    {
+      "type": "toc",
+      "number": 5,
+      "en": "Using the spiral problem solving process to design group work: A case study of educational design research in Shanghai",
+      "th": "การใช้กระบวนการแก้ปัญหาแบบเกลียววนเพื่อออกแบบการทำงานกลุ่ม: กรณีศึกษาการวิจัยเชิงออกแบบทางการศึกษาในเซี่ยงไฮ้",
+      "by": "Nanchang Yan, Qiyun Wang & Zhiting Zhu",
+      "loc": "95"
+    },
+    {
+      "type": "toc",
+      "number": 6,
+      "en": "GO Inquire - Geological Observational Inquiry: Cycles of design research",
+      "th": "GO Inquire — การสืบเสาะหาความรู้จากการสังเกตทางธรณีวิทยา: วงจรการวิจัยเชิงออกแบบ",
+      "by": "Brenda Bannan",
+      "loc": "113"
+    },
+    {
+      "type": "toc",
+      "number": 7,
+      "en": "Fostering science comprehension, vocabulary and motivation in English language learners: A design research study",
+      "th": "การส่งเสริมความเข้าใจวิทยาศาสตร์ คำศัพท์ และแรงจูงใจของผู้เรียนภาษาอังกฤษ: การศึกษาวิจัยเชิงออกแบบ",
+      "by": "Ana Taboada Barber",
+      "loc": "141"
+    },
+    {
+      "type": "toc",
+      "number": 8,
+      "en": "The development of an RME-based geometry course for Indonesian primary schools",
+      "th": "การพัฒนารายวิชาเรขาคณิตตามแนวทางการศึกษาคณิตศาสตร์ที่เชื่อมโยงกับความเป็นจริง (RME) สำหรับโรงเรียนประถมศึกษาในอินโดนีเซีย",
+      "by": "Ahmad Fauzan, Tjeerd Plomp & Koeno Gravemeijer",
+      "loc": "159"
+    }
+  ]
+}
