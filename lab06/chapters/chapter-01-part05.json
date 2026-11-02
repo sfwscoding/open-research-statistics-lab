@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "id": "chapter-01",
+  "part": 5,
+  "pdf_pages": [
+    47,
+    48,
+    49
+  ],
+  "status": "translated_first_pass",
+  "table_title": "Table 1: Summary of research activities",
+  "translation_notes": [
+    "ถอดและแปลตารางสรุปกิจกรรมวิจัยตามระยะและกิจกรรม โดยเรียงหัวข้อข้อมูล ผลการศึกษา และการปรับเปลี่ยน",
+    "หน้า PDF 47–49 เป็นตารางเดียวต่อเนื่อง 3 หน้า; ข้อความต้นฉบับทุกช่องแสดงรวมเป็นข้อความเรียงลำดับเพื่ออ่านบนมือถือ"
+  ],
+  "blocks": [
+    {
+      "p": 47,
+      "k": "table-title",
+      "en": "Table 1: Summary of research activities",
+      "th": "ตารางที่ 1 สรุปกิจกรรมการวิจัย"
+    },
+    {
+      "p": 47,
+      "k": "table-section",
+      "en": "Phase 1: Baseline – 7 weeks",
+      "th": "ระยะที่ 1: การเก็บข้อมูลพื้นฐาน — 7 สัปดาห์"
+    },
+    {
+      "p": 47,
+      "k": "table-row",
+      "en": "Data collected and analyzed: Video recordings of book sharing and semi-structured group activities; classroom observation of all activities including mealtimes; child language assessments; teacher interviews.",
+      "th": "ข้อมูลที่เก็บและวิเคราะห์: บันทึกวิดีโอกิจกรรมอ่านหนังสือร่วมกันและกิจกรรมกลุ่มแบบมีโครงสร้างบางส่วน; สังเกตกิจกรรมในห้องเรียนทุกประเภท รวมถึงมื้ออาหาร; ประเมินภาษาเด็ก; สัมภาษณ์ครู"
+    },
+    {
+      "p": 47,
+      "k": "table-row",
+      "en": "Whole-class book sharing: Teacher meets expectation for decontextualized talk, paraprofessional below expectation; both below expectation for semantically contingent talk.",
+      "th": "ผลการอ่านหนังสือทั้งชั้น: ครูหลักใช้คำถามนอกบริบทเฉพาะหน้าได้ตามเกณฑ์ ผู้ช่วยครูต่ำกว่าเกณฑ์; ส่วนการพูดที่สัมพันธ์กับความหมายของเด็ก ทั้งครูหลักและผู้ช่วยครูต่ำกว่าเกณฑ์"
+    },
+    {
+      "p": 47,
+      "k": "table-row",
+      "en": "Small-group book sharing: Did not implement.",
+      "th": "การอ่านหนังสือกลุ่มเล็ก: ยังไม่ได้ดำเนินการ"
+    },
+    {
+      "p": 47,
+      "k": "table-row",
+      "en": "Semi-structured group activity: Teacher and paraprofessional below expectations for decontextualized and semantically contingent talk.",
+      "th": "กิจกรรมกลุ่มแบบมีโครงสร้างบางส่วน: ครูหลักและผู้ช่วยครูต่ำกว่าเกณฑ์ทั้งการพูดนอกบริบทเฉพาะหน้าและการพูดที่สัมพันธ์กับความหมาย"
+    },
+    {
+      "p": 47,
+      "k": "table-row",
+      "en": "Mealtimes: Teacher and paraprofessional restricted or discouraged talk.",
+      "th": "มื้ออาหาร: ครูหลักและผู้ช่วยครูจำกัดหรือไม่ส่งเสริมการพูดคุย"
+    },
+    {
+      "p": 47,
+      "k": "table-row",
+      "en": "Intervention presented: decontextualized demands and semantically contingent talk strategies in relation to existing practices.",
+      "th": "สิ่งแทรกแซงที่นำเสนอ: กลยุทธ์ชวนคิดนอกบริบทเฉพาะหน้าและการพูดที่สัมพันธ์กับความหมาย โดยเชื่อมโยงกับแนวปฏิบัติเดิมของครู"
+    },
+    {
+      "p": 47,
+      "k": "table-section",
+      "en": "Phase 2: Development – Iteration 1: 7 weeks",
+      "th": "ระยะที่ 2: การพัฒนา — รอบที่ 1 จำนวน 7 สัปดาห์"
+    },
+    {
+      "p": 47,
+      "k": "table-row",
+      "en": "Data: Video recordings; classroom observations including mealtimes; informal teacher interviews.",
+      "th": "ข้อมูลที่เก็บ: วิดีโอกิจกรรมอ่านหนังสือและกิจกรรมกลุ่ม; สังเกตทุกกิจกรรมรวมมื้ออาหาร; สัมภาษณ์ครูอย่างไม่เป็นทางการ"
+    },
+    {
+      "p": 47,
+      "k": "table-row",
+      "en": "Whole class book sharing: decontextualized talk increased before/during book sharing but less after; semantically contingent talk unchanged. Modification: discuss and develop open questions for after-book discussion; no semantically contingent modification.",
+      "th": "การอ่านหนังสือทั้งชั้น: การพูดนอกบริบทเฉพาะหน้าเพิ่มก่อนและขณะอ่าน แต่ยังน้อยหลังอ่าน; การพูดที่สัมพันธ์กับความหมายไม่เปลี่ยน การปรับ: หารือและพัฒนาคำถามปลายเปิดเพื่อสนับสนุนการพูดหลังอ่าน; ไม่มีข้อเสนอให้ปรับการพูดที่สัมพันธ์กับความหมาย"
+    },
+    {
+      "p": 47,
+      "k": "table-row",
+      "en": "Small-group book sharing: Not implemented. Modification: Concerns about adding another small-group activity to the schedule.",
+      "th": "การอ่านหนังสือกลุ่มเล็ก: ไม่ได้ดำเนินการ การปรับ/ข้อกังวล: การเพิ่มกิจกรรมกลุ่มเล็กอีกกิจกรรมลงในตารางเวลา"
+    },
+    {
+      "p": 47,
+      "k": "table-row",
+      "en": "Semi-structured group activities: decontextualized talk unchanged; more extended talk but teacher-led. Modification: attempted small groups several times, but too challenging to manage.",
+      "th": "กิจกรรมกลุ่มแบบมีโครงสร้างบางส่วน: การพูดนอกบริบทเฉพาะหน้าไม่เปลี่ยน; การสนทนาต่อเนื่องเพิ่ม แต่ยังนำโดยครู การปรับ: ทดลองกิจกรรมกลุ่มเล็กหลายครั้ง แต่จัดการได้ยากเกินไป"
+    },
+    {
+      "p": 47,
+      "k": "table-row",
+      "en": "Mealtimes: Timer discontinued and teacher joined breakfast; teacher talked more, paraprofessional less restrictive and responsive. Modification: suggested some classroom lunches to avoid no-talking policy; teacher declined because of inconvenience to support staff.",
+      "th": "มื้ออาหาร: เลิกใช้เครื่องจับเวลาเพื่อห้ามพูดและครูหลักมาร่วมอาหารเช้า; ครูหลักพูดกับเด็กมากขึ้น ผู้ช่วยครูจำกัดการพูดน้อยลงและตอบคำถามหรือข้อคิดเห็น การปรับ: เสนอให้บางมื้อกินอาหารกลางวันในห้องเรียนเพื่อเลี่ยงกฎห้ามพูด แต่ครูไม่เห็นด้วยเพราะอาจรบกวนเจ้าหน้าที่สนับสนุน"
+    },
+    {
+      "p": 48,
+      "k": "table-title",
+      "en": "Table 1: Summary of research activities (continued)",
+      "th": "ตารางที่ 1 สรุปกิจกรรมการวิจัย (ต่อ)"
+    },
+    {
+      "p": 48,
+      "k": "table-section",
+      "en": "Phase 2: Development – Iteration 2: 8 weeks",
+      "th": "ระยะที่ 2: การพัฒนา — รอบที่ 2 จำนวน 8 สัปดาห์"
+    },
+    {
+      "p": 48,
+      "k": "table-row",
+      "en": "Whole-class book sharing: high decontextualized talk before and during book sharing, but less after; semantically contingent talk unchanged. Discussed open questions for after reading; recognized need to keep talk short in structured large groups.",
+      "th": "การอ่านหนังสือทั้งชั้น: ยังคงพูดนอกบริบทเฉพาะหน้าในระดับสูงก่อนและระหว่างอ่าน แต่ยังน้อยหลังอ่าน; การพูดสัมพันธ์กับความหมายไม่เปลี่ยน การปรับ: อภิปรายคำถามปลายเปิดสำหรับหลังอ่านต่อเนื่อง; ตระหนักว่ากิจกรรมทั้งชั้นที่มีโครงสร้างจำเป็นต้องรักษาบทสนทนาให้สั้น"
+    },
+    {
+      "p": 48,
+      "k": "table-row",
+      "en": "Small-group book sharing: Some small-group and half-class literacy activities implemented. Modification: compromise to read to half-class instead of small groups.",
+      "th": "การอ่านหนังสือกลุ่มเล็ก: มีการอ่านเป็นกลุ่มเล็กและทำกิจกรรมรู้หนังสือแบบครึ่งชั้นบางครั้ง การปรับ: ประนีประนอมโดยอ่านหนังสือให้เด็กครึ่งชั้นแทนกลุ่มเล็ก"
+    },
+    {
+      "p": 48,
+      "k": "table-row",
+      "en": "Semi-structured group: no change in decontextualized talk, continued extended talk but still teacher-led. Developed generic conversation starters.",
+      "th": "กิจกรรมกลุ่มแบบมีโครงสร้างบางส่วน: การพูดนอกบริบทเฉพาะหน้าไม่เปลี่ยน; ยังคงมีการสนทนาต่อเนื่องแต่ครูเป็นผู้นำ การปรับ: พัฒนาประโยคเริ่มบทสนทนาทั่วไปเพื่อกระตุ้นการพูดนอกบริบทเฉพาะหน้า"
+    },
+    {
+      "p": 48,
+      "k": "table-row",
+      "en": "Mealtimes: Teacher continued talking; paraprofessional continued to be less restrictive and responsive. No modifications discussed.",
+      "th": "มื้ออาหาร: ครูหลักยังสนทนากับเด็ก ส่วนผู้ช่วยครูยังจำกัดการพูดน้อยลงและตอบสนองต่อเด็ก ไม่มีการอภิปรายข้อปรับเปลี่ยนเพิ่มเติม"
+    },
+    {
+      "p": 48,
+      "k": "table-section",
+      "en": "Re-assessment: 1 week",
+      "th": "การประเมินซ้ำ: 1 สัปดาห์"
+    },
+    {
+      "p": 48,
+      "k": "table-row",
+      "en": "Child language assessments; Teacher interviews.",
+      "th": "ประเมินภาษาเด็กซ้ำ และสัมภาษณ์ครู"
+    },
+    {
+      "p": 49,
+      "k": "table-title",
+      "en": "Table 1: Summary of research activities (continued)",
+      "th": "ตารางที่ 1 สรุปกิจกรรมการวิจัย (ต่อ)"
+    },
+    {
+      "p": 49,
+      "k": "table-section",
+      "en": "Phase 3: Retrospective analysis: 8 weeks",
+      "th": "ระยะที่ 3: การวิเคราะห์ย้อนหลัง — 8 สัปดาห์"
+    },
+    {
+      "p": 49,
+      "k": "table-row",
+      "en": "Data activity: Re-analyzed data.",
+      "th": "กิจกรรมข้อมูล: นำข้อมูลที่มีทั้งหมดกลับมาวิเคราะห์ใหม่"
+    },
+    {
+      "p": 49,
+      "k": "table-row",
+      "en": "Whole-class book sharing: over 30% decontextualized demands before and during book sharing but less talk afterward; longer reading may cause limit; activity does not lend itself to semantically contingent extended discussion. Teacher interview: cognitive skills important; paraprofessional: learn to sit quietly for kindergarten.",
+      "th": "การอ่านหนังสือทั้งชั้น: ครูใช้คำถามนอกบริบทเฉพาะหน้าสูงกว่า 30% ก่อนและระหว่างอ่าน แต่การพูดคุยหลังอ่านลดลง อาจเพราะใช้เวลานานขึ้น; กิจกรรมไม่เอื้อต่อบทสนทนาต่อเนื่องแบบสัมพันธ์กับความหมายจากเด็ก ผลสัมภาษณ์: ครูหลักเห็นว่าเด็กจำเป็นต้องพัฒนาทักษะการคิด ผู้ช่วยครูเห็นว่าเด็กต้องเรียนรู้การนั่งฟังอย่างสงบเพื่อเตรียมเข้าชั้นอนุบาล"
+    },
+    {
+      "p": 49,
+      "k": "table-row",
+      "en": "Small-group book sharing: half-class sharing somewhat feasible but needs time to integrate. Teacher interview: too many teacher-led activities.",
+      "th": "การอ่านหนังสือกลุ่มเล็ก: การอ่านกับเด็กครึ่งชั้นพอทำได้ในระดับหนึ่ง แต่อาจต้องใช้เวลาอีกเพื่อบูรณาการให้เป็นกิจวัตร ผลสัมภาษณ์: ครูหลักยังกังวลว่ามีกิจกรรมที่ครูเป็นผู้นำมากเกินไป"
+    },
+    {
+      "p": 49,
+      "k": "table-row",
+      "en": "Semi-structured group activity: some permit decontextualized and child-led conversation; generally talk about helping children and managing materials. Interview: important other skills.",
+      "th": "กิจกรรมกลุ่มแบบมีโครงสร้างบางส่วน: บางกิจกรรมเอื้อต่อการพูดนอกบริบทเฉพาะหน้าและสนทนาที่เด็กนำ แต่โดยรวมครูมักพูดเพื่อช่วยเด็กและจัดการวัสดุ ผลสัมภาษณ์: กิจกรรมเหล่านี้ช่วยให้เด็กพัฒนาทักษะและความสามารถสำคัญด้านอื่นด้วย"
+    },
+    {
+      "p": 49,
+      "k": "table-row",
+      "en": "Mealtimes: teacher conversed; paraprofessional allowed talk and responded; school rule hindered. Interview: nutritious meals important but more open to socializing.",
+      "th": "มื้ออาหาร: ครูหลักสนทนากับเด็ก ผู้ช่วยครูยอมให้เด็กคุยและตอบคำถามหรือข้อคิดเห็น แต่กฎโรงเรียนยังขัดขวางสิ่งแทรกแซง ผลสัมภาษณ์: ครูทั้งสองยังห่วงเรื่องอาหารที่มีคุณค่าทางโภชนาการ แต่เปิดรับการพูดคุยเพื่อสร้างความสัมพันธ์มากขึ้น"
+    }
+  ]
+}
