@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "kind": "chapter",
+  "id": "preface",
+  "title_en": "Preface",
+  "title_th": "คำนำ",
+  "source": "Educational design research – Part B: Illustrative cases",
+  "pdf_pages": [
+    10,
+    11,
+    12,
+    13
+  ],
+  "printed_pages": [
+    "I",
+    "II",
+    "III",
+    "IV"
+  ],
+  "status": "translated_first_pass",
+  "description_th": "PDF หน้า 10–12 เป็นเนื้อหาคำนำ หน้า 13 เป็นหน้าว่างที่มีเลขหน้า IV",
+  "blocks": [
+    {
+      "p": 10,
+      "k": "heading",
+      "en": "Preface",
+      "th": "คำนำ"
+    },
+    {
+      "p": 10,
+      "k": "paragraph",
+      "en": "In 2007 Professor Zhu Zhiting of the College of Educational Sciences at the East China Normal University in Shanghai (PR China) asked the first editor of this book to organize a seminar on ‘educational design research’ (EDR) with the purpose to introduce a group postgraduate students and lecturing staff in China to educational design research as a research approach. The proceedings of that seminar were written in such a way that they could be used in postgraduate seminars and courses on educational design research. They were published in 2009 as An Introduction to Educational Design Research by the SLO, the National Institute for Curriculum Development, Enschede, the Netherlands.",
+      "th": "ในปี ค.ศ. 2007 ศาสตราจารย์จู จื้อถิง (Zhu Zhiting) แห่งวิทยาลัยวิทยาศาสตร์การศึกษา มหาวิทยาลัยอีสต์ไชนานอร์มอล นครเซี่ยงไฮ้ สาธารณรัฐประชาชนจีน ได้ขอให้บรรณาธิการคนแรกของหนังสือเล่มนี้จัดการสัมมนาเรื่อง “การวิจัยเชิงออกแบบทางการศึกษา” (Educational Design Research: EDR) เพื่อแนะนำ EDR ในฐานะแนวทางการวิจัยให้แก่นักศึกษาระดับบัณฑิตศึกษาและคณาจารย์ในประเทศจีน เอกสารประกอบการสัมมนาครั้งนั้นจัดทำขึ้นในลักษณะที่สามารถใช้ในการสัมมนาและรายวิชาระดับบัณฑิตศึกษาที่เกี่ยวกับ EDR ได้ ต่อมาในปี ค.ศ. 2009 เอกสารดังกล่าวได้รับการตีพิมพ์เป็นหนังสือชื่อ An Introduction to Educational Design Research โดย SLO ซึ่งเป็นสถาบันพัฒนาหลักสูตรแห่งชาติ ตั้งอยู่ที่เมืองเอนสเคเด ประเทศเนเธอร์แลนด์"
+    },
+    {
+      "p": 10,
+      "k": "paragraph",
+      "en": "When we met Professor Zhu in 2011, he asked for a number of illustrative cases (15-20 cases) of successful EDR to be used in combination with the 2009-book with the purpose that graduate students and novice researchers could also learn from examples by others about how to design and conduct a research project utilizing EDR.",
+      "th": "เมื่อเราได้พบศาสตราจารย์จูอีกครั้งในปี ค.ศ. 2011 ท่านได้ขอกรณีศึกษาตัวอย่างของ EDR ที่ประสบความสำเร็จจำนวนหนึ่ง (15–20 กรณี) เพื่อนำมาใช้ควบคู่กับหนังสือปี ค.ศ. 2009 โดยมุ่งให้นักศึกษาระดับบัณฑิตศึกษาและนักวิจัยมือใหม่ได้เรียนรู้จากตัวอย่างของผู้อื่นว่า ควรออกแบบและดำเนินโครงการวิจัยที่ใช้ EDR อย่างไร"
+    },
+    {
+      "p": 10,
+      "k": "paragraph",
+      "en": "We, editors, decided to take up the challenge after SLO had indicated to support our initiative and be willing to publish the new book. This resulted in a major project (starting in December 2011) comprising not only editing this book with ‘illustrative cases of educational design research’, but also updating our 2009 book. So, in the end, the project resulted in two books, namely Educational Design Research – Part A: An Introduction and Educational Design Research - Part B: Illustrative Cases.",
+      "th": "เราในฐานะบรรณาธิการตัดสินใจรับความท้าทายดังกล่าว หลังจาก SLO แจ้งว่าจะสนับสนุนความริเริ่มนี้และยินดีจัดพิมพ์หนังสือเล่มใหม่ จึงเกิดโครงการขนาดใหญ่ขึ้นตั้งแต่เดือนธันวาคม ค.ศ. 2011 ซึ่งไม่เพียงครอบคลุมการบรรณาธิการหนังสือ “กรณีศึกษาตัวอย่างของการวิจัยเชิงออกแบบทางการศึกษา” เล่มนี้เท่านั้น แต่ยังรวมถึงการปรับปรุงหนังสือที่ตีพิมพ์ในปี ค.ศ. 2009 ด้วย ผลสุดท้ายจึงได้หนังสือสองเล่ม ได้แก่ Educational Design Research – Part A: An Introduction และ Educational Design Research – Part B: Illustrative Cases"
+    },
+    {
+      "p": 10,
+      "k": "paragraph",
+      "en": "Prof Zhu Zhiting and Associate Professor Wang Quyien (National Institute of Education, Singapore) will prepare a Chinese edition of this book for which they will be co-editors.",
+      "th": "ศาสตราจารย์จู จื้อถิง และรองศาสตราจารย์หวัง ฉีอวิ้น (Wang Quyien ตามการสะกดชื่อในต้นฉบับ) จากสถาบันการศึกษาแห่งชาติ ประเทศสิงคโปร์ จะจัดทำหนังสือเล่มนี้ฉบับภาษาจีน โดยทั้งสองท่านจะเป็นบรรณาธิการร่วม"
+    },
+    {
+      "p": 10,
+      "k": "heading",
+      "en": "Composition of the book",
+      "th": "องค์ประกอบของหนังสือ"
+    },
+    {
+      "p": 10,
+      "k": "paragraph",
+      "en": "We wanted the illustrative cases to reflect a number of dimensions - as is explained in the Introduction - such as:",
+      "th": "เราต้องการให้กรณีศึกษาตัวอย่างสะท้อนมิติที่หลากหลาย ตามที่อธิบายไว้ในบทนำ ได้แก่"
+    },
+    {
+      "p": 10,
+      "k": "bullet",
+      "en": "coming from many domains in our field, such as curriculum, learning and instruction, subject related pedagogy (math education, language education, science education, etcetera), instructional technology, ICT in education;",
+      "th": "มาจากสาขาต่าง ๆ ในศาสตร์ของเรา เช่น หลักสูตร การเรียนรู้และการสอน ศาสตร์การสอนเฉพาะวิชา (คณิตศาสตร์ศึกษา ภาษา ศึกษา วิทยาศาสตร์ศึกษา เป็นต้น) เทคโนโลยีการสอน และเทคโนโลยีสารสนเทศและการสื่อสารในการศึกษา"
+    },
+    {
+      "p": 10,
+      "k": "bullet",
+      "en": "reflecting various purposes of design research, such as developing an innovative intervention or developing a new instructional or learning theory;",
+      "th": "สะท้อนวัตถุประสงค์ที่หลากหลายของการวิจัยเชิงออกแบบ เช่น การพัฒนานวัตกรรมหรือสิ่งแทรกแซงทางการศึกษา หรือการพัฒนาทฤษฎีใหม่เกี่ยวกับการสอนหรือการเรียนรู้"
+    },
+    {
+      "p": 10,
+      "k": "bullet",
+      "en": "representing all educational levels (from primary till higher education, and also informal education);",
+      "th": "เป็นตัวแทนของการศึกษาทุกระดับ ตั้งแต่ประถมศึกษาจนถึงอุดมศึกษา รวมทั้งการศึกษาตามอัธยาศัย"
+    },
+    {
+      "p": 10,
+      "k": "bullet",
+      "en": "having been conducted in a wide variety of countries.",
+      "th": "เป็นงานวิจัยที่ดำเนินการในประเทศต่าง ๆ อย่างหลากหลาย"
+    },
+    {
+      "p": 10,
+      "k": "paragraph",
+      "en": "As a result, we have 51 chapters covering a variety of combinations of these dimensions as the reader can see from the introduction chapter of this book.",
+      "th": "ผลที่ได้คือหนังสือจำนวน 51 บท ซึ่งครอบคลุมการผสมผสานของมิติเหล่านี้ในรูปแบบที่หลากหลาย ดังจะเห็นได้จากบทนำของหนังสือ"
+    },
+    {
+      "p": 10,
+      "k": "heading",
+      "en": "Unique character as a ‘supra-book’",
+      "th": "ลักษณะเฉพาะของหนังสือในฐานะ “ซูปราบุก” (supra-book)"
+    },
+    {
+      "p": 10,
+      "k": "paragraph",
+      "en": "This book is published electronically. But it is also a ‘supra-book’ with each case chapter separately electronically published, which allows users to make their own selection of chapters given the specific purpose of use – for example, if users want to discuss with graduate students examples of design research in the domain of curriculum development or language/math/science education, or what design research took place in a certain country or continent, they can select their own set of cases for studying with their students.",
+      "th": "หนังสือเล่มนี้เผยแพร่ในรูปแบบอิเล็กทรอนิกส์ และยังมีลักษณะเป็น “ซูปราบุก” (supra-book) กล่าวคือ กรณีศึกษาแต่ละบทเผยแพร่แยกเป็นเอกสารอิเล็กทรอนิกส์ได้ ทำให้ผู้อ่านเลือกบทต่าง ๆ ให้เหมาะกับวัตถุประสงค์การใช้งานของตน ตัวอย่างเช่น หากต้องการอภิปรายกับนักศึกษาระดับบัณฑิตศึกษาเกี่ยวกับงานวิจัยเชิงออกแบบในสาขาการพัฒนาหลักสูตร การศึกษาด้านภาษา คณิตศาสตร์ หรือวิทยาศาสตร์ หรือเกี่ยวกับงานวิจัยเชิงออกแบบที่ดำเนินการในประเทศหรือทวีปใดทวีปหนึ่ง ก็สามารถเลือกชุดกรณีศึกษาที่เหมาะสมไปศึกษาร่วมกับนักศึกษาได้"
+    },
+    {
+      "p": 11,
+      "k": "paragraph",
+      "en": "The publisher is willing to print the book on demand (and will charge for the costs of printing and handling). But readers are allowed to print their own selection of case chapters provided they follow the copyright rules.",
+      "th": "สำนักพิมพ์ยินดีพิมพ์หนังสือตามคำสั่งซื้อ โดยคิดค่าใช้จ่ายในการพิมพ์และดำเนินการ อย่างไรก็ตาม ผู้อ่านสามารถพิมพ์บทกรณีศึกษาที่เลือกไว้เองได้ โดยต้องปฏิบัติตามข้อกำหนดด้านลิขสิทธิ์"
+    },
+    {
+      "p": 11,
+      "k": "heading",
+      "en": "Some features of the case chapters",
+      "th": "ลักษณะบางประการของบทกรณีศึกษา"
+    },
+    {
+      "p": 11,
+      "k": "paragraph",
+      "en": "When we planned this book, an important starting point was that authors should have as much freedom as possible in describing their cases. But on the other hand, as the cases are meant as examples from which graduate students and researchers should be able to learn how to design and conduct a project utilizing EDR as the research approach or design, we wanted that each chapter should address a number of topics that are not only characteristic for good research, but also exemplary for a good case of EDR. We therefore requested each author of a ‘case chapter’ to address – in addition to describing the chain of reasoning for their research - at least the following six issues or topics (1) Introduction to the problem, (2) Conceptual framework/conceptualization of the study, (3) Research design (for each of the phases or cycles of the project), (4) Assessment phase (if applicable), (5) Yield of the project, and (6) Reflection – lessons learned.",
+      "th": "เมื่อวางแผนจัดทำหนังสือเล่มนี้ หลักสำคัญประการหนึ่งคือผู้เขียนควรมีอิสระมากที่สุดเท่าที่จะเป็นไปได้ในการบรรยายกรณีศึกษาของตน แต่ในอีกด้านหนึ่ง เนื่องจากกรณีศึกษาเหล่านี้มีไว้เป็นตัวอย่างให้นักศึกษาระดับบัณฑิตศึกษาและนักวิจัยเรียนรู้วิธีออกแบบและดำเนินโครงการวิจัยที่ใช้ EDR เป็นแนวทางหรือแบบแผนการวิจัย เราจึงต้องการให้ทุกบทกล่าวถึงประเด็นที่ไม่เพียงเป็นลักษณะของงานวิจัยที่ดี แต่ยังเป็นแบบอย่างของกรณีศึกษา EDR ที่ดีด้วย ด้วยเหตุนี้ เราจึงขอให้ผู้เขียนแต่ละบทบรรยาย “ลำดับเหตุผลของการวิจัย” (chain of reasoning) พร้อมทั้งกล่าวถึงประเด็นอย่างน้อยหกประการ ได้แก่ (1) การนำเสนอปัญหา (2) กรอบแนวคิดหรือการกำหนดกรอบแนวคิดของการศึกษา (3) แบบแผนการวิจัยในแต่ละระยะหรือแต่ละวงจรของโครงการ (4) ระยะการประเมินผล หากมี (5) ผลผลิตที่ได้จากโครงการ และ (6) การสะท้อนคิดและบทเรียนที่ได้รับ"
+    },
+    {
+      "p": 11,
+      "k": "paragraph",
+      "en": "As a result, the chapters included in this book do show a wide variety in structure and style of writing. But we hope that readers will be able to understand how the respective research projects have been designed and conducted, as well as that there is a variety in ways of conducting research utilizing EDR. It is in this context that we want to point readers to the following: it is not always possible to summarize all details of a piece of design research - comprising a number of phases, each possibly with a number of cycles or iterations - in a chapter with a text of maximally 8000 words. We therefore asked authors to focus on those parts of their research that would give a wide audience a good insight and understanding of the design and the conduct of their research. But as we could imagine that some readers would be interested in the details of a particular research project, we asked them to serve those readers by including, on top of the references, a number of ‘Key Sources' for the research reported.",
+      "th": "ดังนั้น บทต่าง ๆ ในหนังสือจึงมีโครงสร้างและรูปแบบการเขียนที่หลากหลาย แต่เราหวังว่าผู้อ่านจะเข้าใจว่าโครงการวิจัยแต่ละเรื่องได้รับการออกแบบและดำเนินการอย่างไร และเห็นว่าการทำวิจัยด้วยแนวทาง EDR สามารถทำได้หลายวิธี ในบริบทนี้ เราขอชี้ให้เห็นว่า ไม่อาจสรุปรายละเอียดทั้งหมดของงานวิจัยเชิงออกแบบซึ่งประกอบด้วยหลายระยะ และในแต่ละระยะอาจมีหลายวงจรหรือหลายรอบของการปรับปรุง ลงในบทความที่จำกัดความยาวไม่เกิน 8,000 คำได้เสมอไป เราจึงขอให้ผู้เขียนเน้นส่วนของงานวิจัยที่จะช่วยให้ผู้อ่านวงกว้างมองเห็นและเข้าใจการออกแบบและการดำเนินงานวิจัยได้อย่างชัดเจน และเนื่องจากผู้อ่านบางส่วนอาจสนใจรายละเอียดเชิงลึกของโครงการใดเป็นพิเศษ เราจึงขอให้ผู้เขียนเพิ่มรายการ “แหล่งข้อมูลสำคัญ” (Key Sources) ของงานวิจัยนั้น นอกเหนือจากรายการอ้างอิงทั่วไป"
+    },
+    {
+      "p": 11,
+      "k": "heading",
+      "en": "About the reviewing process",
+      "th": "เกี่ยวกับกระบวนการประเมินต้นฉบับ"
+    },
+    {
+      "p": 11,
+      "k": "paragraph",
+      "en": "Obviously, each case chapter has been reviewed by the editors of this book. But in addition, each chapter has been blindly reviewed by two peers of which at least one was not from the same country as the author(s). We also tried to find for manuscript peer reviewers of which at least one had another background than the author(s). See the Introduction chapter for more details on the reviewing process.",
+      "th": "แน่นอนว่าบทกรณีศึกษาทุกบทได้รับการตรวจพิจารณาโดยบรรณาธิการของหนังสือเล่มนี้ นอกจากนี้ แต่ละบทยังได้รับการประเมินโดยผู้ทรงคุณวุฒิสองคนด้วยกระบวนการประเมินแบบไม่เปิดเผยข้อมูลตามที่ต้นฉบับระบุ (blind peer review) โดยผู้ประเมินอย่างน้อยหนึ่งคนต้องไม่ได้มาจากประเทศเดียวกับผู้เขียน และเรายังพยายามจัดให้ผู้ประเมินอย่างน้อยหนึ่งคนมีภูมิหลังทางวิชาการแตกต่างจากผู้เขียนด้วย รายละเอียดเพิ่มเติมเกี่ยวกับกระบวนการประเมินอยู่ในบทนำ"
+    },
+    {
+      "p": 11,
+      "k": "paragraph",
+      "en": "Finally, for a period of two months the chapters were placed on a website only accessible for the authors of case chapters allowing them to read these and do an ‘open peer review’, providing this way feedback to colleagues and/or to include in their own chapters a reference to relevant other chapters. This resulted in some adaptations in a few chapters.",
+      "th": "ในขั้นสุดท้าย มีการนำบทต่าง ๆ ขึ้นเว็บไซต์เป็นเวลาสองเดือน โดยจำกัดการเข้าถึงไว้เฉพาะผู้เขียนบทกรณีศึกษา เพื่อให้ผู้เขียนอ่านบทของกันและกันและทำการ “ประเมินโดยเพื่อนร่วมวิชาการแบบเปิด” (open peer review) ได้ ทั้งในรูปของการให้ข้อเสนอแนะต่อเพื่อนร่วมงาน หรือการเพิ่มการอ้างอิงบทอื่น ๆ ที่เกี่ยวข้องเข้าไปในบทของตน กระบวนการนี้ส่งผลให้มีการปรับแก้บางบท"
+    },
+    {
+      "p": 11,
+      "k": "heading",
+      "en": "Thanks and acknowledgements",
+      "th": "คำขอบคุณและกิตติกรรมประกาศ"
+    },
+    {
+      "p": 11,
+      "k": "paragraph",
+      "en": "Preparing this book has been a major project. It would not have been possible to accomplish this project without the input and assistance of many people.",
+      "th": "การจัดทำหนังสือเล่มนี้เป็นโครงการขนาดใหญ่ที่ไม่อาจสำเร็จได้หากปราศจากการมีส่วนร่วมและความช่วยเหลือของบุคคลจำนวนมาก"
+    },
+    {
+      "p": 11,
+      "k": "paragraph",
+      "en": "The experiment of publishing this ‘supra-book’ was only possible thanks to the willingness of SLO, the Netherlands Institute for Curriculum Development to assist the project. We are very grateful to Jan van den Akker (Director General) for his support and that of his institute. We appreciate especially that the SLO was open to embark on the type of publishing that utilizes some characteristics and possibilities of the information society.",
+      "th": "การทดลองเผยแพร่หนังสือในรูปแบบ “ซูปราบุก” นี้เกิดขึ้นได้ก็เพราะ SLO สถาบันพัฒนาหลักสูตรแห่งเนเธอร์แลนด์ยินดีให้ความช่วยเหลือแก่โครงการ เราขอขอบคุณ Jan van den Akker (ผู้อำนวยการใหญ่) อย่างยิ่งสำหรับการสนับสนุนของท่านและสถาบัน โดยเฉพาะการที่ SLO เปิดกว้างต่อการเผยแพร่สิ่งพิมพ์ในรูปแบบที่ใช้ประโยชน์จากคุณลักษณะและความเป็นไปได้ของสังคมสารสนเทศ"
+    },
+    {
+      "p": 12,
+      "k": "paragraph",
+      "en": "We are grateful to all the authors who contributed to the book with great commitment and dedication. We are impressed by their enthusiasm, which resulted in a ‘snowball effect’ leading to the 51 chapters instead of the intended 15-20 chapters.",
+      "th": "เราขอขอบคุณผู้เขียนทุกท่านที่ร่วมสร้างสรรค์หนังสือด้วยความมุ่งมั่นและทุ่มเทอย่างยิ่ง ความกระตือรือร้นของพวกเขาทำให้เราเกิดความประทับใจ และก่อให้เกิด “ผลแบบลูกหิมะ” (snowball effect) จนหนังสือมีถึง 51 บท แทนที่จะมีเพียง 15–20 บทตามที่ตั้งใจไว้เดิม"
+    },
+    {
+      "p": 12,
+      "k": "paragraph",
+      "en": "We want to express great appreciation and thanks to the colleagues who contributed to the process of peer review – all mentioned at the end of this Preface.",
+      "th": "เราขอแสดงความซาบซึ้งและขอบคุณเพื่อนร่วมวิชาการทุกท่านที่มีส่วนร่วมในกระบวนการประเมินโดยผู้ทรงคุณวุฒิ ซึ่งรายชื่อทั้งหมดปรากฏอยู่ท้ายคำนำนี้"
+    },
+    {
+      "p": 12,
+      "k": "paragraph",
+      "en": "Finally, preparing all manuscripts for publication has been an enormous task. We are very grateful to the support staff of the SLO in taking up this duty in such a dedicated way.",
+      "th": "ท้ายที่สุด การเตรียมต้นฉบับทั้งหมดเพื่อเผยแพร่เป็นภารกิจที่ใหญ่มาก เราขอขอบคุณเจ้าหน้าที่ฝ่ายสนับสนุนของ SLO ที่รับหน้าที่นี้ด้วยความทุ่มเท"
+    },
+    {
+      "p": 12,
+      "k": "paragraph",
+      "en": "We hope that this book will become a source of inspiration and good ideas for many (future) researchers who want to address important problems in educational practice!",
+      "th": "เราหวังว่าหนังสือเล่มนี้จะเป็นแหล่งแรงบันดาลใจและแนวคิดที่ดีสำหรับนักวิจัยจำนวนมาก รวมทั้งนักวิจัยในอนาคต ที่ต้องการแก้ไขปัญหาสำคัญในทางปฏิบัติด้านการศึกษา"
+    },
+    {
+      "p": 12,
+      "k": "signature",
+      "en": "Tjeerd Plomp and Nienke Nieveen, Editors",
+      "th": "Tjeerd Plomp และ Nienke Nieveen บรรณาธิการ"
+    },
+    {
+      "p": 12,
+      "k": "heading",
+      "en": "Acknowledgments to the 62 peer reviewers from 12 countries",
+      "th": "กิตติกรรมประกาศแด่ผู้ทรงคุณวุฒิประเมินต้นฉบับ 62 คนจาก 12 ประเทศ"
+    },
+    {
+      "p": 12,
+      "k": "paragraph",
+      "en": "Mahmoud Abdallah (Egypt), Jan van den Akker (Netherlands), Terry Anderson (USA), Elizabeth Archer (South Africa), Brenda Bannan (USA), Jim Baumann (USA), Camille Blachowicz (USA), Kerst Boersma (Netherlands), Barbara Bradley (USA), Tara Bunag (USA), Ike Choi (USA), Jamie Colwell (USA), Jeni Davis (USA), Paul Drijvers (Netherlands), Harrie Eijkelhof (Netherlands), Ingo Eilks (Germany), Anna Evmenova (USA), Ahmed Fauzan (Indonesia), Elvira Folmer (Netherlands), Sangeetha Gopalakrishnan (USA), Koeno Gravemeijer (Netherlands), Harald Gropengiesser (Germany), Mike Hannafin (USA), Janette Hill (USA), Gay Ivey (USA), Fred Janssen (Netherlands), Tjip de Jong (Netherlands), Joseph Kessels (Netherlands), ChanMin Kim (Republic of Korea), Wim Kouwenhoven (Netherlands), Wilmad Kuiper (Netherlands), OhNam Kwon (Republic of Korea), Minakshi Lahiri (USA), Ruben van der Linde (Belgium), Patrick Manyak (USA), Susan McKenney (Netherlands), Kay Niebert (Germany), Eunjung Grace Oh (USA), Jules Pieters (Netherlands), Albert Pilot (Netherlands), David Porcaro (USA), Gjalt Prins (Netherlands), Susanne Prediger (Germany), Chris Rasmussen (USA), Tom Reeves (USA), Wilhelmina Savenye (USA), Leona Schauble (USA), Glenn Smith (USA), Mike Spector (USA), Michelle Stephan (USA), Ana Taboada (USA), Annette Thijs (Netherlands), Jos Tolboom (Netherlands), Monica Tracey (USA), Suzanne Verdonschot (Netherlands), Joke Voogt (Netherlands), Anita Wallis (Sweden), Eva West (Sweden), Qiyun Wang (Singapore), Megan Wawro (USA), Nikoleta Yiannoutsou (Greece), Zhiting Zhu (PR China).",
+      "th": "Mahmoud Abdallah (อียิปต์), Jan van den Akker (เนเธอร์แลนด์), Terry Anderson (สหรัฐอเมริกา), Elizabeth Archer (แอฟริกาใต้), Brenda Bannan (สหรัฐอเมริกา), Jim Baumann (สหรัฐอเมริกา), Camille Blachowicz (สหรัฐอเมริกา), Kerst Boersma (เนเธอร์แลนด์), Barbara Bradley (สหรัฐอเมริกา), Tara Bunag (สหรัฐอเมริกา), Ike Choi (สหรัฐอเมริกา), Jamie Colwell (สหรัฐอเมริกา), Jeni Davis (สหรัฐอเมริกา), Paul Drijvers (เนเธอร์แลนด์), Harrie Eijkelhof (เนเธอร์แลนด์), Ingo Eilks (เยอรมนี), Anna Evmenova (สหรัฐอเมริกา), Ahmed Fauzan (อินโดนีเซีย), Elvira Folmer (เนเธอร์แลนด์), Sangeetha Gopalakrishnan (สหรัฐอเมริกา), Koeno Gravemeijer (เนเธอร์แลนด์), Harald Gropengiesser (เยอรมนี), Mike Hannafin (สหรัฐอเมริกา), Janette Hill (สหรัฐอเมริกา), Gay Ivey (สหรัฐอเมริกา), Fred Janssen (เนเธอร์แลนด์), Tjip de Jong (เนเธอร์แลนด์), Joseph Kessels (เนเธอร์แลนด์), ChanMin Kim (สาธารณรัฐเกาหลี), Wim Kouwenhoven (เนเธอร์แลนด์), Wilmad Kuiper (เนเธอร์แลนด์), OhNam Kwon (สาธารณรัฐเกาหลี), Minakshi Lahiri (สหรัฐอเมริกา), Ruben van der Linde (เบลเยียม), Patrick Manyak (สหรัฐอเมริกา), Susan McKenney (เนเธอร์แลนด์), Kay Niebert (เยอรมนี), Eunjung Grace Oh (สหรัฐอเมริกา), Jules Pieters (เนเธอร์แลนด์), Albert Pilot (เนเธอร์แลนด์), David Porcaro (สหรัฐอเมริกา), Gjalt Prins (เนเธอร์แลนด์), Susanne Prediger (เยอรมนี), Chris Rasmussen (สหรัฐอเมริกา), Tom Reeves (สหรัฐอเมริกา), Wilhelmina Savenye (สหรัฐอเมริกา), Leona Schauble (สหรัฐอเมริกา), Glenn Smith (สหรัฐอเมริกา), Mike Spector (สหรัฐอเมริกา), Michelle Stephan (สหรัฐอเมริกา), Ana Taboada (สหรัฐอเมริกา), Annette Thijs (เนเธอร์แลนด์), Jos Tolboom (เนเธอร์แลนด์), Monica Tracey (สหรัฐอเมริกา), Suzanne Verdonschot (เนเธอร์แลนด์), Joke Voogt (เนเธอร์แลนด์), Anita Wallis (สวีเดน), Eva West (สวีเดน), Qiyun Wang (สิงคโปร์), Megan Wawro (สหรัฐอเมริกา), Nikoleta Yiannoutsou (กรีซ) และ Zhiting Zhu (สาธารณรัฐประชาชนจีน)"
+    }
+  ],
+  "summary": {
+    "heading": "สรุปท้ายคำนำเพื่อการศึกษา (ไม่ใช่ส่วนหนึ่งของข้อความต้นฉบับ)",
+    "points": [
+      "หนังสือชุดนี้เกิดจากการสัมมนาเรื่อง EDR ในปี 2007 และการตีพิมพ์หนังสือเบื้องต้นในปี 2009 ก่อนพัฒนาภาค A และ B ฉบับปี 2013",
+      "ภาค B มีกรณีศึกษา 51 บท จากเป้าหมายเดิม 15–20 บท ครอบคลุมหลายสาขาวิชา ระดับการศึกษา วัตถุประสงค์วิจัย และประเทศ",
+      "ทุกกรณีศึกษามุ่งให้ผู้อ่านมองเห็นลำดับเหตุผลของการวิจัย และประเด็น 6 เรื่อง ได้แก่ ปัญหา กรอบแนวคิด แบบแผนการวิจัย ระยะประเมิน ผลผลิต และบทเรียนที่ได้รับ",
+      "บทต่าง ๆ ผ่านการตรวจโดยบรรณาธิการ ผู้ประเมินภายนอกสองคน และเปิดให้ผู้เขียนตรวจแลกเปลี่ยนกันอีกช่วงหนึ่ง"
+    ]
+  }
+}
