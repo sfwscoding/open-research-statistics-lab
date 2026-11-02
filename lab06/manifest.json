@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "book": {
+    "title": "Educational design research – Part B: Illustrative cases",
+    "editors": [
+      "Tjeerd Plomp",
+      "Nienke Nieveen"
+    ],
+    "publisher": "SLO – Netherlands institute for curriculum development",
+    "year": 2013,
+    "isbn": "978 90 329 2335 8",
+    "pdf_total_pages": 1128,
+    "source_url": "https://www.slo.nl/publish/pages/8837/educational-design-research-b-total.pdf"
+  },
+  "workflow": {
+    "translation_mode": "complete page, no summary",
+    "views": [
+      "A: Thai",
+      "B: English–Thai aligned"
+    ],
+    "tracking": "PDF page numbers starting at 1",
+    "source_of_truth": "lab06/pages/NNNN.json",
+    "status_legend": {
+      "translated_first_pass": "แปลครบตามข้อความที่อ่านได้และตรวจเทียบเบื้องต้น แต่ยังไม่ได้ตรวจทานโดยผู้เชี่ยวชาญ"
+    }
+  },
+  "completed_pages": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "next_page": 5,
+  "content_status": "initial translation; not professionally proofread",
+  "updated_on": "2026-11-02"
+}
