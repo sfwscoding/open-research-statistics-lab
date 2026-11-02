@@ -1,0 +1,534 @@
+{
+  "schema_version": 1,
+  "id": "introduction",
+  "part": 4,
+  "pdf_pages": [
+    26,
+    27,
+    28,
+    29
+  ],
+  "status": "translated_first_pass",
+  "notes": [
+    "รายการอ้างอิงคงชื่อและรายละเอียดภาษาอังกฤษเดิมไว้เพื่อความแม่นยำในการค้นคืน",
+    "ตารางภาคผนวกต้นฉบับถอดตามลำดับหัวข้อ โดยแปลทุกหมวดและรายการที่อ่านได้"
+  ],
+  "blocks": [
+    {
+      "p": 26,
+      "k": "reference",
+      "en": "Barab, S., & Squire, K. (2004). Design-based research: Putting a stake in the ground. The Journal of the Learning Sciences, 13(1), 1-14.",
+      "th": "Barab, S., & Squire, K. (2004). Design-based research: Putting a stake in the ground. The Journal of the Learning Sciences, 13(1), 1-14."
+    },
+    {
+      "p": 26,
+      "k": "reference",
+      "en": "Brown, A.L. (1992). Design experiments: Theoretical and methodological challenges in creating complex interventions in classroom settings. The Journal of The Learning Sciences, 2(2), 141-178.",
+      "th": "Brown, A.L. (1992). Design experiments: Theoretical and methodological challenges in creating complex interventions in classroom settings. The Journal of The Learning Sciences, 2(2), 141-178."
+    },
+    {
+      "p": 26,
+      "k": "reference",
+      "en": "Cobb, P., Confrey, J., DiSessa, A., Lehrer, R., & Schauble, L. (2003). Design experiments in educational research. Educational Researcher, 32(1), 9-13.",
+      "th": "Cobb, P., Confrey, J., DiSessa, A., Lehrer, R., & Schauble, L. (2003). Design experiments in educational research. Educational Researcher, 32(1), 9-13."
+    },
+    {
+      "p": 26,
+      "k": "reference",
+      "en": "Eilks, I., & Ralle, B. (2002). Participatory action research in chemical education. In B. Ralle & I. Eilks (Eds.), Research in Chemical Education: What does this mean? (pp. 87-98). Aachen, Shaker.",
+      "th": "Eilks, I., & Ralle, B. (2002). Participatory action research in chemical education. In B. Ralle & I. Eilks (Eds.), Research in Chemical Education: What does this mean? (pp. 87-98). Aachen, Shaker."
+    },
+    {
+      "p": 26,
+      "k": "reference",
+      "en": "Fishman, B.J., Penuel, W.R., Allen, A.-R., & Cheng, B.H. (Eds.). (In press). Design-based implementation research: Theories, methods, and exemplars. New York: Teachers College Record.",
+      "th": "Fishman, B.J., Penuel, W.R., Allen, A.-R., & Cheng, B.H. (Eds.). (In press). Design-based implementation research: Theories, methods, and exemplars. New York: Teachers College Record."
+    },
+    {
+      "p": 26,
+      "k": "reference",
+      "en": "Kelly, A.E., Lesh, R.A., & Baek, J. (Eds.). (2008). Handbook of design research methods in education: Innovations in science, technology, mathematics and engineering. Mahway, NJ: Taylor & Francis.",
+      "th": "Kelly, A.E., Lesh, R.A., & Baek, J. (Eds.). (2008). Handbook of design research methods in education: Innovations in science, technology, mathematics and engineering. Mahway, NJ: Taylor & Francis."
+    },
+    {
+      "p": 26,
+      "k": "reference",
+      "en": "Krathwohl, D.R. (1998). Methods of educational and social science research: An integrated approach. New York: Longman.",
+      "th": "Krathwohl, D.R. (1998). Methods of educational and social science research: An integrated approach. New York: Longman."
+    },
+    {
+      "p": 26,
+      "k": "reference",
+      "en": "McKenney, S., & Reeves, T.C. (2012). Conducting educational design research. London: Routledge.",
+      "th": "McKenney, S., & Reeves, T.C. (2012). Conducting educational design research. London: Routledge."
+    },
+    {
+      "p": 26,
+      "k": "reference",
+      "en": "Nieveen, N. (1999). Prototyping to reach product quality. In J. van den Akker, R.M. Branch, K. Gustafson, N. Nieveen, & T. Plomp (Eds.), Design approaches and tools in education and training (pp. 125-136). Boston: Kluwer Academic.",
+      "th": "Nieveen, N. (1999). Prototyping to reach product quality. In J. van den Akker, R.M. Branch, K. Gustafson, N. Nieveen, & T. Plomp (Eds.), Design approaches and tools in education and training (pp. 125-136). Boston: Kluwer Academic."
+    },
+    {
+      "p": 26,
+      "k": "reference",
+      "en": "Nieveen, N. (2009). Formative evaluation in educational design research. In T. Plomp & N. Nieveen (Eds.), An introduction to educational design research (pp. 89-101). Enschede, the Netherlands: SLO.",
+      "th": "Nieveen, N. (2009). Formative evaluation in educational design research. In T. Plomp & N. Nieveen (Eds.), An introduction to educational design research (pp. 89-101). Enschede, the Netherlands: SLO."
+    },
+    {
+      "p": 26,
+      "k": "reference",
+      "en": "Penuel, W.R., Fishman, B.J., Cheng, B.H., & Sabelli, N. (2011). Organizing research and development at the intersection of learning, implementation, and design. Educational Researcher, 40(7), 331-337.",
+      "th": "Penuel, W.R., Fishman, B.J., Cheng, B.H., & Sabelli, N. (2011). Organizing research and development at the intersection of learning, implementation, and design. Educational Researcher, 40(7), 331-337."
+    },
+    {
+      "p": 26,
+      "k": "reference",
+      "en": "Plomp, T. (2009). Educational design research: An introduction. In T. Plomp & N. Nieveen (Eds.), An introduction to educational design research (pp. 9-25). Enschede, the Netherlands: SLO.",
+      "th": "Plomp, T. (2009). Educational design research: An introduction. In T. Plomp & N. Nieveen (Eds.), An introduction to educational design research (pp. 9-25). Enschede, the Netherlands: SLO."
+    },
+    {
+      "p": 26,
+      "k": "reference",
+      "en": "Plomp, T., & Nieveen, N. (Eds.). (2009). An introduction to educational design research. Enschede, the Netherlands: SLO.",
+      "th": "Plomp, T., & Nieveen, N. (Eds.). (2009). An introduction to educational design research. Enschede, the Netherlands: SLO."
+    },
+    {
+      "p": 26,
+      "k": "reference",
+      "en": "Plomp, T., & Nieveen, N. (Eds). (2013). Educational design research – part A: An introduction. Enschede, the Netherlands: SLO. free access at http://international.slo.nl/edr.",
+      "th": "Plomp, T., & Nieveen, N. (Eds). (2013). Educational design research – part A: An introduction. Enschede, the Netherlands: SLO. free access at http://international.slo.nl/edr."
+    },
+    {
+      "p": 27,
+      "k": "reference",
+      "en": "Reinking, D., & Bradley, B.A. (2008). On formative and design experiments: Approaches to language and literacy research. New York: Teachers College.",
+      "th": "Reinking, D., & Bradley, B.A. (2008). On formative and design experiments: Approaches to language and literacy research. New York: Teachers College."
+    },
+    {
+      "p": 27,
+      "k": "reference",
+      "en": "Richey, R., & Klein, J.D. (2007). Design and development research: Methods, strategies, and issues. London: Routledge.",
+      "th": "Richey, R., & Klein, J.D. (2007). Design and development research: Methods, strategies, and issues. London: Routledge."
+    },
+    {
+      "p": 27,
+      "k": "reference",
+      "en": "Shavelson, R.J., & Towne, L. (2002). Scientific research in education. Washington DC: National Academic Press.",
+      "th": "Shavelson, R.J., & Towne, L. (2002). Scientific research in education. Washington DC: National Academic Press."
+    },
+    {
+      "p": 27,
+      "k": "reference",
+      "en": "Van den Akker, J., Gravemeijer, K., McKenney, S., & Nieveen, N. (Eds.). (2006). Educational design research. London: Routledge.",
+      "th": "Van den Akker, J., Gravemeijer, K., McKenney, S., & Nieveen, N. (Eds.). (2006). Educational design research. London: Routledge."
+    },
+    {
+      "p": 27,
+      "k": "reference",
+      "en": "Wademan, M.R. (2005). Utilizing development research to guide people-capability maturity model adoption considerations. Doctoral dissertation. Syracuse: Syracuse University. Dissertation Abstracts International, 67-01A, 434. (UMI No. 3205587)",
+      "th": "Wademan, M.R. (2005). Utilizing development research to guide people-capability maturity model adoption considerations. Doctoral dissertation. Syracuse: Syracuse University. Dissertation Abstracts International, 67-01A, 434. (UMI No. 3205587)"
+    },
+    {
+      "p": 27,
+      "k": "reference",
+      "en": "Yin, R.K. (2003). Case study research: Design and methods. Newbury Park, CA: Sage.",
+      "th": "Yin, R.K. (2003). Case study research: Design and methods. Newbury Park, CA: Sage."
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "Appendix Dimensions of the description matrix",
+      "th": "ภาคผนวก: มิติของเมทริกซ์สำหรับบรรยายลักษณะกรณีศึกษา"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "1. Main focus/aim of the design research",
+      "th": "1. จุดเน้นหรือจุดมุ่งหมายหลักของการวิจัยเชิงออกแบบ"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "a. Development of innovative intervention (i.e. for which no clear guidelines and examples are available)",
+      "th": "ก. การพัฒนาสิ่งแทรกแซงเชิงนวัตกรรม (กล่าวคือ ยังไม่มีแนวปฏิบัติหรือตัวอย่างที่ชัดเจน)"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "b. Development of a new (instructional, didactical or learning) theory",
+      "th": "ข. การพัฒนาทฤษฎีใหม่ด้านการสอน ศาสตร์การสอน หรือการเรียนรู้"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "c. Validation of a (instructional, didactical or learning) theory",
+      "th": "ค. การตรวจสอบความตรงของทฤษฎีด้านการสอน ศาสตร์การสอน หรือการเรียนรู้"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "d. Dissemination or upscaling of interventions",
+      "th": "ง. การเผยแพร่หรือขยายขอบเขตการใช้สิ่งแทรกแซง"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "e. Other, viz …",
+      "th": "จ. อื่น ๆ โปรดระบุ…"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "2. Education sector",
+      "th": "2. ภาคส่วนหรือระดับการศึกษา"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "a. Pre-school (0-4 year olds)",
+      "th": "ก. ก่อนวัยเรียน (อายุ 0–4 ปี)"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "b. Kindergarten (4, 5 year olds)",
+      "th": "ข. อนุบาล (อายุ 4–5 ปี)"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "c. Primary (6-11 year olds)",
+      "th": "ค. ประถมศึกษา (อายุ 6–11 ปี)"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "d. Junior secondary (12-15 year olds)",
+      "th": "ง. มัธยมศึกษาตอนต้น (อายุ 12–15 ปี)"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "e. Upper secondary (16,17 year olds)",
+      "th": "จ. มัธยมศึกษาตอนปลาย (อายุ 16–17 ปี)"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "f. Upper secondary (vocational)",
+      "th": "ฉ. มัธยมศึกษาตอนปลายสายอาชีพ"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "g. Teacher education (indicate for which subject and sector)",
+      "th": "ช. การผลิตและพัฒนาครู (ระบุวิชาและระดับการศึกษา)"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "h. Higher education general (indicate university/college level; faculty discipline)",
+      "th": "ซ. อุดมศึกษาทั่วไป (ระบุระดับมหาวิทยาลัย/วิทยาลัย และสาขาวิชา/คณะ)"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "i. Corporate learning",
+      "th": "ฌ. การเรียนรู้ในองค์กรธุรกิจ"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "j. Non-formal (or informal) education and training (e.g. workplace learning)",
+      "th": "ญ. การศึกษาและการฝึกอบรมนอกระบบหรือการศึกษาตามอัธยาศัย เช่น การเรียนรู้ในที่ทำงาน"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "k. Other, viz …",
+      "th": "ฎ. อื่น ๆ โปรดระบุ…"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "3. Educational focus",
+      "th": "3. จุดเน้นด้านการศึกษา"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "a. Curriculum/school-related disciplinary focus of the research:",
+      "th": "ก. จุดเน้นของการวิจัยเกี่ยวกับหลักสูตรหรือสาขาวิชาในโรงเรียน"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "1. Can be school subjects: science, math, literacy, English language, mother tongue, etc.; but also: vocational subjects",
+      "th": "1. อาจเป็นรายวิชาในโรงเรียน เช่น วิทยาศาสตร์ คณิตศาสตร์ การรู้หนังสือ ภาษาอังกฤษ ภาษาแม่ และรายวิชาชีพ"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "2. Can be generic topics such as cross-curricular skills (e.g. 21st century skills), use of ICT/computers/social media, library skills",
+      "th": "2. อาจเป็นประเด็นทั่วไป เช่น ทักษะข้ามสาระวิชา (เช่น ทักษะศตวรรษที่ 21) การใช้ ICT/คอมพิวเตอร์/สื่อสังคม และทักษะห้องสมุด"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "3. Combination of the above, viz …",
+      "th": "3. การผสมผสานหัวข้อข้างต้น โปรดระบุ…"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "4. Other, viz …",
+      "th": "4. อื่น ๆ โปรดระบุ…"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "b. Other school/institution-related focus, e.g.",
+      "th": "ข. จุดเน้นอื่นเกี่ยวกับโรงเรียนหรือสถาบัน เช่น"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "1. Teaching-learning methods",
+      "th": "1. วิธีการจัดการเรียนการสอน"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "2. Curriculum planning",
+      "th": "2. การวางแผนหลักสูตร"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "3. ICT in education",
+      "th": "3. ICT ในการศึกษา"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "4. School management or leadership",
+      "th": "4. การบริหารหรือภาวะผู้นำของโรงเรียน"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "5. Monitoring quality of education",
+      "th": "5. การติดตามคุณภาพการศึกษา"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "6. Professional development of teachers",
+      "th": "6. การพัฒนาวิชาชีพครู"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "7. Other, viz …",
+      "th": "7. อื่น ๆ โปรดระบุ…"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "c. Corporate learning related focus: • …",
+      "th": "ค. จุดเน้นที่เกี่ยวกับการเรียนรู้ในองค์กรธุรกิจ: • …"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "d. Other, viz …",
+      "th": "ง. อื่น ๆ โปรดระบุ…"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "4. Type of intervention (that was developed as part of the DR study)",
+      "th": "4. ประเภทของสิ่งแทรกแซง (ที่พัฒนาขึ้นเป็นส่วนหนึ่งของการวิจัยเชิงออกแบบ)"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "a. Education program, curriculum",
+      "th": "ก. โปรแกรมการศึกษาหรือหลักสูตร"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "b. Curriculum unit, course, module",
+      "th": "ข. หน่วยหลักสูตร รายวิชา หรือโมดูล"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "c. Authentic tasks",
+      "th": "ค. ภารกิจที่เชื่อมโยงสถานการณ์จริง"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "d. Assessment tasks",
+      "th": "ง. ภารกิจการประเมิน"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "e. Monitoring system",
+      "th": "จ. ระบบติดตามผล"
+    },
+    {
+      "p": 28,
+      "k": "paragraph",
+      "en": "f. Other, viz …",
+      "th": "ฉ. อื่น ๆ โปรดระบุ…"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "5. Underlying vision on Teaching/Learning (as utilized/applied in intervention)",
+      "th": "5. แนวคิดพื้นฐานเกี่ยวกับการสอน/การเรียนรู้ (ตามที่ใช้หรือประยุกต์ในสิ่งแทรกแซง)"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "a. Problem-based learning",
+      "th": "ก. การเรียนรู้โดยใช้ปัญหาเป็นฐาน"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "b. Competence-based education",
+      "th": "ข. การศึกษาฐานสมรรถนะ"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "c. Constructivistic approach",
+      "th": "ค. แนวทางสร้างองค์ความรู้ด้วยตนเอง (คอนสตรัคติวิสต์)"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "d. Distance learning/e-learning",
+      "th": "ง. การเรียนทางไกลหรือการเรียนรู้ผ่านสื่ออิเล็กทรอนิกส์"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "e. Other, viz …",
+      "th": "จ. อื่น ๆ โปรดระบุ…"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "[NB: Combinations are possible, such as problem-based + eLearning; or constructivistic approach + problem-based education; This dimension may not be applicable to certain cases of EDR]",
+      "th": "[หมายเหตุ: สามารถผสมผสานหลายแนวทางได้ เช่น การเรียนรู้โดยใช้ปัญหาเป็นฐานร่วมกับ eLearning หรือแนวคิดคอนสตรัคติวิสต์ร่วมกับการศึกษาที่ใช้ปัญหาเป็นฐาน มิตินี้อาจไม่เกี่ยวข้องกับ EDR บางกรณี]"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "6. Domain(s) in education sciences",
+      "th": "6. สาขาวิชาในวิทยาศาสตร์การศึกษา"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "a. Curriculum",
+      "th": "ก. หลักสูตร"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "b. Learning and instruction",
+      "th": "ข. การเรียนรู้และการสอน"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "c. Subject-related pedagogy/teaching methods, such",
+      "th": "ค. ศาสตร์การสอนหรือวิธีสอนเฉพาะวิชา เช่น"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "1. math education",
+      "th": "1. คณิตศาสตร์ศึกษา"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "2. science education",
+      "th": "2. วิทยาศาสตร์ศึกษา"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "3. language education",
+      "th": "3. ภาษาศึกษา"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "4. other",
+      "th": "4. อื่น ๆ"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "d. School organization/management",
+      "th": "ง. การจัดองค์กรและการบริหารโรงเรียน"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "e. Instructional technology",
+      "th": "จ. เทคโนโลยีการสอน"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "f. ICT in education",
+      "th": "ฉ. ICT ในการศึกษา"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "g. Other, viz …",
+      "th": "ช. อื่น ๆ โปรดระบุ…"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "[NB: combinations are possible, e.g. ICT in education and subject-related pedagogy]",
+      "th": "[หมายเหตุ: สามารถผสมผสานหมวดหมู่ต่าง ๆ ได้ เช่น ICT ในการศึกษาร่วมกับศาสตร์การสอนเฉพาะวิชา]"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "7. Country (or educational system) that was context of the research",
+      "th": "7. ประเทศหรือระบบการศึกษาที่เป็นบริบทของการวิจัย"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "[NB: could be different from country where authors live]",
+      "th": "[หมายเหตุ: อาจต่างจากประเทศที่ผู้เขียนอาศัยอยู่]"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "8. Please provide a brief ‘portrait’ of your chapter (50-100 words)",
+      "th": "8. กรุณาเขียน ‘ภาพรวมโดยสังเขป’ ของบทท่าน (50–100 คำ)"
+    },
+    {
+      "p": 29,
+      "k": "paragraph",
+      "en": "(only information (in addition to previous points) that you consider essential for a reader when considering selecting this case for further use)",
+      "th": "(เฉพาะข้อมูลเพิ่มเติมจากประเด็นก่อนหน้าที่ท่านเห็นว่าจำเป็นต่อผู้อ่านเมื่อพิจารณาเลือกกรณีศึกษานี้ไปใช้ต่อ)"
+    }
+  ]
+}
