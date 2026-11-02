@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "source": "Educational design research — Part B: Illustrative cases (SLO, 2013)",
+  "status": "translated_first_pass",
+  "pdf_page": 1,
+  "title_en": "Cover",
+  "title_th": "หน้าปก",
+  "printed_page": null,
+  "blocks": [
+    {
+      "type": "title",
+      "en": "Educational design research",
+      "th": "การวิจัยเชิงออกแบบทางการศึกษา"
+    },
+    {
+      "type": "subtitle",
+      "en": "Part B: Illustrative cases",
+      "th": "ภาค B: กรณีศึกษาตัวอย่าง"
+    },
+    {
+      "type": "text",
+      "en": "SLO • Netherlands institute for curriculum development",
+      "th": "SLO • สถาบันพัฒนาหลักสูตรแห่งเนเธอร์แลนด์"
+    },
+    {
+      "type": "text",
+      "en": "Editors: Tjeerd Plomp & Nienke Nieveen",
+      "th": "บรรณาธิการ: Tjeerd Plomp และ Nienke Nieveen"
+    }
+  ],
+  "note_th": "หน้าปกมีภาพประกอบและตราสัญลักษณ์ของสำนักพิมพ์ โปรดดูต้นฉบับ PDF หน้า 1 สำหรับองค์ประกอบภาพ"
+}
