@@ -55,6 +55,7 @@ const items=[
    ["KPA 12 ชั่วโมง","lab05.html?stat=kpa"],
    ["โครงงาน 4 ชั่วโมง","lab05.html?stat=project"]]]
  ]}
+ ,{name:"Lab 06",href:"lab06.html",groups:[["6. EDR ฉบับภาษาไทย",[["บทนำและแนวคิดหลัก (ฉบับเริ่มต้น)","lab06.html"]]]]}
 ];
 const current=location.pathname.split("/").pop()||"index.html";
 const nav=document.createElement("nav");
