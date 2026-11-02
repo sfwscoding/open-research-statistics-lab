@@ -15,7 +15,7 @@
       "caption_en": "Figure 1: Generic design research model (Wademan, 2005)",
       "caption_th": "ภาพที่ 1 แบบจำลองทั่วไปของการวิจัยเชิงออกแบบ (Wademan, 2005)",
       "source_pdf_page_link": "https://www.slo.nl/publish/pages/8837/educational-design-research-b-total.pdf#page=18",
-      "note": "รูปต้นฉบับมีตัวหนังสืออยู่ภายในภาพ จึงแสดงคำแปลและลิงก์ตรวจภาพเดิม"
+      "note": "มีคำแปลของป้ายกำกับทุกกลุ่มหลักในผังภาพ และลิงก์เปิดรูปต้นฉบับตาม PDF หน้า 18"
     }
   ],
   "blocks": [
@@ -30,6 +30,66 @@
       "k": "paragraph",
       "en": "[Diagram: Practitioner and User Participation; Problem and Context; Preliminary Investigation of Problems, Needs & Perspectives; Tentative Products & Theories; Prototyping & Assessment of Preliminary Products & Theories; Problem Resolution & Advancing Theory. Recurring formative evaluation, redesign, refinement, and reflection.]",
       "th": "[ผังภาพต้นฉบับ: การมีส่วนร่วมของผู้ปฏิบัติและผู้ใช้ตลอดกระบวนการ เริ่มจากปัญหาและบริบท → การศึกษาเบื้องต้นเกี่ยวกับปัญหา ความต้องการ และมุมมอง → ผลิตภัณฑ์และทฤษฎีเบื้องต้น → การสร้างต้นแบบและประเมินผลิตภัณฑ์กับทฤษฎีระหว่างพัฒนา → การแก้ปัญหาและพัฒนาทฤษฎี โดยมีการประเมินระหว่างพัฒนา การออกแบบใหม่ การปรับปรุง และการสะท้อนคิดวนซ้ำ ดูรูปเต็มที่ PDF ต้นฉบับหน้า 18]"
+    },
+    {
+      "p": 18,
+      "k": "figure-label",
+      "en": "Practitioner and User Participation",
+      "th": "การมีส่วนร่วมของผู้ปฏิบัติและผู้ใช้"
+    },
+    {
+      "p": 18,
+      "k": "figure-label",
+      "en": "Researchers; Practitioners; Other Sources; Collaboratives",
+      "th": "นักวิจัย; ผู้ปฏิบัติงาน; แหล่งข้อมูลอื่น; ผู้ร่วมมือ"
+    },
+    {
+      "p": 18,
+      "k": "figure-label",
+      "en": "Analyze Practical Context; Consult Experts & Practitioners; Focused Literature Review; Analyze Promising Examples",
+      "th": "วิเคราะห์บริบทการปฏิบัติจริง; ปรึกษาผู้เชี่ยวชาญและผู้ปฏิบัติงาน; ทบทวนวรรณกรรมแบบมุ่งประเด็น; วิเคราะห์ตัวอย่างที่มีแนวโน้มได้ผล"
+    },
+    {
+      "p": 18,
+      "k": "figure-label",
+      "en": "Tentative Product Approaches; Tentative Design Principles",
+      "th": "แนวทางเบื้องต้นของผลิตภัณฑ์; หลักการออกแบบเบื้องต้น"
+    },
+    {
+      "p": 18,
+      "k": "figure-label",
+      "en": "Refinement of Problem, Solution and Method; Successive Approximation of Product",
+      "th": "การปรับปรุงปัญหา วิธีแก้ปัญหา และวิธีดำเนินงาน; การค่อย ๆ พัฒนาผลิตภัณฑ์ให้เข้าใกล้เป้าหมาย"
+    },
+    {
+      "p": 18,
+      "k": "figure-label",
+      "en": "Formative Evaluation; Redesign & Refinement of Products & Theories; Reflection",
+      "th": "การประเมินระหว่างพัฒนา; การออกแบบใหม่และปรับปรุงผลิตภัณฑ์กับทฤษฎี; การสะท้อนคิด"
+    },
+    {
+      "p": 18,
+      "k": "figure-label",
+      "en": "Practical Product/Results; Contribution to Theory",
+      "th": "ผลิตภัณฑ์หรือผลลัพธ์ที่ใช้ได้จริง; การสร้างคุณูปการต่อทฤษฎี"
+    },
+    {
+      "p": 18,
+      "k": "figure-label",
+      "en": "Successive Approximation of Theory; Refinement of Design Theory",
+      "th": "การค่อย ๆ พัฒนาทฤษฎีให้เข้าใกล้เป้าหมาย; การปรับปรุงทฤษฎีการออกแบบ"
+    },
+    {
+      "p": 18,
+      "k": "figure-label",
+      "en": "Problem in Context; Preliminary Investigation of Problem, Context, & Approaches",
+      "th": "ปัญหาในบริบท; การศึกษาเบื้องต้นเกี่ยวกับปัญหา บริบท และแนวทางดำเนินการ"
+    },
+    {
+      "p": 18,
+      "k": "figure-label",
+      "en": "Phases: Problem Identification → Identification of Tentative Products & Design Principles → Tentative Products & Theories → Prototyping & Assessment of Preliminary Products & Theories → Problem Resolution & Advancing Theory",
+      "th": "ระยะดำเนินการ: ระบุปัญหา → กำหนดผลิตภัณฑ์และหลักการออกแบบเบื้องต้น → ผลิตภัณฑ์และทฤษฎีเบื้องต้น → สร้างต้นแบบและประเมินผลิตภัณฑ์กับทฤษฎีเบื้องต้น → แก้ปัญหาและพัฒนาทฤษฎี"
     },
     {
       "p": 19,
