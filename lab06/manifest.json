@@ -24,7 +24,8 @@
       "translated_first_pass": "แปลครบตามข้อความที่อ่านได้และตรวจเทียบเบื้องต้น แต่ยังไม่ได้ตรวจทานโดยผู้เชี่ยวชาญ"
     },
     "primary_unit": "one complete chapter per instruction",
-    "page_unit": "legacy front matter pages 1–4 only; later chapters use chapters/id.json"
+    "page_unit": "legacy front matter pages 1–4 only; later chapters use chapters/id.json",
+    "chapter_01_bilingual_note": "English original is linked by PDF page; paragraph-level bilingual alignment is pending"
   },
   "completed_pages": [
     1,
@@ -80,13 +81,43 @@
       "parts": 4,
       "segments": 199,
       "note": "ข้อความบทนำ 16 หน้า (199 ช่วง) รวมรายละเอียดป้ายกำกับภาพที่ 1 และตัวเลขกราฟที่ 2–6 พร้อมลิงก์ต้นฉบับ; รายการอ้างอิงคงภาษาอังกฤษ"
+    },
+    {
+      "id": "chapter-01",
+      "title_th": "การทดลองเชิงพัฒนาเพื่อส่งเสริมปฏิสัมพันธ์ระหว่างครูกับเด็กในห้องเรียนปฐมวัย",
+      "pdf_pages": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "status": "thai_first_pass_with_source_pdf",
+      "parts": 6,
+      "completeness": "Thai translation full chapter, references maintained in original language, Table 1 translated; English PDF page-linked but not paragraph aligned"
     }
   ],
   "next_chapter": {
-    "id": "chapter-01",
-    "title_th": "A formative experiment to enhance teacher-child interactions in a preschool classroom",
-    "pdf_start": 30,
-    "pdf_end": 50,
+    "id": "chapter-02",
+    "title_th": "การพัฒนาโปรแกรมสอนคำศัพท์แบบครอบคลุมสำหรับเด็กอายุ 9–11 ปี โดยใช้การทดลองเชิงออกแบบ",
+    "pdf_start": 51,
+    "pdf_end": 75,
     "status": "not_started"
   },
   "untranslated_front_matter_pdf_pages": [
