@@ -26,7 +26,8 @@
     "primary_unit": "one complete chapter per instruction",
     "page_unit": "legacy front matter pages 1–4 only; later chapters use chapters/id.json",
     "chapter_01_bilingual_note": "English original is linked by PDF page; paragraph-level bilingual alignment is pending",
-    "chapter_02_bilingual_note": "The Thai translation is complete in first pass, English compared against source PDF by page, not paragraph aligned."
+    "chapter_02_bilingual_note": "The Thai translation is complete in first pass, English compared against source PDF by page, not paragraph aligned.",
+    "chapter_04_bilingual_note": "English original is linked by PDF page, not paragraph aligned; figures 104,110,112 summarized in Thai with original figure links."
   },
   "completed_pages": [
     1,
@@ -36,7 +37,7 @@
   ],
   "next_page": 5,
   "content_status": "initial translation; not professionally proofread",
-  "updated_on": "2026-11-02",
+  "updated_on": "2026-11-03",
   "completed_chapters": [
     {
       "id": "preface",
@@ -177,13 +178,45 @@
       "parts": 4,
       "summary_points": 10,
       "comparison_status": "Thai translation and English PDF page comparison; paragraph-level bilingual matching remains pending"
+    },
+    {
+      "id": "chapter-04",
+      "title_th": "แอฟริกาใต้: การปรับปรุงระบบข้อมูลป้อนกลับให้เหมาะสมที่สุดเพื่อการติดตามผลการเรียนรู้ของผู้เรียนในโรงเรียนประถมศึกษา",
+      "pdf_pages": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "status": "thai_first_pass_with_source_pdf",
+      "parts": 4,
+      "summary_points": 10,
+      "comparison_status": "Thai translation organized page-by-page; English comparison via source PDF, paragraph bilingual alignment pending"
     }
   ],
   "next_chapter": {
-    "id": "chapter-04",
-    "title_th": "South Africa: Optimising a feedback system for monitoring learner performance in primary schools",
-    "pdf_start": 97,
-    "pdf_end": 119,
+    "id": "chapter-05",
+    "title_th": "Using the spiral problem solving process to design group work: A case study of educational design research in Shanghai",
+    "pdf_start": 120,
     "status": "not_started"
   },
   "untranslated_front_matter_pdf_pages": [
